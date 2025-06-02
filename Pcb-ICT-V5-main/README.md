@@ -1,4 +1,4 @@
-# ICT-PCB-v2-v5
+# ICT-PCB
 Eagle PCB for v2-v5 of "my" version of the ICT hab board
 This pcb is made and setup for sw versions v2-v5 of the the ict code
 
