@@ -28,4 +28,8 @@ Tcxo 25/26/27 Mhz for si5351, size 3225
 
 Xo 4Mhz to drive 328
 
+2x 10K resistor size 0603, value non critical, 1K-10K works
+
+3x 100nF Capacitor size 0603, value non critical
+
 
