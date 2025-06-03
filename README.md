@@ -24,7 +24,7 @@ Gps ATGM336 (N31) other will work
 
 TX Si5351
 
-Tcxo size 3225 25/26/27 Mhz for 5351
+Tcxo 25/26/27 Mhz for si5351, size 3225
 
 Xo 4Mhz to drive 328
 
