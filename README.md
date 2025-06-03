@@ -2,7 +2,7 @@
 
 This setup is aimed at three main things: light weight, low power and as few components - easy to build
 
-The board can be built to weigh below 1 Gram fully assambled (pic below) (plus solar & antenna)
+The board can be built to weigh below 1 Gram fully assambled (pic below) + solar cells & antenna
 
 <img src="https://github.com/user-attachments/assets/6a8e9051-83a9-4787-aebc-15e3fc69320a" width="300" />
 
