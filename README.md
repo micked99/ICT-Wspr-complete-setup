@@ -4,7 +4,8 @@ This setup is aimed at three main things: light weight, low power and as few com
 
 The board can be built to weigh below 1 Gram fully assambled (pic) (plus solar & antenna)
 
-ICT-Wspr-complete-setup/Pictures/0,94g.jpg
+![0,94g](https://github.com/user-attachments/assets/6a8e9051-83a9-4787-aebc-15e3fc69320a)
+
 
 
 Ads support for WDT and switching on GPS only mode on the gps for powersaving
