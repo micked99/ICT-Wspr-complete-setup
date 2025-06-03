@@ -1,4 +1,11 @@
 # ICT-v7-ATGM336
+
+This setup is aimed at three main things: light weight, low power and as few components - easy to build
+
+The board can be built to weigh below 1 Gram fully assambled (pic) (plus solar & antenna)
+
+
+
 Ads support for WDT and switching on GPS only mode on the gps for powersaving
 
 Ads support for WDT - Watch Dog Timer to prevent the program running in the 328 to freeze or lock up.          
