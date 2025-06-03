@@ -17,3 +17,9 @@ FD D9 FE
 
 Good fusecalc page https://www.engbedded.com/fusecalc/
 
+# BOM
+Cpu Atmega328
+Gps ATGM336 (N31) other will work
+TX Si5351
+Tcxo size 3225 25/26/27 Mhz for 5351
+Xo 4Mhz to drive 328
