@@ -4,6 +4,8 @@ This setup is aimed at three main things: light weight, low power and as few com
 
 The board can be built to weigh below 1 Gram fully assambled (pic) (plus solar & antenna)
 
+Pictures/0,94g.jpg
+
 
 
 Ads support for WDT and switching on GPS only mode on the gps for powersaving
