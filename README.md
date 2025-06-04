@@ -15,10 +15,9 @@ the code for the board
 ### Pcb-ICT-main  
 contains the cam files for pcb ordering as well as the Eagle schematich and board files  
 ### Boards.txt-main  
-to edit/copy-paste or replace the Boards.txt in arduino to controll the speed of the 328,   
-its located in \arduino-1.8.13\hardware\arduino\avr  
+to edit/copy-paste or replace the Boards.txt in arduino to controll the speed of the 328, its located in \arduino-1.8.13\hardware\arduino\avr  
 ### oscillator-main  
-a test file to test the 328 and si5351, no gps is needed for this only the 328 the 5351, its tcxo and the two pull up resistors is needed, if all works it will tx a carrier at 14.097Mhz
+Test file to test the 328 and si5351, no gps is needed for this, only the 328, 5351, its tcxo and the two pull up resistors is needed, if all works it will tx a carrier at 14.097Mhz
 
 
 
