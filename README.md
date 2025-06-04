@@ -52,7 +52,7 @@ E2 D9 FE 1.8V / internal 8Mhz osc
 
 FD D9 FE 1,8V / External 2/4/8Mhz xo
 
-To set fuses use Avrdude - see below
+To set fuses use Avrdude  https://github.com/avrdudes/avrdudes
 
 Fusecalc page https://www.engbedded.com/fusecalc/
 
