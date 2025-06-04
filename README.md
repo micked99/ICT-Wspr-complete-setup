@@ -7,7 +7,7 @@ most balloons use this encoding today, with a few exceptions, like ELK (have bot
 
 Another good site for beginers is to read up here: https://traquito.github.io/ and join the io board at: https://groups.io/g/picoballoon 
 
-The Traquito page will host channel reservationand, upload to varous tracking sites like aprs.fi and https://amateur.sondehub.org/
+The Traquito page will host channel reservationb and upload to varous tracking sites like https://aprs.fi/ and https://amateur.sondehub.org/
 
 Folders in this repo:  
 ICT_WSPR, the code for the board  
