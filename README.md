@@ -11,11 +11,11 @@ The Traquito page will host channel reservation and upload to varous tracking si
 
 ## Folders in this repo:  
 ### ICT_WSPR   
-the code for the board  
+The code to upload to the board  
 ### Pcb-ICT-main  
-contains the cam files for pcb ordering as well as the Eagle schematich and board files  
+Contains the cam files for pcb ordering as well as the Eagle schematich and board files  
 ### Boards.txt-main  
-to edit/copy-paste or replace the Boards.txt in arduino to controll the speed of the 328, its located in  
+To edit/copy-paste or replace the Boards.txt in arduino to controll the speed of the 328, its located in  
 \arduino-1.8.13\hardware\arduino\avr  
 ### oscillator-main  
 Test file to test the 328 and si5351, no gps is needed for this, only the 328, 5351, its tcxo and the two pull up resistors is needed, if all works it will tx a carrier at 14.097Mhz
