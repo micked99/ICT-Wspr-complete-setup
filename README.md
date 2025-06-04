@@ -11,6 +11,7 @@ The Traquito page will host channel reservationand, upload to varous tracking si
 
 Folders in this repo:  
 Pcb-ICT-main, contains the cam files for pcb ordering as well as the Eagle schematich and board files
+
 Boards.txt-main, to edit/copy-paste or replace the Boards.txt in arduino to controll the speed of the 328
 
 
