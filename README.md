@@ -52,7 +52,7 @@ not needed but if you want to fit it use a 0603 resistor around 30K
 # Antennas
 
 Gps 46mm
-Wire length/band , thicknes
+Wire length/band , thicknes, suport wire - fishingline
 
 # Solar cells
 
@@ -61,6 +61,7 @@ Wire length/band , thicknes
 # Arduino
 
 version, libraris needed
+https://www.arduino.cc/en/software/OldSoftwareReleases/
 
 # Setup parameters in the code
 
