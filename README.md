@@ -45,13 +45,15 @@ The 328 have an internal xo at 8Mhz, you can set it to be divided down by 8 (fus
 the internal xo at 8Mhz is not very stable in cold and it will not work at flying altitude, but I have tried a few flights on the internal xo divided down to 1Mhz 
 and it have worked fine, anyway, both speeeds works fine for testing a board on the bench.
 
-62 D9 FE 1.8V / internal /div8 @ 1Mhz
+62 D9 FE 1.8V / internal 8Mhz osc /div8 = 1Mhz
 
 E2 D9 FE 1.8V / internal 8Mhz osc
 
-FD D9 FE 1,8V / External 2/4/8Mhz  xo
+FD D9 FE 1,8V / External 2/4/8Mhz xo
 
-Good fusecalc page https://www.engbedded.com/fusecalc/
+To set fuses use Avrdude - see below
+
+Fusecalc page https://www.engbedded.com/fusecalc/
 
 # BOM
 
