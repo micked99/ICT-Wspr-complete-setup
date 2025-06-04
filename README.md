@@ -49,13 +49,13 @@ TX Si5351
 
 Tcxo 25/26/27 Mhz for si5351, size 3225
 
-Xo 4Mhz to drive 328
+Xo 4Mhz to drive 328, we will then use a DIV function to set 1/2 or 1/4 the speed to save some power
 
 2x 10K resistor size 0603, value non critical, 1K-10K works
 
 3x 100nF Capacitor size 0603, value non critical 10-470Nf works, it will work fine without any soldered on but I recomend at least one
 
-Thereis also a pad for a bleeed resitor to even out static buildup between gnd and the tx leg, 
+There is also a pad for a bleeed resistor to even out possible static buildup between tx leg and gnd
 not needed but if you want to fit it use a 0603 resistor around 30K
 
 # Antennas
