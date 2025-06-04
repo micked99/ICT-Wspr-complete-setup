@@ -18,12 +18,15 @@ Timing4.h is a testfile that will start tx every 2min
 
 Setts the expected external or internal xo used and also set the brownout to 1,8V
 
+The 328 have an internal xo at 8Mhz, you can set it to be divided down by 8 (fuse) and then the board runs at 1Mhz
+the internal xo at 8Mhz is not very stable in cold and it will not work at flying altitude, but I have tried a few flights on the internal xo divided down to 1Mhz 
+and it have worked fine, anyway, both speeeds work fine for testing a board on the bench.
+
 62 D9 FE 1.8V / internal /div8 @ 1Mhz
 
 E2 D9 FE 1.8V / internal 8Mhz osc
 
-or this one if you use a 2/4/8Mhz external xo
-FD D9 FE 
+FD D9 FE 1,8V / External 2/4/8Mhz  xo
 
 Good fusecalc page https://www.engbedded.com/fusecalc/
 
@@ -41,6 +44,8 @@ Xo 4Mhz to drive 328
 2x 10K resistor size 0603, value non critical, 1K-10K works
 
 3x 100nF Capacitor size 0603, value non critical 10-470Nf works, it will work fine without any soldered on but I recomend at least one
+
+Thereis also a pad for a bleeed resitor to even out static buildup between gnd and the tx leg, not needed but if you want to fit it use a 0603 resistor around 30K
 
 # Antennas
 
