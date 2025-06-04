@@ -85,6 +85,8 @@ Timing4.h is a testfile that will start tx every 2min
 
 I have always used Jlcpcb at https://jlcpcb.com/ for my balloon, and other pcb:s
 
+The pcb files have been made with Eagle pcb nowdays under the name Autodesk Eagle https://www.autodesk.com/products/eagle/overview
+
 Use as thin pcb as possible to save weight - 0,6mm
 
 In Pcb-ICT-main folder in this repo you will find needed files, if you are a experieced with solder small parts and have a hot air solderstation go with the Xtra Smal QFN version of the board, for a more simple soldering setup use the TQFP version
