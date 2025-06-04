@@ -33,7 +33,7 @@ The board will work on any band between 80m and 2m but most used band is 20m-10m
 
 # GPS:
 
-The ATGM336-N31 support both GPS and Beidou system, by switching off Beidou and run the ATGM in GPS only mode we save another 4mA, see .ino file for the command.
+The ATGM336-N31 support both GPS and Beidou system, by switching off Beidou and run the ATGM in GPS only mode we save another 4mA, see .ino file for the command, its activated by default.
 
 # 328 Fuses
 
