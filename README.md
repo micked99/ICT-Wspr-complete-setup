@@ -31,7 +31,7 @@ To make the board consume as little power as possible its setup to switch betwee
 
 The board will work on any band between 80m and 2m but most used band is 20m-10m
 
-The Arduino code is setup from start to use a 26Mhz Tcxo and to use a 4Mhz xo divided by 2 to run at 2Mhz, if other values used the code need to be changed - see below
+The Arduino code is setup from start to use a 26Mhz Tcxo and to use a 4Mhz xo divided by 2 to run at 2Mhz, if other values used the code needs to be changed - see below
 
 # GPS:
 
