@@ -2,7 +2,7 @@
 
 This is based on YO3ICT balloon fw which you can read about here: https://yo3ict.uus.ro/tracker.html
 
-what he did was reverse enginer the QRP-Labs telemetry protocol described here: https://qrp-labs.com/flights/s4#protocol 
+What he did was reverse enginer the QRP-Labs telemetry protocol described here: https://qrp-labs.com/flights/s4#protocol 
 most balloons use this encoding today, with a few exceptions, like ELK (have both his own and qrplabs) and Zachtek trackers
 
 Another good site for beginers is to read up here: https://traquito.github.io/ and join the io board at: https://groups.io/g/picoballoon 
