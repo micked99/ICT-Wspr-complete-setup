@@ -45,7 +45,8 @@ Xo 4Mhz to drive 328
 
 3x 100nF Capacitor size 0603, value non critical 10-470Nf works, it will work fine without any soldered on but I recomend at least one
 
-Thereis also a pad for a bleeed resitor to even out static buildup between gnd and the tx leg, not needed but if you want to fit it use a 0603 resistor around 30K
+Thereis also a pad for a bleeed resitor to even out static buildup between gnd and the tx leg, 
+not needed but if you want to fit it use a 0603 resistor around 30K
 
 # Antennas
 
