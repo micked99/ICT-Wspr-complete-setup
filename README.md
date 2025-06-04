@@ -9,6 +9,12 @@ Another good site for beginers is to read up here: https://traquito.github.io/ a
 
 The Traquito page will host channel reservationand, upload to varous tracking sites like aprs.fi and https://amateur.sondehub.org/
 
+Folders in this repo:  
+Pcb-ICT-main, contains the cam files for pcb ordering as well as the Eagle schematich and board files
+Boards.txt-main, to edit/copy-paste or replace the Boards.txt in arduino to controll the speed of the 328
+
+
+
 This setup is aimed at three main things: light weight, low power demands and as few components as possible - easy to build
 
 The board can be built to weigh below 1 gram fully assambled (pic below) + solar cells & antenna
