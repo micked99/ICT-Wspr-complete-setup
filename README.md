@@ -14,7 +14,9 @@ The ATGM336-N31 support both GPS and Beidou system, by switching off Beidou and 
 
 Timing4.h is a testfile that will start tx every 2min
 
-#Fuses to be set in the 328
+# Fuses to be set in the 328
+
+Setts the expected external or internal xo used and also set the brownout to 1,8V
 
 62 D9 FE 1.8V / internal /div8 @ 1Mhz
 
