@@ -75,6 +75,8 @@ Libraries needed
 
 Ad custom parameters to the Boards.txt in \arduino-1.8.13\hardware\arduino\avr
 
+Course Altitude in standard tx
+
 # Setup parameters in the code
 
 Timing4.h is a testfile that will start tx every 2min
