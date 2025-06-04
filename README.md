@@ -81,6 +81,18 @@ Course Altitude in standard tx
 
 Timing4.h is a testfile that will start tx every 2min
 
+# PCB 
+
+I have always used Jlcpcb at https://jlcpcb.com/ for my balloon, and other pcb:s
+
+Use as thin pcb as possible to save weight - 0,6mm
+
+In Pcb-ICT-main folder in this repo you will find needed files, if you are a experieced with solder small parts and have a hot air solderstation go with the Xtra Smal QFN version of the board, for a more simple soldering setup use the TQFP version
+
+![TQFP](https://github.com/user-attachments/assets/396c5c7e-c1b4-4560-8005-94a8b082ddce)
+![QFN](https://github.com/user-attachments/assets/0c05cefa-c216-4d57-8de8-9f9ed1676eac)
+
+
 
 
 
