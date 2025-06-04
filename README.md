@@ -2,11 +2,11 @@
 
 This is based on YO3ICT balloon fw which you can read about here: https://yo3ict.uus.ro/tracker.html
 
-what he did was reverse enginer the QRP-Labs telemetry protocol described here: https://qrp-labs.com/flights/s4#protocol
+what he did was reverse enginer the QRP-Labs telemetry protocol described here: https://qrp-labs.com/flights/s4#protocol most balloons use this encoding today.
 
 Another good site for beginers is to read up here: https://traquito.github.io/ and join the io board at: https://groups.io/g/picoballoon 
 
-the Traquito page will host channel reservationand, upload to varous tracking sites like aprs.fi and https://amateur.sondehub.org/
+The Traquito page will host channel reservationand, upload to varous tracking sites like aprs.fi and https://amateur.sondehub.org/
 
 This setup is aimed at three main things: light weight, low power demands and as few components as possible - easy to build
 
