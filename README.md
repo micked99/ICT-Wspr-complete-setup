@@ -42,9 +42,16 @@ Xo 4Mhz to drive 328
 
 # Antennas
 
+Gps 46mm
+Wire length/band , thicknes
+
 # Solar cells
+6psc , sizes, 4 cells and voltage doubler /ldo
 
 # Arduino
+version, libraris needed
+
+# Setup parameters in the code
 
 
 
