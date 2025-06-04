@@ -1,5 +1,5 @@
 # ICT-v7-ATGM336
-![complete board](https://github.com/user-attachments/assets/87f7522f-9779-4d59-95e0-92f3e82d1d06)
+<img src="https://github.com/user-attachments/assets/87f7522f-9779-4d59-95e0-92f3e82d1d06" width="170" />
 
 This is based on YO3ICT balloon fw which you can read about here: https://yo3ict.uus.ro/tracker.html
 
