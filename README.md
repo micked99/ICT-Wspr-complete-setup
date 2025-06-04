@@ -10,9 +10,10 @@ Another good site for beginers is to read up here: https://traquito.github.io/ a
 The Traquito page will host channel reservationand, upload to varous tracking sites like aprs.fi and https://amateur.sondehub.org/
 
 Folders in this repo:  
-Pcb-ICT-main, contains the cam files for pcb ordering as well as the Eagle schematich and board files
+ICT_WSPR, the code for the board  
+Pcb-ICT-main, contains the cam files for pcb ordering as well as the Eagle schematich and board files  
+Boards.txt-main, to edit/copy-paste or replace the Boards.txt in arduino to controll the speed of the 328  
 
-Boards.txt-main, to edit/copy-paste or replace the Boards.txt in arduino to controll the speed of the 328
 
 
 
