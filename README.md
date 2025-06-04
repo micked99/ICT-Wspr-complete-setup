@@ -8,11 +8,11 @@ The board can be built to weigh below 1 gram fully assambled (pic below) + solar
 
 To make the board consume as little power as possible its setup to switch between tx and gps so only one of the two is ON at any time, so it will startup and get valid gps lock with tx side of the board switched off, the si5351 consumes 17-27mA (depending on model) in stb curent even when not in use so only the gps is on and draws about 25mA using the ATGM336 (N31), when the board have got a valid lock the gps will turn off and the tx starts, using the low power 76, see further down, it will consume about 20mA and at max power, 79, it will be about 30mA, on top of this the 328 running at 2Mhz and the Tcxo combined will take another 3mA 
 
+The board will work on any band between 80m and 2m but most used band is 20m-10m
+
 GPS:
 
 The ATGM336-N31 support both GPS and Beidou system, by switching off Beidou and run the ATGM in GPS only mode we save another 4mA, see .ino file for the command.
-
-Timing4.h is a testfile that will start tx every 2min
 
 # Fuses to be set in the 328
 
@@ -31,6 +31,7 @@ FD D9 FE 1,8V / External 2/4/8Mhz  xo
 Good fusecalc page https://www.engbedded.com/fusecalc/
 
 # BOM
+
 Cpu Atmega328
 
 Gps ATGM336 (N31) other will work
@@ -54,12 +55,16 @@ Gps 46mm
 Wire length/band , thicknes
 
 # Solar cells
+
 6psc , sizes, 4 cells and voltage doubler /ldo
 
 # Arduino
+
 version, libraris needed
 
 # Setup parameters in the code
+
+Timing4.h is a testfile that will start tx every 2min
 
 
 
