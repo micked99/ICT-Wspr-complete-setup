@@ -60,8 +60,11 @@ Wire length/band , thicknes, suport wire - fishingline
 
 # Arduino
 
-version, libraris needed
-https://www.arduino.cc/en/software/OldSoftwareReleases/
+I use Arduino version 1.8.13 which you find here, others will work but not tested, https://www.arduino.cc/en/software/OldSoftwareReleases/
+
+Libraries needed
+
+Ad custom parameters to the Boards.txt in \arduino-1.8.13\hardware\arduino\avr
 
 # Setup parameters in the code
 
