@@ -38,6 +38,16 @@ Xo 4Mhz to drive 328
 
 2x 10K resistor size 0603, value non critical, 1K-10K works
 
-3x 100nF Capacitor size 0603, value non critical
+3x 100nF Capacitor size 0603, value non critical 10-470Nf works, it will work fine without any soldered on but I recomend at least one
+
+# Antennas
+
+# Solar cells
+
+# Arduino
+
+
+
+
 
 
