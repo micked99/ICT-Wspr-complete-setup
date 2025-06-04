@@ -35,7 +35,8 @@ The Arduino code is setup from start to use a 26Mhz Tcxo and to use a 4Mhz xo di
 
 # GPS:
 
-The ATGM336-N31 support both GPS and Beidou system, by switching off Beidou and run the ATGM in GPS only mode we save another 4mA, see .ino file for the command, its activated by default.
+The ATGM336-N31 support both GPS and Beidou system, by switching off Beidou and run the ATGM in GPS only mode we save another 4mA, see .ino file for the command, its activated by default.  
+This gps does not have any altitude roof like many other modules, its been tested to 150.000m with a hack-rf and GPSSim and still worked fine
 
 # 328 Fuses
 
