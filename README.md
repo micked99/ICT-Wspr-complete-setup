@@ -19,7 +19,7 @@ to edit/copy-paste or replace the Boards.txt in arduino to controll the speed of
 ### oscillator-main  
 Test file to test the 328 and si5351, no gps is needed for this, only the 328, 5351, its tcxo and the two pull up resistors is needed, if all works it will tx a carrier at 14.097Mhz
 
-### Goals  
+## Goals  
 This setup is aimed at three main things: light weight, low power demands and as few components as possible - easy to build
 
 The board can be built to weigh below 1 gram fully assambled (pic below) + solar cells & antenna
