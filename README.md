@@ -20,7 +20,7 @@ Setts the expected external or internal xo used and also set the brownout to 1,8
 
 The 328 have an internal xo at 8Mhz, you can set it to be divided down by 8 (fuse) and then the board runs at 1Mhz
 the internal xo at 8Mhz is not very stable in cold and it will not work at flying altitude, but I have tried a few flights on the internal xo divided down to 1Mhz 
-and it have worked fine, anyway, both speeeds work fine for testing a board on the bench.
+and it have worked fine, anyway, both speeeds works fine for testing a board on the bench.
 
 62 D9 FE 1.8V / internal /div8 @ 1Mhz
 
@@ -34,7 +34,7 @@ Good fusecalc page https://www.engbedded.com/fusecalc/
 
 Cpu Atmega328
 
-Gps ATGM336 (N31) other will work
+Gps ATGM336 (N31) others will work
 
 TX Si5351
 
