@@ -71,6 +71,8 @@ we will use a DIV function to set 1/2 or 1/4 the speed to save some power
 There is also a pad for a bleeed resistor to even out possible static buildup between tx leg and gnd
 not needed but if you want to fit it use a 0603 resistor around 30K
 
+2.54mm x2 Pin Header 
+
 # Antennas
 
 Gps 46mm
@@ -108,7 +110,9 @@ In Pcb-ICT-main folder in this repo you will find needed files, if you are a exp
 <img src="https://github.com/user-attachments/assets/0c05cefa-c216-4d57-8de8-9f9ed1676eac" width="100" />
 
 
+# Programming
 
+The pcb i fited with a 6 pin ICSP connector
 
 
 
