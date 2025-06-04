@@ -115,7 +115,14 @@ In Pcb-ICT-main folder in this repo you will find needed files, if you are a exp
 The Arduino uploads the fw with a USBasp programmer, get a 3,3v version with a 6 pin header adapter on the end of the ribbon cable
 The pcb i fited with a 6 pin ICSP connector
 
-<img src="https://github.com/user-attachments/assets/268ecf5b-a8f3-45db-a4a2-e6bc72a3cb40" width="100" />
+<img src="https://github.com/user-attachments/assets/268ecf5b-a8f3-45db-a4a2-e6bc72a3cb40" width="200" />
+
+# Scehmatic
+
+<img src="https://github.com/user-attachments/assets/d44a3582-5e09-4798-9103-74a7370bb043" width="200" />
+
+
+
 
 
 
