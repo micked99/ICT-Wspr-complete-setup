@@ -105,8 +105,8 @@ Recomended to use Arduino version 1.8.13 which you find here, others will work b
 # Setup parameters in the code  
 The Arduino code is setup from start to use a 26Mhz Tcxo and to use a 4Mhz xo divided by 2 to run at 2Mhz, if other values used the code needs to be changed - see below  
 
-Timing4.h is a testfile that will start tx every 2min so its convinient to use during testing on the bench, final prep before flight is to edit the .ino file from    
-#include "Timing4.h" to #include "Timing.h"
+Timing4.h is a testfile that will start tx every 2min, this it convinient to use during testing on the bench, final prep before flight is to edit the  
+.ino file from #include "Timing4.h" to #include "Timing.h"
 
 Timing.h is the main config that should be used during a flight, it have a 10 min sequence as needed to fit the scheduling agreed on in the community
 
