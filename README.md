@@ -146,8 +146,9 @@ Sets the frequency and band
 Sets your call  
 const char call[] = "SA9BSS";  
 
+Set initial power of the 5351  
 int pwr_level=79;  
-Set initial power of the 5351   
+  
 it will for every sequnce increase the power one step so if you set it at 77 it will take two sequencies, 20 min before it will start at full power  
 avalible valus are 76,77,78 and 79 where 79 is max power, 76 is just a few mW so I recomend not to use that.  
 
