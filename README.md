@@ -1,7 +1,7 @@
 # ICT-v7-ATGM336
 <img src="https://github.com/user-attachments/assets/87f7522f-9779-4d59-95e0-92f3e82d1d06" width="200" />
 
-This is based on YO3ICT balloon fw which you can read about here: https://yo3ict.uus.ro/tracker.html
+This is to 97% the work of YO3ICT balloon fw which you can read about here: https://yo3ict.uus.ro/tracker.html
 
 What Eduard did was reverse enginer the QRP-Labs telemetry protocol which used wspr to get data through, and open sourced it, details of the protocol is described here: https://qrp-labs.com/flights/s4#protocol 
 most balloons use this encoding today, with a few exceptions, like Zachtek trackers and a few more
@@ -85,7 +85,7 @@ Xo 4Mhz size 4520 4.5mm×2mm
 3x 100nF Capacitor size 0603, value non critical 10-470Nf works, it will work fine without any soldered on but I recomend at least one
 
 There is also a pad for a bleeed resistor to even out possible static buildup between tx leg and gnd
-not needed but if you want to fit it use a 0603 resistor around 30K
+not needed but if you want to fit it use a 0603 resistor around 30K  
 
 2.54mm x2 Pin Header 
 
