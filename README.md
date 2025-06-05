@@ -35,6 +35,17 @@ The board will work on any band between 80m and 2m but most used band is 20m-10m
 
 The Arduino code is setup from start to use a 26Mhz Tcxo and to use a 4Mhz xo divided by 2 to run at 2Mhz, if other values used the code needs to be changed - see below
 
+# Features  
+CW init
+Randomization
+No tx over selected grids - move tx to ism freq over selected grids
+Powerswitching between gps and tx
+Course altitude in main wspr
+Slowly increased power in 4 steps
+Good WDT function of 328
+Will work at low clocks, tested down to 1Mhz on the 328
+Powersave of gps by set it at single naviagtion system
+
 # GPS:
 
 The ATGM336-N31 support both GPS and Beidou system, by switching off Beidou and run the ATGM in GPS only mode we save another 4mA, see .ino file for the command, its activated by default.  
