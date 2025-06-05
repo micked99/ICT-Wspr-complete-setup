@@ -164,7 +164,11 @@ clock_prescale_set(clock_div_2);  or clock_prescale_set(clock_div_4);
 this in conjuction with:    
 #define WSPR_CTC 1334  
 WSPR CTC - 2668 @ 4Mhz //1334 @ 2Mhz //667 @ 1Mhz
-
+And to select the apropiate board setting under Boards in Arduino, lets say we want to set the board to 1Mhz using a 4Mhz xo we need to set the prescaler to  
+clock_prescale_set(clock_div_4);   
+and set  
+WSPR CTC 667  
+and then select gAVA 1Mhz under boards, see section Programming
   
 
 
