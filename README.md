@@ -33,8 +33,6 @@ To make the board consume as little power as possible its setup to switch betwee
 
 The board will work on any band between 80m and 2m but most used band is 20m-10m
 
-The Arduino code is setup from start to use a 26Mhz Tcxo and to use a 4Mhz xo divided by 2 to run at 2Mhz, if other values used the code needs to be changed - see below
-
 # Features  
 CW init  
 Randomization  
@@ -104,10 +102,15 @@ Wire length/band , thicknes, suport wire - fishingline
 
 Recomended to use Arduino version 1.8.13 which you find here, others will work but not tested, https://www.arduino.cc/en/software/OldSoftwareReleases/
 
-# Setup parameters in the code
+# Setup parameters in the code  
+The Arduino code is setup from start to use a 26Mhz Tcxo and to use a 4Mhz xo divided by 2 to run at 2Mhz, if other values used the code needs to be changed - see below  
 
-Timing4.h is a testfile that will start tx every 2min
-we will use a DIV function to set 1/2 or 1/4 the speed to save some power
+Timing4.h is a testfile that will start tx every 2min so its convinient to use during testing on the bench, final prep before flight is to edit the .ino file from    
+#include "Timing4.h" to #include "Timing.h"
+
+Timing.h is the main config that should be used during a flight, it have a 10 min sequence as needed to fit the scheduling agreed on in the community
+
+we will use a DIV function to set 1/2 or 1/4 the speed to save some power  
 
 # PCB 
 
