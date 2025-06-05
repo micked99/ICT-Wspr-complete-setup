@@ -140,7 +140,7 @@ The Arduino code is setup from start to use a 26Mhz Tcxo and to use a 4Mhz xo di
 
 Values to edit in the ino file  
 
-Sets the frequency and band
+Sets the frequency and band  
 #define WSPR_FREQ  
 
 Sets your call  
