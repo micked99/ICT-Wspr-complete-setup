@@ -13,6 +13,8 @@ The Traquito page will host channel reservation and upload to varous tracking si
 ## Folders in this repo:  
 ### ICT_WSPR   
 The code to upload to the board  
+### Libraries
+Copy the content in this folder into ibraries folder of Arduino C:\Program Files (x86)\Arduino\libraries  
 ### Pcb-ICT-main  
 Contains the cam files for pcb ordering as well as the Eagle schematich and board files  
 ### Boards.txt-main  
