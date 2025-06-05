@@ -169,11 +169,11 @@ clock_prescale_set(clock_div_4);
 and set  
 WSPR CTC 667  
 and then select gAVA 1Mhz under boards, see section Programming if you wan to run it a 4Mhz  
-WSPR CTC - 2668
+WSPR CTC - 2668  
 mark out both of the //clock_prescale_set  
 set  
 WSPR CTC - 2668  
-and use hAVA 40Mhz board setting
+and use hAVA 4Mhz board setting
   
 
 
