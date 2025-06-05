@@ -68,7 +68,7 @@ To set fuses use Avrdude  https://github.com/avrdudes/avrdudes
 
 Fusecalc page https://www.engbedded.com/fusecalc/
 
-I would recomend to buy a couple of arduino nano boards to practice on before flashing fuses onto a built board as this is the main culpit of non responsive 328 - wrongly set fuses
+I would recommend to buy a couple of arduino nano boards to practice on before flashing fuses onto a built board as this is the main culprit of non responsive 328 - wrongly set fuses
 
 # BOM
 
