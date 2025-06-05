@@ -90,11 +90,7 @@ Wire length/band , thicknes, suport wire - fishingline
 
 # Arduino
 
-I use Arduino version 1.8.13 which you find here, others will work but not tested, https://www.arduino.cc/en/software/OldSoftwareReleases/
-
-Libraries needed
-
-Ad custom parameters to the Boards.txt in \arduino-1.8.13\hardware\arduino\avr
+Recomended to use Arduino version 1.8.13 which you find here, others will work but not tested, https://www.arduino.cc/en/software/OldSoftwareReleases/
 
 Course Altitude in standard tx
 
@@ -105,7 +101,7 @@ we will use a DIV function to set 1/2 or 1/4 the speed to save some power
 
 # PCB 
 
-I have always used Jlcpcb at https://jlcpcb.com/ for my balloon, and other pcb:s
+I have always used Jlcpcb at https://jlcpcb.com/ for my balloon boards and other projects
 
 The pcb files have been made with Eagle pcb nowdays under the name Autodesk Eagle https://www.autodesk.com/products/eagle/overview
 
