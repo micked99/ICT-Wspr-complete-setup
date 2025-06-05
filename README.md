@@ -139,6 +139,8 @@ In Arduino IDE select Usbasp as programmer:
 In Boards select rAVA 2Mhz:    
 <img src="https://github.com/user-attachments/assets/9a1b4d58-5292-4c4c-ae64-b206f18510b0" width="400" />  <br>
 
+Use LibsubK in Zadig to install driver for the Usbasp  
+
 
 # Schematic
 
