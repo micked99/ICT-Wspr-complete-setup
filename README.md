@@ -94,13 +94,14 @@ not needed but if you want to fit it use a 0603 resistor around 30K
 For gps antenna use a 46mm wire which represents a 1/4 antenna at 1575Mhz  
 
 For antenna I use 0,15mm which is a good combination of strength and weigh but any wire in the 0,1 - 0,2mm will work fine.  
-I use a small hook 2cm long made of 0,6mm wire bottom, and 0,8 mm at the top to solder on the antenna wire, solder and turn a couple of turns   
+I use a small hook 2cm long made of 0,6mm wire bottom, and 0,8mm at the top to solder on the antenna wire, solder and twist a couple of turns arround the hook  
 <img src="https://github.com/user-attachments/assets/4242b577-3dce-488c-8667-69651c81a780" width="220" />  <br>  
 Here is good picture where you can see the Red and Yellow gps antennas  
 <img src="https://github.com/user-attachments/assets/a84f1ce0-c35d-4ae1-815b-1d40e82dd7b6" width="220" />  <br>  
 
-Wire length/band  
-suport wire - fishingline  
+Antenna length calculated as normal, 300/freq x 0.95 /4
+
+Upper antenna leg should be supported by some sort of fishing line taped to the balloon
 
 # Solar cells
 
