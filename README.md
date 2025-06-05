@@ -133,11 +133,9 @@ To upload a .hex file like the one supplied in oscillator-main folder I recommen
 
 <img src="https://github.com/user-attachments/assets/268ecf5b-a8f3-45db-a4a2-e6bc72a3cb40" width="200" />  <br>
 
+<img src="https://github.com/user-attachments/assets/8b709942-572e-46ef-bb08-8fecef93d394" width="400" />  <br>
 
-<img src="https://github.com/user-attachments/assets/8b709942-572e-46ef-bb08-8fecef93d394" width="400" />  
-
-
-<img src="https://github.com/user-attachments/assets/9a1b4d58-5292-4c4c-ae64-b206f18510b0" width="400" />  
+<img src="https://github.com/user-attachments/assets/9a1b4d58-5292-4c4c-ae64-b206f18510b0" width="400" />  <br>
 
 
 
