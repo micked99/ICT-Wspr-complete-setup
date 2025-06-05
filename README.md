@@ -20,7 +20,7 @@ Cam files for pcb ordering as well as the Eagle schematic and board files, viewe
 ### Boards.txt-main  
 Replace the Boards.txt in arduino to controll the speed of the 328, its located in: C:\Program Files (x86)\Arduino\hardware\arduino\avr  
 ### oscillator-main  
-Test file to test the 328 and si5351, no gps is needed for this, only the 328, 5351, its tcxo and the two pull up resistors needed to be soldered, if all works it will tx a carrier at 14.097Mhz
+Test file to test the 328 and si5351, no gps is needed for this, only the 328, 5351, its tcxo and the two pull up resistors needed to be soldered, if all works it will tx a carrier at 14.097Mhz, upload the .ino ffile with arduino or the .hex with Avrdudes - see below
 
 ## Goals  
 This setup is aimed at three main things: light weight, low power demands and as few components as possible - easy to build
