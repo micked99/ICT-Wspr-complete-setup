@@ -91,7 +91,13 @@ not needed but if you want to fit it use a 0603 resistor around 30K
 
 # Antennas
 
-For gps antenna use a 46mm wire which represents a 1/4 antenna at 1540Mhz
+For gps antenna use a 46mm wire which represents a 1/4 antenna at 1575Mhz  
+
+For antenna I use 0,15mm which is a good combination of strength and weigh but any wire in the 0,1 - 0,2mm will work fine.  
+I use a small hook 2cm long made of 0,6mm wire bottom, and 0,8 mm at the top to solder on the antenna wire, solder and turn a couple of turns   
+![3](https://github.com/user-attachments/assets/4242b577-3dce-488c-8667-69651c81a780)
+
+
 Wire length/band , thicknes, suport wire - fishingline
 
 # Solar cells
@@ -106,7 +112,7 @@ Recomended to use Arduino version 1.8.13 which you find here, others will work b
 
 I have always used Jlcpcb at https://jlcpcb.com/ for my balloon boards and other projects
 
-The pcb files have been made with Eagle pcb nowdays under the name Autodesk Eagle https://www.autodesk.com/products/eagle/overview
+The pcb files have been made with Eagle pcb nowadays under the name Autodesk Eagle https://www.autodesk.com/products/eagle/overview
 
 Use as thin pcb as possible to save weight - 0,6mm
 
