@@ -91,7 +91,7 @@ not needed but if you want to fit it use a 0603 resistor around 30K
 
 # Antennas
 
-Gps 46mm
+For gps antenna use a 46mm wire which represents a 1/4 antenna at 1540Mhz
 Wire length/band , thicknes, suport wire - fishingline
 
 # Solar cells
