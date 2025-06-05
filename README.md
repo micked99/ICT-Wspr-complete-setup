@@ -154,8 +154,11 @@ avalible valus are 76,77,78 and 79 where 79 is max power, 76 is just a few mW so
 #include "Timing4.h"  
 Timing4.h is a testfile that will start tx every 2min, this it convinient to use during testing on the bench, final prep before flight is to edit the  
 .ino file from #include "Timing4.h" to #include "Timing.h" this is the main config that should be used during a flight, it have a 10 min sequence as needed to fit the scheduling agreed on in the balloon community
+Edit Timing.h sceduling at what minute you want to tx your normal wspr and at what minute to tx the telemetry, this can be done inside Arduino ide or with a normal texteditor
 
 we will use a DIV function to set 1/2 or 1/4 the speed to save some power  
+
+
   
 
 
