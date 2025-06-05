@@ -140,11 +140,11 @@ The Arduino code is setup from start to use a 26Mhz Tcxo and to use a 4Mhz xo di
 
 Values to edit in the ino file  
 
-#define WSPR_FREQ  
 Sets the frequency and band
+#define WSPR_FREQ  
 
+Sets your call  
 const char call[] = "SA9BSS";  
-Sets your call
 
 int pwr_level=79;  
 Set initial power of the 5351   
