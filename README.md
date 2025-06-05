@@ -95,10 +95,14 @@ For gps antenna use a 46mm wire which represents a 1/4 antenna at 1575Mhz
 
 For antenna I use 0,15mm which is a good combination of strength and weigh but any wire in the 0,1 - 0,2mm will work fine.  
 I use a small hook 2cm long made of 0,6mm wire bottom, and 0,8 mm at the top to solder on the antenna wire, solder and turn a couple of turns   
-<img src="https://github.com/user-attachments/assets/4242b577-3dce-488c-8667-69651c81a780" width="220" />
+<img src="https://github.com/user-attachments/assets/4242b577-3dce-488c-8667-69651c81a780" width="220" />  <br>  
+<img src="https://github.com/user-attachments/assets/a84f1ce0-c35d-4ae1-815b-1d40e82dd7b6" width="220" />  
 
 
-Wire length/band , thicknes, suport wire - fishingline
+
+
+Wire length/band  
+suport wire - fishingline  
 
 # Solar cells
 
