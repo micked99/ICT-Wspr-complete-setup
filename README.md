@@ -209,5 +209,7 @@ Sets Telemetry channel
   call_telemetry[0] = '0';  // set 0 or Q  
   call_telemetry[2] = '8';  // set 0 to 9  
 
+Available channels 00, 01, 02 - 08, 09 and Q0, Q1, Q2 - Q8, Q9
+
   
   
