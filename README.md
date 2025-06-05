@@ -196,7 +196,9 @@ TelemFunctions.h
 Sets the frequncy of tcxo used  
 #define F_XTAL 26000000;  
 
-Telem channel  
-  call_telemetry[0] = '0'; // Telemetry channel 0-19   
-  call_telemetry[2] = '1'; // 0/Q & 0-9  
+Sets Telemetry channel  
+  call_telemetry[0] = '0';  // set 0 or Q  
+  call_telemetry[2] = '1';  // set 0-9  
+
+  
   
