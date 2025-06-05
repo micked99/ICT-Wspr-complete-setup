@@ -68,7 +68,7 @@ To set fuses use Avrdude  https://github.com/avrdudes/avrdudes
 
 Fusecalc page https://www.engbedded.com/fusecalc/
 
-I would recommend to buy a couple of arduino nano boards to practice on before flashing fuses onto a built board as this is the main culprit of non responsive 328 - wrongly set fuses
+I would recommend to buy a couple of arduino nano boards to practice on before flashing fuses onto a built board as this is the main culprit of non responsive 328 - wrongly set or corupted fuses
 
 # BOM
 
@@ -132,6 +132,12 @@ The Arduino uploads the fw with a USBasp programmer, get a 3,3v version with a 6
 To upload a .hex file like the one supplied in oscillator-main folder I recommend using Avrdude https://github.com/avrdudes/avrdude
 
 <img src="https://github.com/user-attachments/assets/268ecf5b-a8f3-45db-a4a2-e6bc72a3cb40" width="200" />
+
+![usbasp](https://github.com/user-attachments/assets/8b709942-572e-46ef-bb08-8fecef93d394)
+
+![rAVA_2Mhz](https://github.com/user-attachments/assets/9a1b4d58-5292-4c4c-ae64-b206f18510b0)
+
+
 
 # Schematic
 
