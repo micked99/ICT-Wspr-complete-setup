@@ -151,7 +151,7 @@ int pwr_level=79;
 it will for every sequnce increase the power one step so if you set it at 77 it will take two sequencies, 20 min before it will start at full power  
 avalible valus are 76,77,78 and 79 where 79 is max power, 76 is just a few mW so I recomend not to use that.  
 
-#include "Timing.h"  
+#include "Timing4.h"  
 Timing4.h is a testfile that will start tx every 2min, this it convinient to use during testing on the bench, final prep before flight is to edit the  
 .ino file from #include "Timing4.h" to #include "Timing.h" this is the main config that should be used during a flight, it have a 10 min sequence as needed to fit the scheduling agreed on in the balloon community
 
