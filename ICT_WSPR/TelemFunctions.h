@@ -290,7 +290,8 @@ void SetFrequency (uint32_t frequency) { // Frequency in Hz; must be within [781
   unsigned long MSNA_P1;                 // Si5351a Feedback Multisynth register MSNA_P1
   unsigned long MSNA_P2;                 // Si5351a Feedback Multisynth register MSNA_P2
   unsigned long MSNA_P3;                 // Si5351a Feedback Multisynth register MSNA_P3
-  outdivider = 30000000000 / frequency;  // With 900 MHz beeing the maximum internal PLL-Frequency // 77000000000 // 30000000000  // if bad decoding at 28Mhz wspr try the other value
+ //outdivider 77000000000 or 30000000000 // If bad decodes at 24/28Mhz try the other value
+  outdivider = 30000000000 / frequency;  // With 900 MHz beeing the maximum internal PLL-Frequency
   while (outdivider > 900){              // If output divider out of range (>900) use additional Output divider
   R = R * 2;
   outdivider = outdivider / 2;
