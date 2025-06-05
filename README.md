@@ -8,7 +8,7 @@ most balloons use this encoding today, with a few exceptions, mostly Zachtek tra
 
 Another good site for beginers is to read up here: https://traquito.github.io/ and join the io board at: https://groups.io/g/picoballoon 
 
-The Traquito page will host channel reservation and upload to varous tracking sites like https://aprs.fi/ and https://amateur.sondehub.org/
+The Traquito page will host channel reservation and upload to varous tracking sites like https://aprs.fi/ and https://amateur.sondehub.org/ and as well host its own map, more map avalible here https://lu7aa.org/dx.asp and here http://qrp-labs.com/tracking.html
 
 ## Folders in this repo:  
 ### ICT_WSPR   
