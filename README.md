@@ -66,10 +66,9 @@ Gps ATGM336 (N31) others will work
 
 TX Si5351
 
-Tcxo 25/26/27 Mhz for si5351, size 3225 3.2x2.5mm
+Tcxo 25/26/27 Mhz size 3225 3.2x2.5mm
 
-Xo 4Mhz to drive 328, size 4520 4.5mm×2mm  
-we will use a DIV function to set 1/2 or 1/4 the speed to save some power
+Xo 4Mhz to drive 328 size 4520 4.5mm×2mm  
 
 2x 10K resistor size 0603, value non critical, 1K-10K works
 
@@ -102,6 +101,7 @@ Course Altitude in standard tx
 # Setup parameters in the code
 
 Timing4.h is a testfile that will start tx every 2min
+we will use a DIV function to set 1/2 or 1/4 the speed to save some power
 
 # PCB 
 
