@@ -190,7 +190,7 @@ to set tx frequncy adjust in Beep.h
      freq = 18105900UL;  
   // freq = 28125870UL;  
 
-And Last there is a couple of setting that needs adjusting in the  
+And last there is a couple of setting that needs adjusting in the  
 TelemFunctions.h  
 
 Sets the frequncy of tcxo used  
@@ -198,7 +198,7 @@ Sets the frequncy of tcxo used
 
 Sets Telemetry channel  
   call_telemetry[0] = '0';  // set 0 or Q  
-  call_telemetry[2] = '1';  // set 0-9  
+  call_telemetry[2] = '2';  // set 0 to 9  
 
   
   
