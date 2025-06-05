@@ -44,7 +44,7 @@ Course altitude in main wspr
 Slowly increased power in 4 steps  
 Good WDT function of 328  
 Will work at low clocks, tested down to 1Mhz on the 328  
-Powersave of gps by set it at single naviagtion system  
+Powersave of gps by set it to single naviagtion system  - see Gps section
 
 # GPS:
 
