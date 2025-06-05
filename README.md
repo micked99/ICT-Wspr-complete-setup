@@ -178,10 +178,15 @@ and then select gAVA 1Mhz under boards, see section Programming
 then, for example if you wan to run it a 4Mhz set:
 WSPR CTC - 2668  
 mark out both of the //clock_prescale_set  
-and use hAVA 4Mhz board setting
+and use hAVA 4Mhz board setting  
+
   
+CW setup, the board will at first moment at power on send a morde signal with your callsign or whatever you shose to set
 
-
+Here is my SA6BSS call in the ino file
+cw_s(); cw_a(); cw_6(); cw_b(); cw_s(); cw_s();
+to set tx frequncy adjust in Beep.h  
+freq = 18105900UL;  
 
 
 
