@@ -186,9 +186,9 @@ CW setup, the board will at first moment at power on send a morse signal with yo
 Here is my SA6BSS call in the ino file  
 cw_s(); cw_a(); cw_6(); cw_b(); cw_s(); cw_s();  
 to set tx frequncy adjust in Beep.h  
-  // freq = 14096950UL;
-     freq = 18105900UL;
-  // freq = 28125870UL;
+  // freq = 14096950UL;  
+     freq = 18105900UL;  
+  // freq = 28125870UL;  
 
 
 
