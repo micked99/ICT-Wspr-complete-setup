@@ -104,8 +104,6 @@ Wire length/band , thicknes, suport wire - fishingline
 
 Recomended to use Arduino version 1.8.13 which you find here, others will work but not tested, https://www.arduino.cc/en/software/OldSoftwareReleases/
 
-Course Altitude in standard tx
-
 # Setup parameters in the code
 
 Timing4.h is a testfile that will start tx every 2min
