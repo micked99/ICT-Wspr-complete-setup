@@ -66,11 +66,11 @@ To set fuses use Avrdude  https://github.com/avrdudes/avrdudes
 
 Fusecalc page https://www.engbedded.com/fusecalc/
 
-I would recommend to buy a couple of arduino nano boards to practice on before flashing fuses onto a built board as this is the main culprit of non responsive 328 - wrongly set or corupted fuses
+I would recommend to buy a couple of arduino nano boards to practice on before flashing fuses onto a built board, as this is the main culprit of non responsive 328 - wrongly set or corrupted fuses
 
 # BOM
 
-Cpu Atmega328
+Cpu ATmega328
 
 Gps ATGM336 (N31) others will work
 
@@ -78,7 +78,7 @@ TX Si5351
 
 Tcxo 25/26/27 Mhz size 3225 3.2x2.5mm
 
-Xo 4Mhz to drive 328 size 4520 4.5mm×2mm  
+Xo 4Mhz size 4520 4.5mm×2mm  
 
 2x 10K resistor size 0603, value non critical, 1K-10K works
 
