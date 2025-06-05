@@ -51,7 +51,7 @@ This gps does not have any altitude limit like many other modules, its been test
 
 # 328 Fuses
 
-Setts the expected external or internal xo used and also set the brownout to 1,8V
+Sets the expected external or internal xo used and also set the brownout to 1,8V
 
 The 328 have an internal xo at 8Mhz, you can set it to be divided down by 8 (fuse) and then the board runs at 1Mhz
 the internal xo at 8Mhz is not very stable in cold and it will not work at flying altitude, but I have tried a few flights on the internal xo divided down to 1Mhz 
