@@ -163,6 +163,7 @@ Sets speed of the board
 clock_prescale_set(clock_div_2);  or clock_prescale_set(clock_div_4);  
 this in conjuction with:    
 #define WSPR_CTC 1334  
+and select rAVA 2Mhz from boards in Arduino
 
 Alternative clocksettings:  
 WSPR CTC - 2668 @ 4Mhz //1334 @ 2Mhz //667 @ 1Mhz  
