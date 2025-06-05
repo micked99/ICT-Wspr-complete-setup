@@ -8,7 +8,7 @@ most balloons use this encoding today, with a few exceptions, like Zachtek track
 
 Another good site for beginers is to read up here: https://traquito.github.io/ and join the io board at: https://groups.io/g/picoballoon 
 
-The Traquito page will host channel reservation and upload to varous tracking sites like https://aprs.fi/ and https://amateur.sondehub.org/ and as well host its own map, more map avalible here https://lu7aa.org/dx.asp and here http://qrp-labs.com/tracking.html
+The Traquito page will host channel reservation and upload to varous tracking sites like https://aprs.fi/ and https://amateur.sondehub.org/ and as well host its own map, more maps and info avalible here https://lu7aa.org/dx.asp and here http://qrp-labs.com/tracking.html
 
 ## Folders in this repo:  
 ### ICT_WSPR   
@@ -57,13 +57,10 @@ Setts the expected external or internal xo used and also set the brownout to 1,8
 
 The 328 have an internal xo at 8Mhz, you can set it to be divided down by 8 (fuse) and then the board runs at 1Mhz
 the internal xo at 8Mhz is not very stable in cold and it will not work at flying altitude, but I have tried a few flights on the internal xo divided down to 1Mhz 
-and it have worked fine, anyway, both speeeds works fine for testing a board on the bench.
-
-62 D9 FE 1.8V / internal 8Mhz osc /div8 = 1Mhz
-
-E2 D9 FE 1.8V / internal 8Mhz osc
-
-FD D9 FE 1,8V / External 2/4/8Mhz xo
+and it have worked fine, anyway, both speeeds works fine for testing a board on the bench.  
+FD D9 FE 1,8V / External 2/4/8Mhz xo  - This is the fuse you should use if you build this board  
+62 D9 FE 1.8V / internal 8Mhz osc /div8 = 1Mhz  
+E2 D9 FE 1.8V / internal 8Mhz osc  
 
 To set fuses use Avrdude  https://github.com/avrdudes/avrdudes
 
