@@ -3,7 +3,7 @@
 
 This is based on YO3ICT balloon fw which you can read about here: https://yo3ict.uus.ro/tracker.html
 
-What Eduard did was reverse enginer the QRP-Labs telemetry protocol which used wspr to get data through, and open source it, details of the protocol is described here: https://qrp-labs.com/flights/s4#protocol 
+What Eduard did was reverse enginer the QRP-Labs telemetry protocol which used wspr to get data through, and open sourced it, details of the protocol is described here: https://qrp-labs.com/flights/s4#protocol 
 most balloons use this encoding today, with a few exceptions, like Zachtek trackers and a few more
 
 Another good site for beginers is to read up here: https://traquito.github.io/ and join the io board at: https://groups.io/g/picoballoon 
@@ -185,12 +185,12 @@ CW setup, the board will at first moment at power on send a morse signal with yo
 
 Here is my SA6BSS call in the ino file  
 cw_s(); cw_a(); cw_6(); cw_b(); cw_s(); cw_s();  
-to set tx frequncy adjust in Beep.h  
+to set cw tx frequncy adjust it in Beep.h  
   // freq = 14096950UL;  
      freq = 18105900UL;  
   // freq = 28125870UL;  
 
-And last there is a couple of setting that needs adjusting in the  
+And last, there is a couple of setting that needs adjusting in the  
 TelemFunctions.h  
 
 Sets the frequncy of tcxo used  
@@ -198,7 +198,7 @@ Sets the frequncy of tcxo used
 
 Sets Telemetry channel  
   call_telemetry[0] = '0';  // set 0 or Q  
-  call_telemetry[2] = '2';  // set 0 to 9  
+  call_telemetry[2] = '8';  // set 0 to 9  
 
   
   
