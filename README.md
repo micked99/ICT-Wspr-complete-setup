@@ -16,7 +16,7 @@ The code to upload to the board
 ### Libraries
 Copy the content in this folder into libraries folder of Arduino C:\Program Files (x86)\Arduino\libraries  
 ### Pcb-ICT-main  
-Contains the cam files for pcb ordering as well as the Eagle schematich and board files  
+Contains the cam files for pcb ordering as well as the Eagle schematic and board files, viewer for both files here: https://www.altium365.com/viewer/
 ### Boards.txt-main  
 To edit/copy-paste or replace the Boards.txt in arduino to controll the speed of the 328, its located in  
 \arduino-1.8.13\hardware\arduino\avr  
