@@ -140,13 +140,16 @@ The Arduino code is setup from start to use a 26Mhz Tcxo and to use a 4Mhz xo di
 
 Values to edit in the ino file  
 
+#define WSPR_FREQ  
+Sets the frequency and band
+
 const char call[] = "SA9BSS";  
 Sets your call
 
 int pwr_level=79;  
 Set initial power of the 5351   
 it will for every sequnce increase the power one step so if you set it at 77 it will take two sequencies, 20 min before it will start at full power  
-avalible valus are 76,77,78 and 79 where 79 is max power from the tx, 76 is just a few mW so I recomend not to ue that.  
+avalible valus are 76,77,78 and 79 where 79 is max power from the tx, 76 is just a few mW so I recomend not to use that.  
 
 
 Timing4.h is a testfile that will start tx every 2min, this it convinient to use during testing on the bench, final prep before flight is to edit the  
@@ -155,7 +158,7 @@ Timing4.h is a testfile that will start tx every 2min, this it convinient to use
 Timing.h is the main config that should be used during a flight, it have a 10 min sequence as needed to fit the scheduling agreed on in the community
 
 we will use a DIV function to set 1/2 or 1/4 the speed to save some power  
-
+  
 
 
 
