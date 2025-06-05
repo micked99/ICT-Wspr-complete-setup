@@ -58,13 +58,17 @@ Setts the expected external or internal xo used and also set the brownout to 1,8
 The 328 have an internal xo at 8Mhz, you can set it to be divided down by 8 (fuse) and then the board runs at 1Mhz
 the internal xo at 8Mhz is not very stable in cold and it will not work at flying altitude, but I have tried a few flights on the internal xo divided down to 1Mhz 
 and it have worked fine, anyway, both speeeds works fine for testing a board on the bench.  
+
 FD D9 FE 1,8V / External 2/4/8Mhz xo  - This is the fuse you should use if you build this board  
+
 62 D9 FE 1.8V / internal 8Mhz osc /div8 = 1Mhz  
 E2 D9 FE 1.8V / internal 8Mhz osc  
 
 To set fuses use Avrdude  https://github.com/avrdudes/avrdudes
 
 Fusecalc page https://www.engbedded.com/fusecalc/
+
+I would recomend to buy a couple of arduino nano boards to practice on before flashing fuses onto a built board as this is the main culpit of non responsive 328 - wrongly set fuses
 
 # BOM
 
