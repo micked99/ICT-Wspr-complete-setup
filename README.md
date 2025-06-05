@@ -18,7 +18,7 @@ Copy the content in this folder into libraries folder of Arduino C:\Program File
 ### Pcb-ICT-main  
 Contains the cam files for pcb ordering as well as the Eagle schematic and board files, viewer for both files here: https://www.altium365.com/viewer/
 ### Boards.txt-main  
-Replace the Boards.txt in arduino to controll the speed of the 328, its located in: \arduino-1.8.13\hardware\arduino\avr  
+Replace the Boards.txt in arduino to controll the speed of the 328, its located in: C:\Program Files (x86)\Arduino\hardware\arduino\avr  
 ### oscillator-main  
 Test file to test the 328 and si5351, no gps is needed for this, only the 328, 5351, its tcxo and the two pull up resistors needed to be soldered, if all works it will tx a carrier at 14.097Mhz
 
