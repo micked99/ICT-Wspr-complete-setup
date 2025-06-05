@@ -157,10 +157,15 @@ Timing4.h is a testfile that will start tx every 2min, this it convinient to use
 .ino file from #include "Timing4.h" to #include "Timing.h" this is the main config that should be used during a flight, it have a 10 min sequence as needed to fit the scheduling agreed on in the balloon community
 Edit Timing.h sceduling at what minute you want to tx your normal wspr and at what minute to tx the telemetry, this can be done inside Arduino ide or with a normal texteditor  
 
-To adjust the sequnece in what order the standard and telemtry is transmitted edit Timing.h, it is set to transmitt 4 times - 8 minutes and then switching off the radio and enable gps, gets new loction data last 2 min of the 10 minute slot, then start over, default setting is: WSPR, WSPR_telemtry, WSPR, WSPR, this is set by adjusting the setModeWSPR();  or  setModeWSPR_telem(); in Timing.h file  
+To adjust the sequence in what order the standard and telemtry is transmitted edit Timing.h, it is set to transmitt 4 times - 8 minutes and then switching off the radio and enable gps, gets new loction data last 2 min of the 10 minute slot, then start over, default setting is: WSPR, WSPR_telemtry, WSPR, WSPR, this is set by adjusting the setModeWSPR();  or  setModeWSPR_telem(); in Timing.h file  
+
+Sets speed of the board
+clock_prescale_set(clock_div_2);  or clock_prescale_set(clock_div_4);  
+this in conjuction with:    
+#define WSPR_CTC 1334
+WSPR CTC - 2668 @ 4Mhz //1334 @ 2Mhz //667 @ 1Mhz
 
 
-we will use a DIV function to set 1/2 or 1/4 the speed to save some power  
 
 
   
