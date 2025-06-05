@@ -138,10 +138,11 @@ In Boards select rAVA 2Mhz:
 # Setup parameters in the code  
 The Arduino code is setup from start to use a 26Mhz Tcxo and to use a 4Mhz xo divided by 2 to run at 2Mhz, if other values used the code needs to be changed - see below  
 
-Set you call in the ino file by edit this: const char call[] = "SA9BSS";  
+Values to edit in the ino file  
 
+const char call[] = "SA9BSS";   Sets your call
 
-Set initial power of the 5351: int pwr_level=79;  
+int pwr_level=79;  Set initial power of the 5351  
 it will for every sequnce increase the power one step so if you set it at 77 it will take two sequencies, 20 min before it will start at full power  
 avalible valus are 76,77,78 and 79 where 79 is max power from the tx, 76 is just a few mW so I recomend not to ue that.  
 
