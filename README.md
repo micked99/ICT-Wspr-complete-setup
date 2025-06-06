@@ -28,7 +28,7 @@ This setup is aimed at three main things: light weight, low power demands and as
 The board can be built to weigh below 1 gram fully assembled (pic below) with solar cells & antenna connected total weight 4-5 gram
 
 <img src="https://github.com/user-attachments/assets/6a8e9051-83a9-4787-aebc-15e3fc69320a" width="220" />
-![IMG_20200218_230449](https://github.com/user-attachments/assets/16894bf4-589b-4a33-bbca-fa34b94adde3)
+<img src="https://github.com/user-attachments/assets/16894bf4-589b-4a33-bbca-fa34b94adde3" width="220" />
 
 
 
