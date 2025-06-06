@@ -82,7 +82,7 @@ Xo 4Mhz size 4520 4.5mm×2mm
 
 2x 10K resistor size 0603, value non critical, 1K-10K works
 
-3x 100nF Capacitor size 0603, value non critical 10-470Nf works, it will work fine without any soldered on but I recomend at least one
+2x 100nF Capacitor size 0603, value non critical 10-470Nf works, it will work fine without any soldered on but I recomend at least one
 
 There is also a pad for a bleeed resistor to even out possible static buildup between tx leg and gnd
 not needed but if you want to fit it use a 0603 resistor around 30K  
@@ -99,7 +99,7 @@ I use a small hook 2cm long made of 0,6mm wire bottom, and 0,8mm at the top to s
 Here is good picture where you can see the Red and Yellow gps antennas  
 <img src="https://github.com/user-attachments/assets/a84f1ce0-c35d-4ae1-815b-1d40e82dd7b6" width="220" />  <br>  
 
-Antenna length calculated as normal, 300/freq x 0.95 /4
+Tx Antenna length calculated as normal, 300/freq x 0.95 /4
 
 Upper antenna leg should be supported by some sort of fishing line taped to the balloon
 
@@ -139,11 +139,9 @@ In Arduino IDE select Usbasp as programmer:
 <img src="https://github.com/user-attachments/assets/8b709942-572e-46ef-bb08-8fecef93d394" width="400" />  <br>
 
 In Boards select rAVA 2Mhz:    
-<img src="https://github.com/user-attachments/assets/9a1b4d58-5292-4c4c-ae64-b206f18510b0" width="400" />  <br>
+<img src="https://github.com/user-attachments/assets/9a1b4d58-5292-4c4c-ae64-b206f18510b0" width="400" />  <br>  
 
-
-
-# Schematic
+# Schematic  
 
 <img src="https://github.com/user-attachments/assets/d44a3582-5e09-4798-9103-74a7370bb043" width="200" />
 
