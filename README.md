@@ -38,14 +38,14 @@ The board will work on any band between 80m and 2m but most used band is 20m-10m
 
 # Features  
 CW init - At power on, when sun hits the solar panels it start to tx cw, then you know you are good for launch  
-Randomization - randomize the tx by ca 5 hz each tx, have been turned off by deafult, enable in Timing.h  
-No tx over selected grids - move tx to ism (13.555) freq over selected grids  
-Powerswitching between gps and tx  
-Course altitude in main wspr  
-Slowly increased power in 4 steps  
-Good WDT function of 328  
-Will work at low clocks, tested down to 1Mhz on the 328  
-Powersave of gps by set it to single naviagtion system  - see Gps section
+Randomization - Randomize the tx by ca 5 hz each tx, have been turned off by deafult, enable in Timing.h  
+No tx over selected grids - Move tx to ism (13.555) freq over selected grids  
+Powerswitching between gps and tx - Will put less stress on the cells and get earlier in the morning startups  
+Course altitude in main wspr - Will insert a rough altitude into the standard wspr db field, see TelemFunctions.h  
+Slowly increased power in 4 steps - Default setting is 79 - Max power  
+Good WDT function of 328 - Will never fail to wake up even with unstable solar cells powering the board  
+Will work at low clocks, tested down to 1Mhz on the 328 - Deafult is 2Mhz  
+Powersave of gps by set it to single naviagtion system  - See Gps section  
 
 # GPS:
 
@@ -138,7 +138,7 @@ The pcb is fited with a 6 pin ICSP/ICP connector
 The Arduino uploads the fw with an USBasp programmer, get a 3,3v version with a 6 pin header adapter on the end of the ribbon cable  
 To upload a .hex file like the one supplied in oscillator-main folder I recommend using Avrdudess  
 https://blog.zakkemble.net/avrdudess-a-gui-for-avrdude/  
-Use libsusbK in https://zadig.akeo.ie/ to install driver for the Usbasp https://zadig.akeo.ie/
+Use libsusbK in Zadig to install driver for the Usbasp: https://zadig.akeo.ie/
 
 <img src="https://github.com/user-attachments/assets/268ecf5b-a8f3-45db-a4a2-e6bc72a3cb40" width="200" />  <br>  
 
