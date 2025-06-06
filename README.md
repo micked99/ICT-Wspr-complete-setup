@@ -90,7 +90,7 @@ Xo 4Mhz size 4520 4.5mm×2mm
 There is also a pad for a bleeed resistor to even out possible static buildup between tx leg and gnd
 not needed but if you want to fit it use a 0603 resistor around 30K  
 
-2.54mm x2 Pin Header - Remove before flight
+2.54mm x2 Pin Header - Remove before flight by cutting it of with a scissor
 
 # Antennas
 
