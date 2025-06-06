@@ -28,6 +28,7 @@ This setup is aimed at three main things: light weight, low power demands and as
 The board can be built to weigh below 1 gram fully assembled (pic below) with solar cells & antenna connected total weight 4-5 gram
 
 <img src="https://github.com/user-attachments/assets/6a8e9051-83a9-4787-aebc-15e3fc69320a" width="220" />
+<img src="https://github.com/user-attachments/assets/66d9cc60-625a-4ff6-a8c1-fad7e3cb6b89" width="220" />
 
 To make the board consume as little power as possible its setup to switch between tx and gps so only one of the two is ON at any time, so it will startup and get valid gps lock with tx side of the board switched off, the tx ic - si5351 consumes 17-27mA (depending on model) in stb curent even when not in use so only the gps is on and draws about 25mA using the ATGM336 (N31), when the board have got a valid lock the gps will turn off and the wspr tx starts, using the low power 76, see further down, it will consume about 20mA in low and at max power, 79, it will be about 30mA, on top of this the 328 running at 2Mhz and the Tcxo combined will take another 3mA 
 
