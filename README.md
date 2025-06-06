@@ -37,9 +37,9 @@ To make the board consume as little power as possible its setup to switch betwee
 The board will work on any band between 80m and 2m but most used band is 20m-10m
 
 # Features  
-CW init - It will at power on or when sun hits the solar panels start to tx cw, then you know you are good for launch  
-Randomization - randmize the tx by ca 5 hz each tx, have been turned off by deafult, enable in Timing.h  
-No tx over selected grids - move tx to ism freq over selected grids  
+CW init - At power on, when sun hits the solar panels it start to tx cw, then you know you are good for launch  
+Randomization - randomize the tx by ca 5 hz each tx, have been turned off by deafult, enable in Timing.h  
+No tx over selected grids - move tx to ism (13.555) freq over selected grids  
 Powerswitching between gps and tx  
 Course altitude in main wspr  
 Slowly increased power in 4 steps  
