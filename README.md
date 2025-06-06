@@ -109,7 +109,7 @@ Upper antenna leg should be supported by some sort of fishing line taped to the 
 # Solar cells
 
 6psc , sizes, 4 cells and voltage doubler /ldo  
-![Solarcells](https://github.com/user-attachments/assets/2246c5c4-9fce-4bfc-a279-e8053c7010ab)  
+<img src="https://github.com/user-attachments/assets/2246c5c4-9fce-4bfc-a279-e8053c7010ab" width="220" />  <br>  
 
 
 # Arduino
