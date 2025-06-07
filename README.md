@@ -111,13 +111,15 @@ Upper antenna leg should be supported by some sort of fishing line taped to the 
 6psc solar cells connected in seriees will work fine, or 4 psc of a bit larger cells and a voltage doubler with 3,3V ldo like REG710 will do the work.  
 Do not try use boost buck converter using an inductor, they will not work to power on the board using solar cells.  
 
-As can be seeen in the below picture the solar cells is intended to be soldered to the board with a center copper rod of 0,8mm, notice, there are two pairs of vias,   
-one is GND and one pair is not connected to anything which is where you solder the center support for the cells - see below pic  
+As can be seeen in the below picture the solar cells is intended to be soldered to the board with a center copper rod of 0,8mm, notice,  
+there are two pairs of vias, one is GND and one pair is not connected to anything which is where you solder the center support for the cells - see below pic  
 <img src="https://github.com/user-attachments/assets/2246c5c4-9fce-4bfc-a279-e8053c7010ab" width="220" />  <br>  
 OBS! The programming pinhead should be cutoff before flight and preferably before you solder the cells onto the pcb  
 
 ![solderpoints](https://github.com/user-attachments/assets/892893e5-67a8-44e1-9371-487d653f814b) <br> 
 Solderpoints for the solar cells  
+
+With 6 x 38x19 cells you can see a startup of the board at about 13° solar angle  
 
 # Arduino
 
