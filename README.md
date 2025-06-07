@@ -140,6 +140,8 @@ The pcb is fited with a 6 pin ICSP/ICP connector
 The Arduino uploads the fw with an USBasp programmer, get a 3,3v version with a 6 pin header adapter on the end of the ribbon cable  
 To upload a .hex file like the one supplied in oscillator-main folder I recommend using Avrdudess  
 https://blog.zakkemble.net/avrdudess-a-gui-for-avrdude/  
+
+
 Use libsusbK in Zadig to install driver for the Usbasp: https://zadig.akeo.ie/
 
 <img src="https://github.com/user-attachments/assets/268ecf5b-a8f3-45db-a4a2-e6bc72a3cb40" width="200" />  <br>  
