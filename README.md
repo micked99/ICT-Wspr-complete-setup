@@ -137,7 +137,7 @@ In Pcb-ICT-main folder in this repo you will find needed files, if you are a exp
 # Programming
 
 The pcb is fited with a 6 pin ICSP/ICP connector  
-The Arduino uploads the fw with an USBasp programmer, get a 3,3v version with a 6 pin header adapter on the end of the ribbon cable  
+The Arduino uploads the fw with an USBasp programmer, get a 3,3v version with a 10 to 6 pin header adapter on the end of the ribbon cable  
 To upload a .hex file like the one supplied in oscillator-main folder I recommend using Avrdudess  
 https://blog.zakkemble.net/avrdudess-a-gui-for-avrdude/  
 
