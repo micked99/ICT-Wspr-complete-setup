@@ -108,10 +108,10 @@ Upper antenna leg should be supported by some sort of fishing line taped to the 
 
 # Solar cells
 
-6 psc of solar cells connected in series will work fine, or 4 psc of a bit larger cells and a voltage doubler with 3,3V ldo like REG710 will do the work, ready made pcb are avalible on Aliexpress, search for "Low Noise Regulated Charge Pump" see blow pic  
-![Charge pump 3,3V](https://github.com/user-attachments/assets/20d9d26f-9d26-46e9-9770-1600b79adca6)
+6 psc of solar cells connected in series will work fine, or 4 psc of a bit larger cells and a voltage doubler with 3,3V ldo like REG710 will do the work, ready made pcb are avalible on Aliexpress, search for "Low Noise Regulated Charge Pump" see below pic  
+<img src="https://github.com/user-attachments/assets/20d9d26f-9d26-46e9-9770-1600b79adca6" width="220" />  <br> 
 
-Do not try use converters with an inductor, they will not work to power on the board using solar cells, only converters using a capcitor are likley to work.  
+Do not try use converters with an inductor, they will not work, only converters using a capacitor are likeley to succeed.  
 
 As can be seeen in the below picture the solar cells is intended to be soldered to the board with a center copper rod of 0,8mm, notice,  
 there are two pairs of vias, one is GND and one pair is not connected to anything which is where you solder the center support for the cells - see below pic  
