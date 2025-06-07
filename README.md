@@ -201,7 +201,11 @@ and use hAVA 4Mhz board setting
 CW setup, the board will at first moment at power on send a morse signal with your callsign or what you choose to set
 
 Here is my SA6BSS call in the ino file  
+
+
 cw_s(); cw_a(); cw_6(); cw_b(); cw_s(); cw_s();  
+
+
 to set cw tx frequncy adjust it in Beep.h  
   // freq = 14096950UL;  
      freq = 18105900UL;  
