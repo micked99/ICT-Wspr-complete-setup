@@ -120,7 +120,7 @@ Recomended to use Arduino version 1.8.13 which you find here, others will work b
 
 # PCB  
 
-<img src="https://github.com/user-attachments/assets/d3663667-622f-49d1-af40-d2abe115b113" width="100" />
+<img src="https://github.com/user-attachments/assets/d3663667-622f-49d1-af40-d2abe115b113" width="300" />
 
 I have always used Jlcpcb at https://jlcpcb.com/ for my balloon boards and other projects
 
