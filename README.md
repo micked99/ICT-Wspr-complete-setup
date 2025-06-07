@@ -118,7 +118,9 @@ OBS! The programming pinhead should be cutoff before flight and preferably befor
 
 Recomended to use Arduino version 1.8.13 which you find here, others will work but not tested, https://www.arduino.cc/en/software/OldSoftwareReleases/
 
-# PCB 
+# PCB  
+
+![pcb](https://github.com/user-attachments/assets/d3663667-622f-49d1-af40-d2abe115b113)
 
 I have always used Jlcpcb at https://jlcpcb.com/ for my balloon boards and other projects
 
