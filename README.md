@@ -114,8 +114,8 @@ As can be seeen in the below picture the solar cells is intended to be soldered 
 <img src="https://github.com/user-attachments/assets/2246c5c4-9fce-4bfc-a279-e8053c7010ab" width="220" />  <br>  
 OBS! The programming pinhead should be cutoff before flight and preferably before you solder the cells onto the pcb  
 
-![solderpoints](https://github.com/user-attachments/assets/892893e5-67a8-44e1-9371-487d653f814b)
-
+![solderpoints](https://github.com/user-attachments/assets/892893e5-67a8-44e1-9371-487d653f814b) <br> 
+Solderpoints for the solar cells  
 
 # Arduino
 
