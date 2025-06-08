@@ -71,9 +71,11 @@ void call_telem() // Determine the telemetry callsign
   char MH[2] = {'A', 'A'};
   MH[0] += ((lon % 200000) / 8333);
   MH[1] += ((lat % 100000) / 4166);
+  
   // Telemetry channel 0-19 - 00 01 02 - 08 09 - Q0 Q1 Q2 - Q8 Q9
   call_telemetry[0] = '0';  // set 0 or Q
   call_telemetry[2] = '8';  // set 0 to 9
+    
   int a = MH[0] - 'A';
   int b = MH[1] - 'A';
   int c = a * 24 + b;
@@ -125,7 +127,7 @@ void loc_dbm_telem() // Determine the locator and dBm value for the telemetry tr
   volt = sensorVolt * 1.1f;      // mark out for fixed voltage
   volt = volt / 1023.0f;         // mark out for fixed voltage
   volt = volt * 4.18f;           // mark out for fixed voltage
- // volt = 3.54;                     // Remove if sensor voltage is used
+  // volt = 3.54;                // --Remove if sensor voltage is used--
   if (volt < 3.0) volt = 3.0;    // mark out for fixed voltage
   if (volt > 4.95) volt = 4.95;  // mark out for fixed voltage
   if (temp < -49) temp = -49;
