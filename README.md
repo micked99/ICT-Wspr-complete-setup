@@ -1,5 +1,5 @@
 # ICT-v7-ATGM336
-<img src="https://github.com/user-attachments/assets/87f7522f-9779-4d59-95e0-92f3e82d1d06" width="200" />
+<img src="https://github.com/user-attachments/assets/87f7522f-9779-4d59-95e0-92f3e82d1d06" width="400" />
 
 This FW is to 97% the work of YO3ICT balloon fw which you can read about here: https://yo3ict.uus.ro/tracker.html
 
@@ -160,7 +160,7 @@ In Boards select rAVA 2Mhz:
 
 # Schematic  
 
-<img src="https://github.com/user-attachments/assets/d44a3582-5e09-4798-9103-74a7370bb043" width="300" />
+<img src="https://github.com/user-attachments/assets/d44a3582-5e09-4798-9103-74a7370bb043" width="400" />
 
 # Setup parameters in the code  
 The Arduino code is setup from start to use a 26Mhz Tcxo and to use a 4Mhz xo divided by 2 to run at 2Mhz, if other values used the code needs to be changed - see below  
