@@ -160,7 +160,7 @@ In Boards select rAVA 2Mhz:
 
 # Schematic  
 
-<img src="https://github.com/user-attachments/assets/d44a3582-5e09-4798-9103-74a7370bb043" width="200" />
+<img src="https://github.com/user-attachments/assets/d44a3582-5e09-4798-9103-74a7370bb043" width="300" />
 
 # Setup parameters in the code  
 The Arduino code is setup from start to use a 26Mhz Tcxo and to use a 4Mhz xo divided by 2 to run at 2Mhz, if other values used the code needs to be changed - see below  
