@@ -75,22 +75,19 @@ I would recommend to buy a couple of arduino nano boards to practice on before f
 
 Cpu ATmega328
 
-Gps ATGM336 (N31) others will work
+Gps ATGM336 (N31) others will work  
 
-TX Si5351
+TX Si5351  
 
-Tcxo 25/26/27 Mhz size 3225 3.2x2.5mm
+Tcxo 25/26/27 Mhz size 3225 3.2x2.5mm  
 
-Xo 4Mhz size 4520 4.5mm×2mm  
+Xo 4Mhz size 4520 4.5mm×2mm   
 
-2x 10K resistor size 0603, value non critical, 1K-10K works
+2x 10K resistor size 0603, value non critical, 1K-10K works  
 
-2x 100nF Capacitor size 0603, value non critical 10-470Nf works, it will work fine without any soldered on but I recomend at least one
+2x 100nF Capacitor size 0603, value non critical 10-470Nf works, it will work fine without any soldered on but I recomend at least one  
 
-There is also a pad for a bleeed resistor to even out possible static buildup between tx leg and gnd
-not needed but if you want to fit it use a 0603 resistor around 30K  
-
-2.54mm x2 Pin Header - Remove before flight by cutting it of with a scissor
+2.54mm x2 Pin Header - Remove before flight by cutting it of with a scissor  
 
 # Antennas
 
