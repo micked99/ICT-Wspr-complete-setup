@@ -233,5 +233,8 @@ call_telemetry[2] = '8';  // set 0 to 9
 
 Available channels 00, 01, 02 - 08, 09 and Q0, Q1, Q2 - Q8, Q9
 
-  
-  
+# Misc pictures
+
+![dFcSfmT](https://github.com/user-attachments/assets/b9990e72-a1dd-4269-a934-05309d96239c)
+![umWM682](https://github.com/user-attachments/assets/d67339c1-1426-44fc-b76d-b88c0535a88e)
+
