@@ -85,7 +85,7 @@ Xo 4Mhz size 4520 4.5mm×2mm
 
 2x 10K resistor size 0603, value non critical, 1K-10K works  
 
-2x 100nF Capacitor size 0603, value non critical 10-470Nf works, it will work fine without any soldered on but I recomend at least one  
+2x 100nF Capacitor size 0603, value non critical 10-470Nf works, it will work fine without any soldered on but I recommend at least one  
 
 2.54mm x2 Pin Header - Remove before flight by cutting it of with a scissor  
 
@@ -188,7 +188,7 @@ const char call[] = "SA9BSS";
 Set initial power of the 5351  
 int pwr_level=79;  
 it will for every sequence increase the power one step so if you set it at 77 it will take two sequencies, 20 min before it will start at full power   
-avalible valus are 76, 77, 78 and 79 where 79 is max power, 76 is just a few mW so I recomend not to use that, the default setting is max power 79
+avalible valus are 76, 77, 78 and 79 where 79 is max power, 76 is just a few mW so I recommend not to use that, the default setting is max power 79
 
 #include "Timing4.h"  
 #include "Timing.h"  
