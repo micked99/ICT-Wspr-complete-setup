@@ -45,7 +45,7 @@ Course altitude in main wspr - Will insert a rough altitude into the standard ws
 Slowly increased power in 4 steps - Default setting is 79 - Max power  
 Good WDT function of 328 - Will never fail to wake up even with unstable solar cells powering the board  
 Will work at low clocks, tested down to 1Mhz on the 328 - Deafult is 2Mhz  
-Powersave of gps by set it to single naviagtion system  - See Gps section  
+Powersave of gps by set it to single navigational system  - See Gps section  
 
 # GPS:
 
