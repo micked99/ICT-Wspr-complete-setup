@@ -133,7 +133,7 @@ To test the solar + board indoor before a flight you can use a Halogen flood lig
 
 # Arduino
 
-Recomended to use Arduino version 1.8.13 which you find here, others will work but not tested, https://www.arduino.cc/en/software/OldSoftwareReleases/
+To compile and upload the sketch I use Arduino version 1.8.13 which you find here, others will work but not tested, https://www.arduino.cc/en/software/OldSoftwareReleases/
 
 # PCB  
 
