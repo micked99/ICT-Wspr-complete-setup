@@ -125,7 +125,8 @@ How I solder the cells together, I use a 0,6mm wire I extract from a multi stran
 <img src="https://github.com/user-attachments/assets/032f98bb-db6c-457d-9fd2-6ab59c9f318a" width="300" />  <br>  
 <img src="https://github.com/user-attachments/assets/1f709e82-cc4f-4c87-bf25-c44f5ea02478" width="300" />  <br>  
 
-To test the solar + board indoor before a flight you can use a Halogen flood light like below pic, I use a 400W, 8545 lumen lamp. -OBS- Led lamps wont work.
+To test the solar + board indoor before a flight you can use a Halogen flood light like below pic, I use a 400W, 8545 lumen lamp.  
+-OBS- Led lamps wont work.
 
 
 <img src="https://github.com/user-attachments/assets/c46cecd5-28c3-4f24-a544-17eb5ec61cbf" width="300" />  <br>  
@@ -186,8 +187,8 @@ const char call[] = "SA9BSS";
 
 Set initial power of the 5351  
 int pwr_level=79;  
-it will for every sequnce increase the power one step so if you set it at 77 it will take two sequencies, 20 min before it will start at full power  
-avalible valus are 76,77,78 and 79 where 79 is max power, 76 is just a few mW so I recomend not to use that, the default setting is max power 79
+it will for every sequence increase the power one step so if you set it at 77 it will take two sequencies, 20 min before it will start at full power   
+avalible valus are 76, 77, 78 and 79 where 79 is max power, 76 is just a few mW so I recomend not to use that, the default setting is max power 79
 
 #include "Timing4.h"  
 #include "Timing.h"  
