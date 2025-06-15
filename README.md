@@ -3,7 +3,7 @@
 
 This FW is to 97% the work of YO3ICT balloon fw which you can read about here: https://yo3ict.uus.ro/tracker.html
 
-What Eduard did was reverse enginer the QRP-Labs telemetry protocol which used wspr to get data through, and open sourced it, details of the protocol is described here: https://qrp-labs.com/flights/s4#protocol 
+What Eduard did was reverse enginer the QRP-Labs telemetry protocol which use wspr to get data through, and open sourced it, details of the protocol is described here: https://qrp-labs.com/flights/s4#protocol 
 most balloons use this encoding today, with a few exceptions, like Zachtek trackers and a few more
 
 Another good site for beginers is to read up here: https://traquito.github.io/ and join the io board at: https://groups.io/g/picoballoon 
@@ -118,7 +118,13 @@ OBS! The programming pinhead should be cutoff before flight and preferably befor
 ![solderpoints](https://github.com/user-attachments/assets/892893e5-67a8-44e1-9371-487d653f814b) <br> 
 Solderpoints for the solar cells  
 
-With 6 x 38x19 cells you can see a startup of the board at about 13° solar angle  
+With 6 x 38x19 cells ounded flat you can see a startup of the board at about 13° solar angle 
+
+How I solder the cells togther, I use a 0,6mm wore I extract from a multistarnded lectrical cable, and then a very thin wire from an even smaller multistraned electrical cable to connect the cells to the pcb, pics:
+
+<img src="https://github.com/user-attachments/assets/032f98bb-db6c-457d-9fd2-6ab59c9f318a" width="300" />  <br>  
+<img src="https://github.com/user-attachments/assets/1f709e82-cc4f-4c87-bf25-c44f5ea02478" width="300" />  <br>  
+
 
 # Arduino
 
