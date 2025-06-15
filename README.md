@@ -128,6 +128,9 @@ How I solder the cells together, I use a 0,6mm wire I extract from a multi stran
 Testing the solar + board indoor before a flight you can use a Halogen flood light like below pic, I use a 400W, 8545 lumen
 
 
+<img src="https://github.com/user-attachments/assets/c46cecd5-28c3-4f24-a544-17eb5ec61cbf" width="300" />  <br>  
+
+
 # Arduino
 
 Recomended to use Arduino version 1.8.13 which you find here, others will work but not tested, https://www.arduino.cc/en/software/OldSoftwareReleases/
