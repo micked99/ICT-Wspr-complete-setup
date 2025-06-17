@@ -250,11 +250,11 @@ Available channels 00, 01, 02 - 08, 09 and Q0, Q1, Q2 - Q8, Q9
 You want the board to be as levled as possible so the solarcells always points up and not to the sodes,  
 to do this use the top hook, puti it on a short loop of fishingline and bent the copper untill it levels up, see below:  
 
-<img src="https://github.com/user-attachments/assets/eec8681e-1199-46cd-8c37-9d269d65407c" width="200" />  <br> 
+<img src="https://github.com/user-attachments/assets/eec8681e-1199-46cd-8c37-9d269d65407c" width="300" />  <br> 
 
 
 # Misc pictures
 
-![dFcSfmT](https://github.com/user-attachments/assets/b9990e72-a1dd-4269-a934-05309d96239c)
-![umWM682](https://github.com/user-attachments/assets/d67339c1-1426-44fc-b76d-b88c0535a88e)
+<img src="https://github.com/user-attachments/assets/b9990e72-a1dd-4269-a934-05309d96239c" width="500" />  <br> 
+<img src="https://github.com/user-attachments/assets/d67339c1-1426-44fc-b76d-b88c0535a88e" width="500" />  <br> 
 
