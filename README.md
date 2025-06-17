@@ -73,9 +73,8 @@ I would recommend to buy a couple of arduino nano boards to practice on before f
 
 # BOM
 
-All components but the si5351 is bought on Aliexpress, you can source the SI535/MS5351 on Ali but they can have an highr power draw then the original,  
-from my experience the Ali ones draw 27mA instead of 17mA in stb current
-
+All components but the si5351 is bought on Aliexpress, you can source the SI535/MS5351 on Ali but they can have an higher power consumption then the original, from my experience the Ali ones draw 27mA instead of 17mA in stb current  
+----------------  
 Cpu ATmega328
 
 Gps ATGM336 (N31) others will work  
