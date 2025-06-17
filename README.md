@@ -247,8 +247,8 @@ Available channels 00, 01, 02 - 08, 09 and Q0, Q1, Q2 - Q8, Q9
 
 # Balance the board
 
-You want the board to be as levled as possible so the solarcells always points up and not to the sodes,  
-to do this use the top hook, puti it on a short loop of fishingline and bent the copper untill it levels up, see below:  
+You want the board to be as leveled as possible so the solarcells always points up and not to the sides,  
+to do this use the top hook, puti it on a short loop of fishing line and bend the copper rod untill it levels up, see below:  
 
 <img src="https://github.com/user-attachments/assets/eec8681e-1199-46cd-8c37-9d269d65407c" width="300" />  <br> 
 
