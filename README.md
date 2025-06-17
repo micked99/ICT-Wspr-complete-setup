@@ -243,7 +243,15 @@ Sets Telemetry channel
 call_telemetry[0] = '0';  // set 0 or Q  
 call_telemetry[2] = '8';  // set 0 to 9  
 
-Available channels 00, 01, 02 - 08, 09 and Q0, Q1, Q2 - Q8, Q9
+Available channels 00, 01, 02 - 08, 09 and Q0, Q1, Q2 - Q8, Q9  
+
+# Balance the board
+
+You want the board to be as levled as possible so the solarcells always points up and not to the sodes,  
+to do this use the top hook, puti it on a short loop of fishingline and bent the copper untill it levels up, see below:  
+
+![IMG_20170713_125617](https://github.com/user-attachments/assets/eec8681e-1199-46cd-8c37-9d269d65407c)
+
 
 # Misc pictures
 
