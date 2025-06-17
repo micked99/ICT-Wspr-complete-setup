@@ -73,6 +73,9 @@ I would recommend to buy a couple of arduino nano boards to practice on before f
 
 # BOM
 
+All components but the si5351 is bought on Aliexpress, you can source the SI535/MS5351 on Ali but they can have an highr power draw then the original,  
+from my experience the Ali ones draw 27mA instead of 17mA in stb current
+
 Cpu ATmega328
 
 Gps ATGM336 (N31) others will work  
@@ -85,7 +88,7 @@ Xo 4Mhz size 4520 4.5mm×2mm
 
 2x 10K resistor size 0603, value non critical, 1K-10K works  
 
-2x 100nF Capacitor size 0603, value non critical 10-470Nf works, it will work fine without any soldered on but I recommend at least one  
+2x 100nF Capacitor size 0603, value non critical 10-470nF works, it will work fine without any soldered on but I recommend at least one  
 
 2.54mm x2 Pin Header - Remove before flight by cutting it of with a scissor  
 
