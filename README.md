@@ -6,7 +6,7 @@ This FW is to 97% the work of YO3ICT balloon fw which you can read about here: h
 What Eduard did was reverse enginer the QRP-Labs telemetry protocol which use wspr to get data through, and open sourced it, details of the protocol is described here: https://qrp-labs.com/flights/s4#protocol 
 most balloons use this encoding today, with a few exceptions, like Zachtek trackers and a few more
 
-Another good site for beginers is to read up here: https://traquito.github.io/ and join the io board at: https://groups.io/g/picoballoon 
+Another good site for beginers is to read up and join the io board at: https://groups.io/g/picoballoon 
 
 The Traquito page will host channel reservation and upload to varous tracking sites like https://aprs.fi/ and https://amateur.sondehub.org/ and as well host its own map, more maps and info avalible here https://lu7aa.org/dx.asp and here http://qrp-labs.com/tracking.html
 
