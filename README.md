@@ -3,7 +3,7 @@
 ## Updates
 BOM and Pick and place files adaded if you want to for example JLCPCB to make and assamble the comppete board
 
-
+## Introduction
 This FW is to 97% the work of YO3ICT balloon fw which you can read about here: https://yo3ict.uus.ro/tracker.html
 
 What Eduard did was reverse enginer the QRP-Labs telemetry protocol which use wspr to get data through, and open sourced it, details of the protocol is described here: https://qrp-labs.com/flights/s4#protocol 
