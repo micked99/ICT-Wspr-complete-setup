@@ -2,8 +2,9 @@
 <img src="https://github.com/user-attachments/assets/87f7522f-9779-4d59-95e0-92f3e82d1d06" width="400" />  <br> <br>
 ## Updates
 BOM and Pick and place files adaded if you want to for example JLCPCB to make and assamble the complete board
-CPL_pick place_ict_v361-xs.xlsx
-BOM_ict_v361-xs.csv
+CPL_pick place_ict_v361-xs.xlsx <br>
+BOM_ict_v361-xs.csv <br>
+
 
 
 ## Introduction
