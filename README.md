@@ -255,7 +255,7 @@ call_telemetry[2] = '8';  // set 0 to 9
 
 Available channels 00, 01, 02 - 08, 09 and Q0, Q1, Q2 - Q8, Q9  
 
-If you have problem getting decodes going from 20m to 10m try change this in TelemFunctions.h <br> <br> 
+If you have problem getting decodes going from 20m to 10m try change this in TelemFunctions.h <br>
 
  //outdivider 77000000000 or 30000000000 // If bad decodes at 24/28Mhz try the other value<br> 
   outdivider = 30000000000 / frequency;  // With 900 MHz beeing the maximum internal PLL-Frequency<br> 
