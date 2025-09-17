@@ -4,7 +4,7 @@
 BOM and Pick and place files adaded if you want to for example JLCPCB to make and assamble the complete board <br>
 BOM_ict_v361-xs.csv <br>
 CPL_pick place_ict_v361-xs.xlsx <br>
-
+Screenshots to see order seq of JLCPcb complete board assembly, ask JLCpcb if you have problem :)
 
 
 
