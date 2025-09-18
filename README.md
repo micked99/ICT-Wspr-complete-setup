@@ -269,9 +269,9 @@ to do this use the top hook, puti it on a short loop of fishing line and bend th
 
 <img src="https://github.com/user-attachments/assets/eec8681e-1199-46cd-8c37-9d269d65407c" width="300" />  <br> 
 
-# Get the flight online to Sondehub and/or aprs.fi
+# Get your flight uploaded to Sondehub and/or aprs.fi
 
-Using a wsrp to sondehub script
+Using a WSPR to sondehub script with a filtering function so your upload data dont get mixed with other flights 
 
 
 # Misc pictures
