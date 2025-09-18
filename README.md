@@ -16,7 +16,7 @@ most balloons use this encoding today, with a few exceptions, like Zachtek track
 
 Another good site for beginers is to read up and join the io board at: https://groups.io/g/picoballoon 
 
-The Traquito page will host channel reservation and upload to varous tracking sites like https://aprs.fi/ and https://amateur.sondehub.org/ and as well host its own map, more maps and info avalible here https://lu7aa.org/dx.asp and here http://qrp-labs.com/tracking.html, another good page that poped up lately is this: https://wsprtv.com/docs/user_guide.html#u4b-channel-map & https://wsprtv.com/tools/channel_map.html?band=17m&num_days=30&rx_threshold=1
+The [Traquito](https://traquito.github.io/)  page will host channel reservation and upload to varous tracking sites like https://aprs.fi/ and https://amateur.sondehub.org/ and as well host its own map, more maps and info avalible here https://lu7aa.org/dx.asp and here http://qrp-labs.com/tracking.html, another good page that poped up lately is this: https://wsprtv.com/docs/user_guide.html#u4b-channel-map & https://wsprtv.com/tools/channel_map.html?band=17m&num_days=30&rx_threshold=1
 
 ## Folders in this repo:  
 ### ICT_WSPR   
