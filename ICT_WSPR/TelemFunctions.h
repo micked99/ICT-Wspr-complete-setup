@@ -127,7 +127,7 @@ void loc_dbm_telem() // Determine the locator and dBm value for the telemetry tr
   volt = sensorVolt * 1.1f;      // mark out for fixed voltage
   volt = volt / 1023.0f;         // mark out for fixed voltage
   volt = volt * 4.18f;           // mark out for fixed voltage
-  // volt = 3.54;                // --Remove if sensor voltage is used--
+  // volt = 3.94;                // --Remove if sensor voltage is used--
   if (volt < 3.0) volt = 3.0;    // mark out for fixed voltage
   if (volt > 4.95) volt = 4.95;  // mark out for fixed voltage
   if (temp < -49) temp = -49;
@@ -430,3 +430,4 @@ void GPS_VCC_off()
   digitalWrite(A7, LOW);
  }
   
+
