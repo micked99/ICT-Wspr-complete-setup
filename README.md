@@ -298,7 +298,7 @@ The normal setup is as above where the adc reads the voltage on sensorpin, it sh
 
 After we done this and upload the code to the pcb we should have a fixed voltage reading constantly sending 3,94V which we can put in the balloon.ini file in the  [wspr upload script](https://github.com/micked99/wspr-to-sondehub-script)  
 
-If you have launched the board with no editing to the ict code you can set the 4,56V as well as a filter working on boards allready in flight.  
+If you have launched the board with no editing to the ict code you can set 4,56V as a filter, this making it work on boards allready in flight.  
 
 You need to double check the voltage readign your board actually tx as there will be a 0,01V variation on the actual value that comes out of the decoder, even if you set 3,94V it might be 3,95 that comes out, you can test it in this xls  
 https://qrp-labs.com/images/ultimate3builder/ve3kcl/s4/308d.xls  
