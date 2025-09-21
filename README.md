@@ -269,7 +269,13 @@ to do this use the top hook, puti it on a short loop of fishing line and bend th
 
 <img src="https://github.com/user-attachments/assets/eec8681e-1199-46cd-8c37-9d269d65407c" width="300" />  <br> 
 
+
 # Get your flight uploaded to Sondehub and/or aprs.fi
+
+There is a couple of ways to get your board onto [Sondehub](https://amateur.sondehub.org/) 
+
+The way Im doing it is to use a wspr-to-sondehub python script described here: https://github.com/micked99/wspr-to-sondehub-script
+
 
 Using a WSPR to sondehub script with a filtering function so your upload data dont get mixed with other flights 
 
