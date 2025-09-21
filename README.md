@@ -3,7 +3,7 @@
 ## Updates
 BOM and Pick and place files added if you want to for example JLCPCB to make and assamble the complete board  
 BOM_ict_v361-xs.csv & CPL_pick place_ict_v361-xs.xlsx  
-Screenshots of the settings of order sequence of pcb assembly, see folder "JLCPcb order" 
+Screenshots of the settings of order of pcb assembly, see folder "JLCPcb order" 
 
 ## Introduction
 This FW is to 97% the work of YO3ICT balloon fw which you can read about here: https://yo3ict.uus.ro/tracker.html
