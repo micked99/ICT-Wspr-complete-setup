@@ -295,9 +295,7 @@ The normal setup is as above where the adc reads the voltage on sensorpin, it sh
  // if (volt < 3.0) volt = 3.0;    // mark out for fixed voltage<br>
  // if (volt > 4.95) volt = 4.95;  // mark out for fixed voltage<br>
 
- 
-
-  
+After we done this and upload the code to the pcb we should have a fixed voltage reading constantly sending 3,94V which we can put in the balloon.ini file in the  [wspr upload script](https://github.com/micked99/wspr-to-sondehub-script)
 
 
 # Misc pictures
