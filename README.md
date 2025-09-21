@@ -281,7 +281,7 @@ look at lines 126 - 132 in TelemFunctions.h and you see this:<br>
   volt = sensorVolt * 1.1f;      // mark out for fixed voltage<br> 
   volt = volt / 1023.0f;         // mark out for fixed voltage<br> 
   volt = volt * 4.18f;           // mark out for fixed voltage<br> 
-  // volt = 3.94;                // --Remove if sensor voltage is used--  
+  // volt = 3.94;                // --Remove if sensor voltage is used--<br>
   if (volt < 3.0) volt = 3.0;    // mark out for fixed voltage<br>  
   if (volt > 4.95) volt = 4.95;  // mark out for fixed voltage<br>    
 
@@ -291,9 +291,11 @@ The normal setup is as above where the adc reads the voltage on sensorpin, it sh
  // volt = sensorVolt * 1.1f;      // mark out for fixed voltage<br>
  // volt = volt / 1023.0f;         // mark out for fixed voltage<br>
  // volt = volt * 4.18f;           // mark out for fixed voltage<br>
-    volt = 3.94;                   // --Remove if sensor voltage is used--    
+    volt = 3.94;                   // --Remove if sensor voltage is used--<br>
  // if (volt < 3.0) volt = 3.0;    // mark out for fixed voltage<br>
- // if (volt > 4.95) volt = 4.95;  // mark out for fixed voltage<br>  
+ // if (volt > 4.95) volt = 4.95;  // mark out for fixed voltage<br>
+
+ 
 
   
 
