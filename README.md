@@ -277,7 +277,7 @@ There is a couple of ways to get your board onto [Sondehub](https://amateur.sond
 The way Im doing it is to use a wspr-to-sondehub python script described here: https://github.com/micked99/wspr-to-sondehub-script
 What I do is to use this script with a filtering function so your upload data dont get mixed with other flights - you should check the channel is free here before relesing a balloon:  [WSPR-TV](https://wsprtv.com/tools/channel_map.html?band=17m&num_days=30&rx_threshold=1) but as the 600 channels per band is relaying on filtering on frequency and this script cant handle, that this is a way to work arround that.
 So the idea I got and that DG4NOB implemented in the code was that we can use the voltage reading of the battery as a filtering function, as we use solar cells voltage is mostly of no interest, reading the Encoding [Description](https://qrp-labs.com/flights/s4#protocol) we see "Battery voltage is coded by a number in the range 0..39, which represents battery voltage in the range 3.00 to 4.95V with a resolution of 0.05V" this means we have 40 unique "channels" within this, so what we can do is to set a static value in the ict fw and uplod this to the board, <br> 
-see line 126 - 132 in TelemFunctions.h and you see this:<br> 
+look at line 126 - 132 in TelemFunctions.h and you see this:<br> 
 
   sensorVolt = sensorVolt / 5;   // mark out for fixed voltage<br> 
   volt = sensorVolt * 1.1f;      // mark out for fixed voltage<br> 
@@ -285,7 +285,7 @@ see line 126 - 132 in TelemFunctions.h and you see this:<br>
   volt = volt * 4.18f;           // mark out for fixed voltage<br> 
   // volt = 3.54;                // --Remove if sensor voltage is used--<br> 
   if (volt < 3.0) volt = 3.0;    // mark out for fixed voltage<br> 
-  if (volt > 4.95) volt = 4.95;  // mark out for fixed voltage<br> 
+  if (volt > 4.95) volt = 4.95;  // mark out for fixed voltage<br> <br> <br> 
 
 
 # Misc pictures
