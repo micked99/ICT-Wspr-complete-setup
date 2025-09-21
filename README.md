@@ -275,9 +275,9 @@ to do this use the top hook, puti it on a short loop of fishing line and bend th
 There is a couple of ways to get your board onto [Sondehub](https://amateur.sondehub.org/) 
 
 The way Im doing it is to use a wspr-to-sondehub python script described here: https://github.com/micked99/wspr-to-sondehub-script
-
-
-Using a WSPR to sondehub script with a filtering function so your upload data dont get mixed with other flights 
+Using this script with a filtering function so your upload data dont get mixed with other flights (you should check the cahnnel is free here before relesing a balloon 
+[WSPR-TV](https://wsprtv.com/tools/channel_map.html?band=17m&num_days=30&rx_threshold=1)
+, so the idea I got and that DG4NOB implemeted in the code was that 
 
 
 # Misc pictures
