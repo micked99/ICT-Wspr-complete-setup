@@ -285,7 +285,7 @@ look at lines 126 - 132 in TelemFunctions.h and you see this:<br>
   if (volt < 3.0) volt = 3.0;    // mark out for fixed voltage<br>  
   if (volt > 4.95) volt = 4.95;  // mark out for fixed voltage<br>    
 
-The normal setup is as above where the adc reads the voltage on sensorpin, it should be a voltage divider there but I have routed the pin directly to vcc so if you dont make any edits to the code it will constantly read 4.56V, so what we can do is to change the code, say we want to filter the volatage to 3,94V we edit the code to:  
+The normal setup is as above where the adc reads the voltage on sensorpin, it should be a voltage divider there but I have routed the pin directly to vcc so if you dont make any edits to the code it will constantly read 4.56V, so what we can do is to change the code, say we want to filter the voltage to 3,94V we edit the code to:  
 
  // sensorVolt = sensorVolt / 5;   // mark out for fixed voltage<br>
  // volt = sensorVolt * 1.1f;      // mark out for fixed voltage<br>
