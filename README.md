@@ -299,7 +299,12 @@ After we done this and upload the code to the pcb we should have a fixed voltage
 
 You need to double check the voltage readign your board actually tx as there will be a 0,01V variation on the actual value that comes out of the decoder, even if you set 3,94V it might be 3,95 that comes out, you can test it in this xls  
 https://qrp-labs.com/images/ultimate3builder/ve3kcl/s4/308d.xls  
-originating from https://qrp-labs.com/flights/s4#protocol
+originating from https://qrp-labs.com/flights/s4#protocol  
+
+Other wasy to get you board online is to use https://lu7aa.org.ar/wsprset.asp  
+There is also an uploader by WB8ELK that you can download from  [Here](https://groups.io/g/picoballoon/message/23150?p=%2C%2C%2C50%2C0%2C0%2C0%3A%3Arecentpostdate%2Fsticky%2C%2Cwspr2aprs%2C50%2C2%2C0%2C114107378)  
+You need to be a member of this io board to download it.
+
 
 
 # Misc pictures
