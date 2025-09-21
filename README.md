@@ -295,7 +295,10 @@ The normal setup is as above where the adc reads the voltage on sensorpin, it sh
  // if (volt < 3.0) volt = 3.0;    // mark out for fixed voltage<br>
  // if (volt > 4.95) volt = 4.95;  // mark out for fixed voltage<br>
 
-After we done this and upload the code to the pcb we should have a fixed voltage reading constantly sending 3,94V which we can put in the balloon.ini file in the  [wspr upload script](https://github.com/micked99/wspr-to-sondehub-script)
+After we done this and upload the code to the pcb we should have a fixed voltage reading constantly sending 3,94V which we can put in the balloon.ini file in the  [wspr upload script](https://github.com/micked99/wspr-to-sondehub-script)  
+You need to double check the volatage readign your board actually tx as there will be a 0,01V variation on the actual value that comes out of the decoder, even if you set 3,94V it might be 3,95 that comes out, you can test it in this xls  
+https://qrp-labs.com/images/ultimate3builder/ve3kcl/s4/308d.xls  
+originating from https://qrp-labs.com/flights/s4#protocol
 
 
 # Misc pictures
