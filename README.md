@@ -1,10 +1,10 @@
 # ICT-v7-ATGM336
 <img src="https://github.com/user-attachments/assets/87f7522f-9779-4d59-95e0-92f3e82d1d06" width="400" />  <br> <br>
 ## Updates
-BOM and Pick and place files adaded if you want to for example JLCPCB to make and assamble the complete board <br>
-BOM_ict_v361-xs.csv <br>
-CPL_pick place_ict_v361-xs.xlsx <br>
-Screenshots to see order seq of JLCPcb complete board assembly, ask JLCpcb if you have ordering problems :)
+BOM and Pick and place files adaded if you want to for example JLCPCB to make and assamble the complete board  
+BOM_ict_v361-xs.csv & CPL_pick place_ict_v361-xs.xlsx  
+Screenshots to see order seq of JLCPcb complete board assembly, ask JLCpcb if you have ordering problems :)  
+
 
 
 
