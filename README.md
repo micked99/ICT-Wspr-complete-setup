@@ -301,12 +301,11 @@ You need to double check the voltage readign your board actually tx as there wil
 https://qrp-labs.com/images/ultimate3builder/ve3kcl/s4/308d.xls  
 originating from https://qrp-labs.com/flights/s4#protocol  
 
-Other wasy to get you board online is to use https://lu7aa.org.ar/wsprset.asp  
+Other ways to get you board online is to use https://lu7aa.org.ar/wsprset.asp  
 
 There is also an uploader by Bill WB8ELK - maker of [Skytracker](https://elktronics.com) that you can download from [Here](https://groups.io/g/picoballoon/message/23150?p=%2C%2C%2C50%2C0%2C0%2C0%3A%3Arecentpostdate%2Fsticky%2C%2Cwspr2aprs%2C50%2C2%2C0%2C114107378)  
-You need to be a member of this io board to access it, it will upload to aprs.fi and Sondehub will then automaticly pipe it onto its site, pros of this program is easy to setup and it can filter on Frequency as the 600 channel mapping require.  
-
-
+You need to be a member of this io board to access it, it will upload to aprs.fi and Sondehub will then automaticly pipe it onto its site,  
+pros of this program is easy to setup and it can filter on Frequency as the 600 channel mapping require.  
 
 
 # Misc pictures
