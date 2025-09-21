@@ -7,10 +7,10 @@ Screenshots of the settings of order of pcb assembly, see folder "JLCPcb order"
 Get your board online onto Sondehub/aprs.fi section added  
 
 ## Introduction
-This FW is to 97% the work of YO3ICT balloon fw which you can read about here: https://yo3ict.uus.ro/tracker.html
+This FW is mostly the work of Eduard YO3ICT,  you can read about here: https://yo3ict.uus.ro/tracker.html
 
-What Eduard did was reverse enginer the QRP-Labs telemetry protocol which use wspr to get data through, and open sourced it, details of the protocol is described here: https://qrp-labs.com/flights/s4#protocol 
-most balloons use this encoding today, with a few exceptions, like Zachtek trackers and a few more
+What Eduard did was reverse enginer the [QRP-Labs](https://shop.qrp-labs.com) telemetry protocol which use wspr to get data through, and open sourced it, details of the protocol is described here: https://qrp-labs.com/flights/s4#protocol 
+most balloons use this encoding today, with a few exceptions, like [Zachtek](https://www.zachtek.com/ trackers)  
 
 Another good site for beginers is to read up and join the io board at: https://groups.io/g/picoballoon 
 
