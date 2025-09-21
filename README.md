@@ -276,7 +276,7 @@ There is a couple of ways to get your board onto [Sondehub](https://amateur.sond
 
 The way Im doing it is to use a wspr-to-sondehub python script described here: https://github.com/micked99/wspr-to-sondehub-script
 What I do is to use this script with a filtering function so your upload data dont get mixed with other flights - you should check the channel is free here before relesing a balloon:  [WSPR-TV](https://wsprtv.com/tools/channel_map.html?band=17m&num_days=30&rx_threshold=1)
-,so the idea I got and that DG4NOB implemented in the code was that we can use the voltage reading of the battery as a filtering function, reading at the description of the encoding we see "Battery voltage is coded by a number in the range 0..39, which represents battery voltage in the range 3.00 to 4.95V with a resolution of 0.05V"
+,so the idea I got and that DG4NOB implemented in the code was that we can use the voltage reading of the battery as a filtering function, as we use solar cells voltage is mostly of no interest, reading the Encoding [Description](https://qrp-labs.com/flights/s4#protocol) of the encoding we see "Battery voltage is coded by a number in the range 0..39, which represents battery voltage in the range 3.00 to 4.95V with a resolution of 0.05V"
 which means we have 40 uniqe "channels" within this, so what we can do is to set a static value in the ict fw and uplod ths to the board
 See line 126 - 132 in TelemFunctions.h and you see this:
 
