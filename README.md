@@ -155,7 +155,7 @@ The pcb files have been made with Eagle pcb nowadays under the name Autodesk Eag
 
 Use as thin pcb as possible to save weight - 0,6mm
 
-In Pcb-ICT-main folder in this repo you will find needed files, if you are a experieced with solder small parts and have a hot air solderstation go with the Xtra Smal QFN version of the board, for a more simple soldering setup use the TQFP version
+In Pcb-ICT-main folder in this repo you will find needed CAM files in the zip´s, if you are a experieced with solder small parts and have a hot air solder station go with the Xtra Smal QFN version (ict_v361-xs.zip) of the board, for a more simple soldering setup use the TQFP version (ict_v361.zip)
 
 ![TQFP](https://github.com/user-attachments/assets/396c5c7e-c1b4-4560-8005-94a8b082ddce) 
 <img src="https://github.com/user-attachments/assets/0c05cefa-c216-4d57-8de8-9f9ed1676eac" width="100" />
