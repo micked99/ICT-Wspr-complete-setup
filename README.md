@@ -1,4 +1,4 @@
-# Consider a donation to this projects software development at: https://yo3ict.uus.ro/index.html press the "Show Sponsors" button  <br>
+# Consider a donation to this projects software developer at: https://yo3ict.uus.ro/index.html press the "Show Sponsors" button  <br>
 
 If you do find the following compilation of information of use or intereset - [Donation](https://www.paypal.com/donate/?business=FRB6FHBJRKUK8&no_recurring=0&currency_code=SEK) <br>
 
