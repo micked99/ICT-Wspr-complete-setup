@@ -1,5 +1,7 @@
-# If you find this compilation of information of use or intereset consider a [Donation](https://www.paypal.com/donate/?business=FRB6FHBJRKUK8&no_recurring=0&currency_code=SEK) <br>
-# Do also consider a donation to this projects software development at, https://yo3ict.uus.ro/index.html press the "Show Sponsor button"  <br>
+# Do consider a donation to this projects software development at, https://yo3ict.uus.ro/index.html press the "Show Sponsor button"  <br>
+
+# If you do find the following compilation of information of use or intereset consider a [Donation](https://www.paypal.com/donate/?business=FRB6FHBJRKUK8&no_recurring=0&currency_code=SEK) <br>
+
 
 
 
