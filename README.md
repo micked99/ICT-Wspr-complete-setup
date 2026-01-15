@@ -1,7 +1,7 @@
 https://www.paypal.com/donate/?business=FRB6FHBJRKUK8&no_recurring=0&currency_code=SEK
 ![Don](https://github.com/user-attachments/assets/b2409215-3663-4770-bc37-fc7a4d2afdce)
 
-<a href="[https://www.paypal.com/donate/?business=FRB6FHBJRKUK8&no_recurring=0&currency_code=SEK]  ![Don](https://github.com/user-attachments/assets/b2409215-3663-4770-bc37-fc7a4d2afdce)
+<img src="https://github.com/user-attachments/assets/b2409215-3663-4770-bc37-fc7a4d2afdce" width="300" />  <br>  
 
 # ICT-v7-ATGM336
 <img src="https://github.com/user-attachments/assets/87f7522f-9779-4d59-95e0-92f3e82d1d06" width="400" />  <br> <br>
