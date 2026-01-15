@@ -1,3 +1,6 @@
+If you find this inforamtion of intereset.<br>
+[Donation](https://www.paypal.com/donate/?business=FRB6FHBJRKUK8&no_recurring=0&currency_code=SEK)
+
 https://www.paypal.com/donate/?business=FRB6FHBJRKUK8&no_recurring=0&currency_code=SEK
 
 
