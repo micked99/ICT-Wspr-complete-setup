@@ -1,5 +1,4 @@
 https://www.paypal.com/donate/?business=FRB6FHBJRKUK8&no_recurring=0&currency_code=SEK
-![Don](https://github.com/user-attachments/assets/b2409215-3663-4770-bc37-fc7a4d2afdce)
 
 <img src="https://github.com/user-attachments/assets/b2409215-3663-4770-bc37-fc7a4d2afdce" width="300" />  <br>  
 
