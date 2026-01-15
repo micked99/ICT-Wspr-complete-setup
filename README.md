@@ -1,7 +1,7 @@
-If you find this inforamtion of intereset.<br>
-[Donation](https://www.paypal.com/donate/?business=FRB6FHBJRKUK8&no_recurring=0&currency_code=SEK)
+If you find this information of use or intereset condider a [Donation](https://www.paypal.com/donate/?business=FRB6FHBJRKUK8&no_recurring=0&currency_code=SEK)
+Also I strongly 
 
-https://www.paypal.com/donate/?business=FRB6FHBJRKUK8&no_recurring=0&currency_code=SEK
+
 
 
 # ICT-v7-ATGM336
