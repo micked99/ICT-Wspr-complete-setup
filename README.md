@@ -141,9 +141,9 @@ Sets the expected external or internal xo used and also set the brownout to 1,8V
 
 The 328 have an internal xo at 8Mhz, you can set it to be divided down by 8 (fuse) and then the board runs at 1Mhz
 the internal xo at 8Mhz is not very stable in cold and it will not work at flying altitude, but I have tried a few flights on the internal xo divided down to 1Mhz 
-and it have worked fine, anyway, both speeeds works fine for testing a board on the bench.  
+and it have worked fine, anyway, both speeeds works fine for testing a board on the bench, but I do recomend that you use the suggested 4Mhz xo as in the schematic.
 
-FD D9 FE 1,8V / External 2/4/8Mhz xo  - This is the fuse you should use if you build this board  
+FD D9 FE 1,8V / External 2/4/8Mhz xo  - This is the fuses you should use if you build this board  
 
 62 D9 FE 1.8V / internal 8Mhz osc /div8 = 1Mhz  
 E2 D9 FE 1.8V / internal 8Mhz osc  
@@ -186,9 +186,6 @@ In Pcb-ICT-main folder in this repo you will find needed CAM files in the zip´s
 
 ![TQFP](https://github.com/user-attachments/assets/396c5c7e-c1b4-4560-8005-94a8b082ddce) 
 <img src="https://github.com/user-attachments/assets/0c05cefa-c216-4d57-8de8-9f9ed1676eac" width="100" />
-
-
-
 
 # Schematic  
 
