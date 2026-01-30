@@ -109,7 +109,8 @@ Xo 4Mhz size 4520 4.5mm×2mm
 
 For gps antenna use a 46mm wire which represents a 1/4 antenna at 1575Mhz  
 
-For antenna I use 0,15mm which is a good combination of strength and weigh but any wire in the 0,1 - 0,2mm will work fine.  
+For tx antenna I use 0,15mm which is a good combination of strength and weigh but any wire in the 0,1 - 0,2mm will work fine.  
+
 I use a small hook 2cm long made of 0,6mm wire bottom, and 0,8mm at the top to solder on the antenna wire, solder and twist a couple of turns arround the hook  
 <img src="https://github.com/user-attachments/assets/4242b577-3dce-488c-8667-69651c81a780" width="220" />  <br>  
 Here is good picture where you can see the Red and Yellow gps antennas  
