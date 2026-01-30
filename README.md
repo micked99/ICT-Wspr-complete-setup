@@ -66,24 +66,6 @@ Powersave of gps by set it to single navigational system  - See Gps section
 The ATGM336-N31 support both GPS and Beidou system, by switching off Beidou and run the ATGM in GPS only mode we save about 4mA, see .ino file for the command, gps only is activated by default.  
 This gps does not have any altitude limit like many other modules, its been tested to 150.000m with a hack-rf and GPSSim and still worked fine
 
-# 328 Fuses
-
-Sets the expected external or internal xo used and also set the brownout to 1,8V
-
-The 328 have an internal xo at 8Mhz, you can set it to be divided down by 8 (fuse) and then the board runs at 1Mhz
-the internal xo at 8Mhz is not very stable in cold and it will not work at flying altitude, but I have tried a few flights on the internal xo divided down to 1Mhz 
-and it have worked fine, anyway, both speeeds works fine for testing a board on the bench.  
-
-FD D9 FE 1,8V / External 2/4/8Mhz xo  - This is the fuse you should use if you build this board  
-
-62 D9 FE 1.8V / internal 8Mhz osc /div8 = 1Mhz  
-E2 D9 FE 1.8V / internal 8Mhz osc  
-
-To set fuses use Avrdudess https://github.com/ZakKemble/AVRDUDESS
-
-Fusecalc page https://www.engbedded.com/fusecalc/
-
-I would recommend to buy a couple of arduino nano boards to practice on before flashing fuses onto a built board, as this is the main culprit of non responsive 328 - wrongly set or corrupted fuses
 
 # BOM
 
@@ -153,20 +135,24 @@ To test the solar + board indoor before a flight you can use a Halogen flood lig
 
 To compile and upload the sketch I use Arduino version 1.8.13 which you find here, others will work but not tested, https://www.arduino.cc/en/software/OldSoftwareReleases/
 
-# PCB  
+# 328 Fuses
 
-<img src="https://github.com/user-attachments/assets/d3663667-622f-49d1-af40-d2abe115b113" width="300" />  <br>  
+Sets the expected external or internal xo used and also set the brownout to 1,8V
 
-I have always used Jlcpcb at https://jlcpcb.com/ for my balloon boards and other projects
+The 328 have an internal xo at 8Mhz, you can set it to be divided down by 8 (fuse) and then the board runs at 1Mhz
+the internal xo at 8Mhz is not very stable in cold and it will not work at flying altitude, but I have tried a few flights on the internal xo divided down to 1Mhz 
+and it have worked fine, anyway, both speeeds works fine for testing a board on the bench.  
 
-The pcb files have been made with Eagle pcb nowadays under the name Autodesk Eagle https://www.autodesk.com/products/eagle/overview
+FD D9 FE 1,8V / External 2/4/8Mhz xo  - This is the fuse you should use if you build this board  
 
-Use as thin pcb as possible to save weight - 0,6mm
+62 D9 FE 1.8V / internal 8Mhz osc /div8 = 1Mhz  
+E2 D9 FE 1.8V / internal 8Mhz osc  
 
-In Pcb-ICT-main folder in this repo you will find needed CAM files in the zip´s, if you are a experieced with solder small parts and have a hot air solder station go with the Xtra Smal QFN version (ict_v361-xs.zip) of the board, for a more simple soldering setup use the TQFP version (ict_v361.zip)
+To set fuses use Avrdudess https://github.com/ZakKemble/AVRDUDESS
 
-![TQFP](https://github.com/user-attachments/assets/396c5c7e-c1b4-4560-8005-94a8b082ddce) 
-<img src="https://github.com/user-attachments/assets/0c05cefa-c216-4d57-8de8-9f9ed1676eac" width="100" />
+Fusecalc page https://www.engbedded.com/fusecalc/
+
+I would recommend to buy a couple of arduino nano boards to practice on before flashing fuses onto a built board, as this is the main culprit of non responsive 328 - wrongly set or corrupted fuses
 
 
 # Programming
@@ -186,6 +172,23 @@ In Arduino IDE select Usbasp as programmer:
 
 In Boards select rAVA 2Mhz:    
 <img src="https://github.com/user-attachments/assets/9a1b4d58-5292-4c4c-ae64-b206f18510b0" width="400" />  <br>  
+# PCB  
+
+<img src="https://github.com/user-attachments/assets/d3663667-622f-49d1-af40-d2abe115b113" width="300" />  <br>  
+
+I have always used Jlcpcb at https://jlcpcb.com/ for my balloon boards and other projects
+
+The pcb files have been made with Eagle pcb nowadays under the name Autodesk Eagle https://www.autodesk.com/products/eagle/overview
+
+Use as thin pcb as possible to save weight - 0,6mm
+
+In Pcb-ICT-main folder in this repo you will find needed CAM files in the zip´s, if you are a experieced with solder small parts and have a hot air solder station go with the Xtra Smal QFN version (ict_v361-xs.zip) of the board, for a more simple soldering setup use the TQFP version (ict_v361.zip)
+
+![TQFP](https://github.com/user-attachments/assets/396c5c7e-c1b4-4560-8005-94a8b082ddce) 
+<img src="https://github.com/user-attachments/assets/0c05cefa-c216-4d57-8de8-9f9ed1676eac" width="100" />
+
+
+
 
 # Schematic  
 
