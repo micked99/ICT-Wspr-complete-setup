@@ -189,8 +189,8 @@ In Pcb-ICT-main folder in this repo you will find needed CAM files in the zip´s
 <img src="https://github.com/user-attachments/assets/0c05cefa-c216-4d57-8de8-9f9ed1676eac" width="100" />
 
 Here is what a JLC-PCB assambled board looks like, pictures from Michael KC3GMG  
-<img src="https://github.com/micked99/ICT-Wspr-complete-setup/blob/main/Pcb-ICT-main/pcb%20front.jpeg" width="100" />  
-<img src="https://github.com/micked99/ICT-Wspr-complete-setup/blob/main/Pcb-ICT-main/pcb%20back.jpeg" width="100" />  
+<img src="https://github.com/micked99/ICT-Wspr-complete-setup/blob/main/Pcb-ICT-main/pcb%20front.jpeg" width="300" />  
+<img src="https://github.com/micked99/ICT-Wspr-complete-setup/blob/main/Pcb-ICT-main/pcb%20back.jpeg" width="300" />  
 
 
 # Schematic  
