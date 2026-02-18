@@ -189,8 +189,10 @@ In Pcb-ICT-main folder in this repo you will find needed CAM files in the zip´s
 <img src="https://github.com/user-attachments/assets/0c05cefa-c216-4d57-8de8-9f9ed1676eac" width="100" />
 
 Here is what a JLC-PCB assambled board looks like, pictures from Michael KC3GMG
-![440ee47d-4982-4761-b896-d9d7f5948a3c](https://github.com/user-attachments/assets/0630c23e-7077-4b16-927e-41e91c934f58)
+![440ee47d-4982-4761-b896-d9d7f5948a3c](https://github.com/user-attachments/assets/0630c23e-7077-4b16-927e-41e91c934f58) 
+
 <img src="https://github.com/user-attachments/assets/0630c23e-7077-4b16-927e-41e91c934f58)" width="100" />
+
 ![981cc66d-20a9-40c2-bec3-d3a7e6fb8747](https://github.com/user-attachments/assets/18442967-063e-4d63-b4cd-a00a280614aa)
 
 
