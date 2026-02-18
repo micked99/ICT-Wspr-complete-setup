@@ -121,8 +121,8 @@ With 6 x 38x19 cells ounded flat you can see a startup of the board at about 13Â
 
 How I solder the cells together, I use a 0,6mm wire I extract from a multi stranded electrical cable, and then a very thin wire from an even smaller multi stranded cable to solder the cells to the pcb, pics:
 
-<img src="https://github.com/user-attachments/assets/032f98bb-db6c-457d-9fd2-6ab59c9f318a" width="300" />  <br>  
-<img src="https://github.com/user-attachments/assets/1f709e82-cc4f-4c87-bf25-c44f5ea02478" width="300" />  <br>  
+<img src="https://github.com/user-attachments/assets/032f98bb-db6c-457d-9fd2-6ab59c9f318a" width="300"/>  <br>  
+<img src="https://github.com/user-attachments/assets/1f709e82-cc4f-4c87-bf25-c44f5ea02478" width="300"/>  <br>  
 
 To test the solar + board indoor before a flight you can use a Halogen flood light like below pic, I use a 400W, 8545 lumen lamp.  
 -OBS- Led lamps wont work.
