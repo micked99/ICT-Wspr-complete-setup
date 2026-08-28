@@ -4,14 +4,18 @@
 
 
 
-
 # ICT-v7-ATGM336
 <img src="https://github.com/user-attachments/assets/87f7522f-9779-4d59-95e0-92f3e82d1d06" width="400" />  <br> <br>
 ## Updates
 BOM and Pick and place files added if you want to for example JLCPCB to make and assamble the complete board  
+
 BOM_ict_v361-xs.csv & CPL_pick place_ict_v361-xs.xlsx  
+
 Screenshots of the settings of order of pcb assembly, see folder "JLCPcb order"  
+
 Get your board online onto Sondehub/aprs.fi section added  
+
+A 180° tx with a 4x power output avalible here: https://github.com/micked99/ICT-wspr-180-4x-the-power-output
 
 ## Introduction
 This FW is mostly the work of Eduard YO3ICT,  you can read about here: https://yo3ict.uus.ro/tracker.html  
