@@ -210,9 +210,6 @@ Values to edit in the ino file  <br>
 
 Sets the frequency and band  <br>
 #define WSPR_FREQ     14097190UL   // <<<<< SET TX FREQUENCY HERE<br>
-// #define WSPR_FREQ    18106230UL // <<<<< SET TX FREQUENCY HERE<br>
-//#define WSPR_FREQ     21096150UL // <<<<< SET TX FREQUENCY HERE<br>      
-//#define WSPR_FREQ     28126235UL // <<<<< SET TX FREQUENCY HERE<br>
 
 Sets your call and channel<br>
 const char call[] = "SA7BSS";  <br>
