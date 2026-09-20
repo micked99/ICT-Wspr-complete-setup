@@ -163,7 +163,7 @@ I would recommend to buy a couple of arduino nano boards to practice on before f
 
 # Programming
 
-The pcb is fited with a 6 pin ICSP/ICP connector  
+The pcb is fited with a 6 pin ISP connector  
 The Arduino uploads the fw with an USBasp programmer, get a 3,3v version with a 10 to 6 pin header adapter on the end of the ribbon cable  
 To upload a .hex file like the one supplied in oscillator-main folder I recommend using AVRDUDESS - A GUI for AVRDUDE
 
@@ -209,29 +209,46 @@ The Arduino code is setup from start to use a 26Mhz Tcxo and to use a 4Mhz xo di
 Values to edit in the ino file  
 
 Sets the frequency and band  
-#define WSPR_FREQ  
+#define WSPR_FREQ     14097190UL   // <<<<< SET TX FREQUENCY HERE
+// #define WSPR_FREQ    18106230UL // <<<<< SET TX FREQUENCY HERE
+//#define WSPR_FREQ     21096150UL // <<<<< SET TX FREQUENCY HERE         
+//#define WSPR_FREQ     28126235UL // <<<<< SET TX FREQUENCY HERE
 
-Sets your call  
-const char call[] = "SA9BSS";  
+Sets your call and channel
+const char call[] = "SA7BSS";  
+char tlm_channel1 = 'Q';        // Telemetry channel: 0/1/Q
+char tlm_channel2 = '9';        // Telemetry channel: 0-9
+
+See this page for channel setup and reservation: https://traquito.github.io/channelmap/
 
 Set initial power of the 5351  
 int pwr_level=79;  
 it will for every sequence increase the power one step so if you set it at 77 it will take two sequencies, 20 min before it will start at full power   
 avalible valus are 76, 77, 78 and 79 where 79 is max power, 76 is just a few mW so I recommend not to use that, the default setting is max power 79
 
-#include "Timing4.h"  
+CW setup, the board will at first moment at power on send a morse signal with your callsign
+Here is my SA6BSS call in the ino file  
+cw_s(); cw_a(); cw_6(); cw_b(); cw_s(); cw_s();  
+
+And lastly, sets the frequncy of tcxo used for the si5351 
+tcxo  = 26000000UL;
+
+
+
+#include "Timing-test.h"  
 #include "Timing.h"  
-Timing4.h is a testfile that will start tx every 2min, this it convinient to use during testing on the bench, final prep before flight is to edit the  
-.ino file from #include "Timing4.h" to #include "Timing.h" this is the main config that should be used during a flight, it have a 10 min sequence as needed to fit the scheduling agreed on in the balloon community
+Timing-test.h is a testfile that will start tx every 2min, this it convinient to use during testing on the bench, final prep before flight is to edit the  
+.ino file from #include "Timing-test.h" to #include "Timing.h" this is the main config that should be used during a flight, it have a 10 min sequence as needed to fit the scheduling agreed on in the balloon community
 Edit Timing.h sceduling at what minute you want to tx your normal wspr and at what minute to tx the telemetry, this can be done inside Arduino ide or with a normal texteditor  
 
 To adjust the sequence in what order the standard and telemtry is transmitted edit Timing.h, it is set to transmitt 4 times - 8 minutes and then switching off the radio and enable gps, gets new loction data last 2 min of the 10 minute slot, then start over, default setting is: WSPR, WSPR_telemtry, WSPR, WSPR, this is set by adjusting the setModeWSPR();  or  setModeWSPR_telem(); in Timing.h file  
 
+This is the standard setup using a 4 Mhz xo, so if you build the board with the recommended components and downloaded fw this does not need to change
 Sets speed of the board  
 clock_prescale_set(clock_div_2);  or clock_prescale_set(clock_div_4);  
 this in conjuction with:    
 #define WSPR_CTC 1334  
-and select rAVA 2Mhz from boards in Arduino
+and select rAVA 2Mhz from boards in Arduino boards 
 
 Alternative clocksettings:  
 WSPR CTC - 2668 @ 4Mhz //1334 @ 2Mhz //667 @ 1Mhz  
@@ -248,34 +265,13 @@ WSPR CTC - 2668
 mark out both of the //clock_prescale_set  
 and use hAVA 4Mhz board setting  
 
-
-CW setup, the board will at first moment at power on send a morse signal with your callsign or what you choose to set
-
-Here is my SA6BSS call in the ino file  
-
-
-cw_s(); cw_a(); cw_6(); cw_b(); cw_s(); cw_s();  
-
-
-to set cw tx frequncy adjust it in Beep.h  
+to set cw tx frequncy adjust it in Beep.h, this will tx a short cw init as soon as you connect power
   // freq = 14096950UL;  
      freq = 18105900UL;  
   // freq = 28125870UL;  
 
-And lastly, there is a couple of setting in the  
-TelemFunctions.h  
-
-Sets the frequncy of tcxo used, line 283  
-#define F_XTAL 26000000;  
-
-Sets Telemetry channel  
-call_telemetry[0] = '0';  // set 0 or Q  
-call_telemetry[2] = '8';  // set 0 to 9  
-
-Available channels 00, 01, 02 - 08, 09 and Q0, Q1, Q2 - Q8, Q9  
-
-If you have problem getting decodes, say its works fine on 20m but when you try 10m the board tx but you dont get any decodes in wsjt-x,
-change this in TelemFunctions.h , look at line 295 & 296<br>
+If you have problem getting wspr decodes, say its works fine on 20m but when you try 10m the board tx but you dont get any decodes,
+change this in TelemFunctions.h <br>
 
  //outdivider 77000000000 or 30000000000 // If bad decodes at 24/28Mhz try the other value<br> 
   outdivider = 30000000000 / frequency;  // With 900 MHz beeing the maximum internal PLL-Frequency<br> 
