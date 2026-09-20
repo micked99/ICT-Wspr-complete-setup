@@ -230,13 +230,14 @@ CW setup, the board will at first moment at power on send a morse signal with yo
 Here is my SA6BSS call in the ino file  
 cw_s(); cw_a(); cw_6(); cw_b(); cw_s(); cw_s();  
 
-And lastly, sets the frequncy of tcxo used for the si5351 
+Sets the frequncy of tcxo used for the si5351 
 tcxo  = 26000000UL;
 
-
+Testing and Scheduling of tx sequence
 
 #include "Timing-test.h"  
 #include "Timing.h"  
+
 Timing-test.h is a testfile that will start tx every 2min, this it convinient to use during testing on the bench, final prep before flight is to edit the  
 .ino file from #include "Timing-test.h" to #include "Timing.h" this is the main config that should be used during a flight, it have a 10 min sequence as needed to fit the scheduling agreed on in the balloon community
 Edit Timing.h sceduling at what minute you want to tx your normal wspr and at what minute to tx the telemetry, this can be done inside Arduino ide or with a normal texteditor  
