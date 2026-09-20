@@ -214,11 +214,11 @@ Sets the frequency and band  <br>
 //#define WSPR_FREQ     21096150UL // <<<<< SET TX FREQUENCY HERE<br>      
 //#define WSPR_FREQ     28126235UL // <<<<< SET TX FREQUENCY HERE<br>
 
-Sets your call and channel
-const char call[] = "SA7BSS";  
-char tlm_channel1 = 'Q';        // Telemetry channel: 0/1/Q
-char tlm_channel2 = '9';        // Telemetry channel: 0-9
-
+Sets your call and channel<br>
+const char call[] = "SA7BSS";  <br>
+char tlm_channel1 = 'Q';        // Telemetry channel: 0/1/Q <br>
+char tlm_channel2 = '9';        // Telemetry channel: 0-9 <br>
+ 
 See this page for channel setup and reservation: https://traquito.github.io/channelmap/
 
 Set initial power of the 5351  
