@@ -206,13 +206,13 @@ Here is what a JLC-PCB assambled board looks like, pictures from Michael KC3GMG
 # Setup parameters in the code  
 The Arduino code is setup from start to use a 26Mhz Tcxo and to use a 4Mhz xo divided by 2 to run at 2Mhz, if other values used the code needs to be changed - see below  
 
-Values to edit in the ino file  
+Values to edit in the ino file  <br>
 
-Sets the frequency and band  
-#define WSPR_FREQ     14097190UL   // <<<<< SET TX FREQUENCY HERE
-// #define WSPR_FREQ    18106230UL // <<<<< SET TX FREQUENCY HERE
-//#define WSPR_FREQ     21096150UL // <<<<< SET TX FREQUENCY HERE         
-//#define WSPR_FREQ     28126235UL // <<<<< SET TX FREQUENCY HERE
+Sets the frequency and band  <br>
+#define WSPR_FREQ     14097190UL   // <<<<< SET TX FREQUENCY HERE<br>
+// #define WSPR_FREQ    18106230UL // <<<<< SET TX FREQUENCY HERE<br>
+//#define WSPR_FREQ     21096150UL // <<<<< SET TX FREQUENCY HERE<br>      
+//#define WSPR_FREQ     28126235UL // <<<<< SET TX FREQUENCY HERE<br>
 
 Sets your call and channel
 const char call[] = "SA7BSS";  
@@ -226,17 +226,17 @@ int pwr_level=79;
 it will for every sequence increase the power one step so if you set it at 77 it will take two sequencies, 20 min before it will start at full power   
 avalible valus are 76, 77, 78 and 79 where 79 is max power, 76 is just a few mW so I recommend not to use that, the default setting is max power 79
 
-CW setup, the board will at first moment at power on send a morse signal with your callsign
-Here is my SA6BSS call in the ino file  
-cw_s(); cw_a(); cw_6(); cw_b(); cw_s(); cw_s();  
+CW setup, the board will at first moment at power on send a morse signal with your callsign<br>
+Here is my SA6BSS call in the ino file  <br>
+cw_s(); cw_a(); cw_6(); cw_b(); cw_s(); cw_s();  <br>
 
-Sets the frequncy of tcxo used for the si5351 
-tcxo  = 26000000UL;
+Sets the frequncy of tcxo used for the si5351 <br>
+tcxo  = 26000000UL;<br>
 
-Testing and Scheduling of tx sequence
+Testing and Scheduling of tx sequence<br>
 
-#include "Timing-test.h"  
-#include "Timing.h"  
+#include "Timing-test.h"  <br>
+#include "Timing.h"  <br>
 
 Timing-test.h is a testfile that will start tx every 2min, this it convinient to use during testing on the bench, final prep before flight is to edit the  
 .ino file from #include "Timing-test.h" to #include "Timing.h" this is the main config that should be used during a flight, it have a 10 min sequence as needed to fit the scheduling agreed on in the balloon community
@@ -266,10 +266,10 @@ WSPR CTC - 2668
 mark out both of the //clock_prescale_set  
 and use hAVA 4Mhz board setting  
 
-to set cw tx frequncy adjust it in Beep.h, this will tx a short cw init as soon as you connect power
-  // freq = 14096950UL;  
-     freq = 18105900UL;  
-  // freq = 28125870UL;  
+to set cw tx frequncy adjust it in Beep.h, this will tx a short cw init as soon as you connect power<br>
+  // freq = 14096950UL;  <br>
+     freq = 18105900UL;  <br>
+  // freq = 28125870UL;  <br>
 
 If you have problem getting wspr decodes, say its works fine on 20m but when you try 10m the board tx but you dont get any decodes,
 change this in TelemFunctions.h <br>
