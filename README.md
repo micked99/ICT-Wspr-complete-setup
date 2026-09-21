@@ -231,7 +231,7 @@ Here is my SA6BSS call in the ino file  <br>
 cw_s(); cw_a(); cw_6(); cw_b(); cw_s(); cw_s();  <br>
 
 Sets the frequncy of tcxo used for the si5351 <br>
-tcxo  = 26000000UL;<br>
+tcxo  = 26000000UL;   // <<<<< SET TCXO FREQUENCY HERE <<<<<<<<br>
 
 Testing and Scheduling of tx sequence<br>
 
