@@ -212,12 +212,12 @@ Values to edit in the ino file  <br>
 Follow the <<<<< arrows where you need to edit <br>
 
 Sets the frequency and band  <br>
-#define WSPR_FREQ     14097190UL   // <<<<< SET TX FREQUENCY HERE<br>
+#define WSPR_FREQ     14097190UL // <<<<< SET TX FREQUENCY HERE <<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 Sets your call and channel<br>
-const char call[] = "SA7BSS";  <br>
-char tlm_channel1 = 'Q';        // Telemetry channel: 0/1/Q <br>
-char tlm_channel2 = '9';        // Telemetry channel: 0-9 <br>
+const char call[] = "SA7BSS";   // <<<<< SET WSPR CALLSIGN <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+char tlm_channel1 = 'Q';        // <<<<< SET TELEMETRY CHANNEL 0/1/Q <<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+char tlm_channel2 = '9';        // <<<<< SET TELEMETRY CHANNEL 0-9 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
  
 See this page for channel setup and reservation: https://traquito.github.io/channelmap/
 
