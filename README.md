@@ -209,6 +209,7 @@ Here is what a JLC-PCB assambled board looks like, pictures from Michael KC3GMG
 The Arduino code is setup from start to use a 26Mhz Tcxo and to use a 4Mhz xo divided by 2 to run at 2Mhz, if other values used the code needs to be changed - see below  
 
 Values to edit in the ino file  <br>
+Follow the <<<<< arrows where you need to edit <br>
 
 Sets the frequency and band  <br>
 #define WSPR_FREQ     14097190UL   // <<<<< SET TX FREQUENCY HERE<br>
