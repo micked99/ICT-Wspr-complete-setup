@@ -62,8 +62,9 @@ bool Outside = true;            // Geofence flag
 const char NoTXGrids[] PROGMEM = {"PN31 PN41 PN20 PN30 PN40 PM29 PM39 PM28 PM38 LK16 LK15 LK14 LK13 LK23 LK24 LK25 LK26 LK36 LK35 LK34 LK33 LK44 LK45 LK46 LK47 LK48 LK58 LK57 LK56 LK55"};
 
 #include "TelemFunctions.h"     // Various telemetry functions
-#include "Beep.h"               // beeps and CW
-#include "Timing4.h"            // Scheduling, set Timing4.h for testing, it will then tx on first 2 min slot after power on, for flight set Timing.h and it will tx on the nominal 10 min scheduling
+#include "Beep.h"               // Beeps and CW at power on
+//#include "Timing-test.h"      // <<<<< Set Timing-test.h for testing, it will tx on first 2 min slot after power on <<<<<<<<<<
+#include "Timing.h"             // <<<<< Set Timing.h for flight and it will tx on the nominal 10 min scheduling <<<<<<<<<<<<<<<
 
 // Function Prototype
 void wdt_init(void) __attribute__ ((naked, used, section(".init3")));
