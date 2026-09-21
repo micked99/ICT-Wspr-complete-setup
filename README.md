@@ -235,8 +235,8 @@ tcxo  = 26000000UL;<br>
 
 Testing and Scheduling of tx sequence<br>
 
-#include "Timing-test.h"  <br>
-#include "Timing.h"  <br>
+#include "Timing-test.h"  // <<<<< Set Timing-test.h for testing, it will tx on first 2 min slot after power on <<<<<<<<<<  <br>
+#include "Timing.h"       // <<<<< Set Timing.h for flight and it will tx on the nominal 10 min scheduling <<<<<<<<<<<<<<<  <br>
 
 Timing-test.h is a testfile that will start tx every 2min, this it convinient to use during testing on the bench, final prep before flight is to edit the  
 .ino file from #include "Timing-test.h" to #include "Timing.h" this is the main config that should be used during a flight, it have a 10 min sequence as needed to fit the scheduling agreed on in the balloon community
