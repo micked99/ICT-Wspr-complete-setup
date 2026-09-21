@@ -15,13 +15,13 @@
 #include <avr/pgmspace.h>
 #include <avr/power.h>
 
-//#define WSPR_FREQ     3570185UL  // <<<<< SET TX FREQUENCY HERE
-//#define WSPR_FREQ     7040185UL  // <<<<< SET TX FREQUENCY HERE
-//#define WSPR_FREQ     10140285UL // <<<<< SET TX FREQUENCY HERE
-#define WSPR_FREQ     14097190UL   // <<<<< SET TX FREQUENCY HERE
-// #define WSPR_FREQ    18106230UL // <<<<< SET TX FREQUENCY HERE
-//#define WSPR_FREQ     21096150UL // <<<<< SET TX FREQUENCY HERE         
-//#define WSPR_FREQ     28126235UL // <<<<< SET TX FREQUENCY HERE
+//#define WSPR_FREQ     3570185UL  // <<<<< SET TX FREQUENCY HERE <<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+//#define WSPR_FREQ     7040185UL  // <<<<< SET TX FREQUENCY HERE <<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+//#define WSPR_FREQ     10140285UL // <<<<< SET TX FREQUENCY HERE <<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+#define WSPR_FREQ     14097190UL   // <<<<< SET TX FREQUENCY HERE <<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+// #define WSPR_FREQ    18106230UL // <<<<< SET TX FREQUENCY HERE <<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+//#define WSPR_FREQ     21096150UL // <<<<< SET TX FREQUENCY HERE <<<<<<<<<<<<<<<<<<<<<<<<<<<<<        
+//#define WSPR_FREQ     28126235UL // <<<<< SET TX FREQUENCY HERE <<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 #define ISM_WSPR_FREQ   13555425UL // = 1,500Hz audio on 13.553.900 Mhz // 13555425UL New correct ism freq
 #define WSPR_CTC        1334       // WSPR CTC - 2668 @ 4Mhz //1334 @ 2Mhz //667 @ 1Mhz
 
@@ -33,9 +33,9 @@ JTEncode jtencode;
 
 // Global variables
 unsigned long freq;
-const char call[] = "SA7BSS";   // WSPR Standard callsign
-char tlm_channel1 = 'Q';        // Telemetry channel: 0/1/Q
-char tlm_channel2 = '9';        // Telemetry channel: 0-9
+const char call[] = "SA7BSS";   // <<<<< SET WSPR CALLSIGN <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+char tlm_channel1 = 'Q';        // <<<<< SET TELEMETRY CHANNEL 0/1/Q <<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+char tlm_channel2 = '9';        // <<<<< SET TELEMETRY CHANNEL 0-9 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 uint32_t tcxo;                  // TCXO/crystal frequency in Hz, set in setup()
 uint32_t pll_c;                 // "c" part of feedback multiplier XTAL->PLL, set in setup()
 char call_telemetry[7];         // WSPR telemetry callsign
@@ -83,8 +83,8 @@ void setup()
   WDTCSR = (0 << WDIE) | (1 << WDE) | (1 << WDP3) | (1 << WDP0);  // First enable the watchdog timer
   sei(); //Enable global interrupts
 
-  tcxo  = 26000000UL;   // <<<<< SET TCXO FREQUENCY HERE (Hz)
-  pll_c = 924000UL;     // <<<<< "c" part of PLL feedback multiplier
+  tcxo  = 26000000UL;   // <<<<< SET TCXO FREQUENCY HERE <<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+  pll_c = 924000UL;     // "c" part of PLL feedback multiplier
 
   clock_prescale_set(clock_div_2);
   //clock_prescale_set(clock_div_4);
