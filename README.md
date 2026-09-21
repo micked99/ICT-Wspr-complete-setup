@@ -267,8 +267,8 @@ mark out both of the //clock_prescale_set
 and use hAVA 4Mhz board setting  
 
 to set cw tx frequncy adjust it in Beep.h, this will tx a short cw init as soon as you connect power<br>
-  // freq = 14096950UL;  <br>
-     freq = 18105900UL;  <br>
+     freq = 14096980UL;  <br>
+  // freq = 18105900UL;  <br>
   // freq = 28125870UL;  <br>
 
 If you have problem getting wspr decodes, say its works fine on 20m but when you try 10m the board tx but you dont get any decodes,
