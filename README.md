@@ -43,6 +43,7 @@ Cam files for pcb ordering as well as the Eagle schematic and board files, viewe
 Replace the Boards.txt in arduino to controll the speed of the 328, its located in: C:\Program Files (x86)\Arduino\hardware\arduino\avr  
 ### oscillator-main  
 Test file to test the 328 and si5351, no gps is needed for this, only the 328, 5351, its tcxo and the two pull up resistors have to be soldered, if all works it will tx a carrier at 14.097Mhz, upload the .ino file with arduino or the .hex with Avrdudess https://github.com/ZakKemble/AVRDUDESS
+Sidenote - the main code have a cw beep function that it will tx at startup, this also with out a gps, so this bit is really not needed anymore
 
 ## Goals  
 This setup is aimed at three main things: light weight, low power demands and as few components as possible - easy to build
@@ -79,7 +80,7 @@ This gps does not have any altitude limit like many other modules, its been test
 
 All components but the si5351 is bought on Aliexpress, you can source the SI535/MS5351 on Ali but they can have an higher power consumption then the original, from my experience the Ali ones draw 27mA instead of 17mA in stb current  
 ----------------  
-Cpu ATmega328
+Cpu ATmega328P (328PB also works but need installing MiniCore in Arduino IDE)
 
 Gps ATGM336 (N31) others will work  
 
