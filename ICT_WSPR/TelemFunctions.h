@@ -6,63 +6,19 @@ void setGPStime() // Sets the system time from the GPS
  {
   if (gps.time.isValid())
  {
-    Hour = gps.time.hour();
-    Minute = gps.time.minute();
-    Second = gps.time.second();
-    setTime(Hour, Minute, Second, 1, 1, 2000); // (hr,min,sec,day,month,yr)
+    setTime(gps.time.hour(), gps.time.minute(), gps.time.second(), 1, 1, 2000); // (hr,min,sec,day,month,yr)
  }
- }
-
-void locjt9() // Calculates full locator from GPS
- {
-  lon = (gps.location.lng() * 100000) + 18000000L;
-  lat = (gps.location.lat() * 100000) +  9000000L;
-  char MH[13] = {'A', 'A', 'A', 'A', 'A', 'A', '-', 'A', 'A', 'A', 'A', 'A', 'A'};
-  MH[5] += lat % 25;
-  unsigned long q = lat / 25;
-  MH[4] += q % 25;
-  q = q / 25;
-  MH[3] += q % 25;
-  q = q / 25;
-  MH[2] += q % 25;
-  q = q / 25;
-  MH[1] += q % 25;
-  MH[0] += q / 25;
-  MH[12] += lon % 25;
-  q = lon / 25;
-  MH[11] += q % 25;
-  q = q / 25;
-  MH[10] += q % 25;
-  q = q / 25;
-  MH[9] += q % 25;
-  q = q / 25;
-  MH[8] += q % 25;
-  MH[7] += q / 25;
-  String locjt9_txt = "";
-  int i = 0;
-  while (i < 13) {
-  locjt9_txt += MH[i];
-  i++;
- }
- // locjt9_txt.toCharArray(message_jt9, 14);
  }
 
 void loc4calc() // Determine the locator from the GPS data
  {
   lon = (gps.location.lng() * 100000) + 18000000L;
   lat = (gps.location.lat() * 100000) +  9000000L;
-  char MH[4] = {'A', 'A', '0', '0'};
-  MH[0] +=  lon / 2000000;
-  MH[1] +=  lat / 1000000;
-  MH[2] += (lon % 2000000) / 200000;
-  MH[3] += (lat % 1000000) / 100000;
-  String loc4_txt = "";
-  int i = 0;
-  while (i < 4) {
-    loc4_txt += MH[i];
-    i++;
- }
-  loc4_txt.toCharArray(loc4, 5);
+  loc4[0] = 'A' + lon / 2000000;
+  loc4[1] = 'A' + lat / 1000000;
+  loc4[2] = '0' + (lon % 2000000) / 200000;
+  loc4[3] = '0' + (lat % 1000000) / 100000;
+  loc4[4] = '\0';
  }
 
 void call_telem() // Determine the telemetry callsign
@@ -115,18 +71,18 @@ void loc_dbm_telem() // Determine the locator and dBm value for the telemetry tr
   wADC = wADC / 5;
   temp = (wADC - 305.11 ) / 1.15;
   delay(20);
-  analogReference(INTERNAL);
+ // analogReference(INTERNAL);     // mark out for fixed voltage
   for (int i=0;i<5;i++)
  {
-  sensorVolt = sensorVolt + analogRead(0); //analogRead(0) for the old boards
+ // sensorVolt = sensorVolt + analogRead(0); //analogRead(0) for the old boards // mark out for fixed voltage
  }
-  sensorVolt = sensorVolt / 5;   // mark out for fixed voltage
-  volt = sensorVolt * 1.1f;      // mark out for fixed voltage
-  volt = volt / 1023.0f;         // mark out for fixed voltage
-  volt = volt * 4.18f;           // mark out for fixed voltage
- // volt = 3.54;                     // Remove if sensor voltage is used
-  if (volt < 3.0) volt = 3.0;    // mark out for fixed voltage
-  if (volt > 4.95) volt = 4.95;  // mark out for fixed voltage
+ // sensorVolt = sensorVolt / 5;   // mark out for fixed voltage
+ // volt = sensorVolt * 1.1f;      // mark out for fixed voltage
+ // volt = volt / 1023.0f;         // mark out for fixed voltage
+ // volt = volt * 4.18f;           // mark out for fixed voltage
+  volt = 3.51;                     // mark out for sensor voltage 
+  if (volt < 3.0) volt = 3.0;      // mark out for fixed voltage
+  if (volt > 4.95) volt = 4.95;    // mark out for fixed voltage
   if (temp < -49) temp = -49;
   if (temp > 39) temp = 39;
   int GPS = 0;
@@ -182,79 +138,53 @@ void loc_dbm_telem() // Determine the locator and dBm value for the telemetry tr
  }
  
 #define WSPR_TONE_SPACING  146     // ~1.46 Hz
-#define WSPR_DELAY         683     // Delay value for WSPR
 
- void geofence_check()
+void geofence_check()
  {
   Outside = true;
-  for (unsigned int GridLoop = 0; GridLoop < sizeof(NoTXGrids); GridLoop = GridLoop + 5) //Iterate between Geo-Fenced grids
+  for (unsigned int GridLoop = 0; GridLoop < sizeof(NoTXGrids); GridLoop = GridLoop + 5)
  {
   for (int CharLoop = 0; CharLoop < 4; CharLoop++)
  {
-      TestGrid[CharLoop] = pgm_read_byte_near (NoTXGrids + CharLoop + GridLoop);  //Copy a Grid string from program memory to RAM variable.
+      TestGrid[CharLoop] = pgm_read_byte_near (NoTXGrids + CharLoop + GridLoop);
  }
   if ((loc4[0] == TestGrid[0]) && (loc4[1] == TestGrid[1]) && (loc4[2] == TestGrid[2]) && (loc4[3] == TestGrid[3])) {
-      Outside = false; //We found a match between the current location and a Geo-Fenced Grid
+      Outside = false;
       break;
  }
  }
  }
 
- void dbm_alt() // Coarse altitude for WSPR standard message dBm value
+void dbm_alt() // Coarse altitude for WSPR standard message dBm value
  {
-/*  
-alt_meters = gps.altitude.meters();
-if (alt_meters >= 15000) dbm = 60;
-else if (alt_meters >= 14600) dbm = 57;
-else if (alt_meters >= 14200) dbm = 53;
-else if (alt_meters >= 13800) dbm = 50;
-else if (alt_meters >= 13400) dbm = 47;
-else if (alt_meters >= 13000) dbm = 43;
-else if (alt_meters >= 12600) dbm = 40;
-else if (alt_meters >= 12200) dbm = 37;
-else if (alt_meters >= 11800) dbm = 33;
-else if (alt_meters >= 11400) dbm = 30;
-else if (alt_meters >= 11000) dbm = 27;
-else if (alt_meters >= 10600) dbm = 23;
-else if (alt_meters >= 10200) dbm = 20;
-else if (alt_meters >= 9800) dbm = 17;
-else if (alt_meters >= 8000) dbm = 13;
-else if (alt_meters >= 6000) dbm = 10;
-else if (alt_meters >= 3000) dbm = 7;
-else if (alt_meters >= 1000) dbm = 3;
-else dbm = 0;  
-*/ 
-
-alt_meters = gps.altitude.meters();
-if (alt_meters >= 15000) dbm = 0;
-else if (alt_meters >= 14600) dbm = 3;
-else if (alt_meters >= 14200) dbm = 7;
-else if (alt_meters >= 13800) dbm = 10;
-else if (alt_meters >= 13400) dbm = 13;
-else if (alt_meters >= 13000) dbm = 17;
-else if (alt_meters >= 12600) dbm = 20;
-else if (alt_meters >= 12200) dbm = 23;
-else if (alt_meters >= 11800) dbm = 27;
-else if (alt_meters >= 11400) dbm = 30;
-else if (alt_meters >= 11000) dbm = 33;
-else if (alt_meters >= 10600) dbm = 37;
-else if (alt_meters >= 10200) dbm = 40;
-else if (alt_meters >= 9800) dbm = 43;
-else if (alt_meters >= 8000) dbm = 47;
-else if (alt_meters >= 6000) dbm = 50;
-else if (alt_meters >= 3000) dbm = 53;
-else if (alt_meters >= 1000) dbm = 57;
-else dbm = 60;  
-
+  alt_meters = gps.altitude.meters();
+  if (alt_meters >= 15000) dbm = 0;
+  else if (alt_meters >= 14600) dbm = 3;
+  else if (alt_meters >= 14200) dbm = 7;
+  else if (alt_meters >= 13800) dbm = 10;
+  else if (alt_meters >= 13400) dbm = 13;
+  else if (alt_meters >= 13000) dbm = 17;
+  else if (alt_meters >= 12600) dbm = 20;
+  else if (alt_meters >= 12200) dbm = 23;
+  else if (alt_meters >= 11800) dbm = 27;
+  else if (alt_meters >= 11400) dbm = 30;
+  else if (alt_meters >= 11000) dbm = 33;
+  else if (alt_meters >= 10600) dbm = 37;
+  else if (alt_meters >= 10200) dbm = 40;
+  else if (alt_meters >= 9800) dbm = 43;
+  else if (alt_meters >= 8000) dbm = 47;
+  else if (alt_meters >= 6000) dbm = 50;
+  else if (alt_meters >= 3000) dbm = 53;
+  else if (alt_meters >= 1000) dbm = 57;
+  else dbm = 60;
  }
  
 void setModeWSPR()
  {
   symbol_count = WSPR_SYMBOL_COUNT;
   tone_spacing = WSPR_TONE_SPACING;
-  tone_delay = WSPR_DELAY;
   CTC = WSPR_CTC;
-  memset(tx_buffer, 0, 255); // Clears Tx buffer from previous operation.
+  memset(tx_buffer, 0, 255);
   jtencode.wspr_encode(call, loc4, dbm, tx_buffer);
  }
 
@@ -262,160 +192,133 @@ void setModeWSPR_telem()
  {
   symbol_count = WSPR_SYMBOL_COUNT;
   tone_spacing = WSPR_TONE_SPACING;
-  tone_delay = WSPR_DELAY;
   CTC = WSPR_CTC;
-  memset(tx_buffer, 0, 255); // Clears Tx buffer from previous operation.
+  memset(tx_buffer, 0, 255);
   jtencode.wspr_encode(call_telemetry, loc_telemetry, dbm_telemetry, tx_buffer);
  }
 
-void Si5351a_Write_Reg (byte regist, byte value){   // Writes "byte" into "regist" of Si5351a via I2C  
-  Wire.beginTransmission(96);    //111 or 96        // Starts transmission as master to slave 96, which is the 
-                                                    // I2C address of the Si5351a (see Si5351a datasheet)
-  Wire.write(regist);                               // Writes a byte containing the number of the register
-  Wire.write(value);                                // Writes a byte containing the value to be written in the register
-  Wire.endTransmission();                           // Sends the data and ends the transmission
+void Si5351a_Write_Reg (byte regist, byte value) {  // Writes "byte" into "regist" of Si5351a via I2C
+  Wire.beginTransmission(96);
+  Wire.write(regist);
+  Wire.write(value);
+  Wire.endTransmission();
  }
 
-void SetFrequency (uint32_t frequency) { // Frequency in Hz; must be within [7810 Hz to 200 Mhz]
-
+void SetFrequency (uint32_t frequency) { // frequency is in centi-Hz (Hz x100); optimised for 14-28 MHz, no R divider
 
   uint64_t fvco;
   uint32_t outdivider;
 
-  byte R = 1;
   byte a;
-
   unsigned long b;
   float f;
 
   unsigned long MS0_P1;
   unsigned long MS1_P1;
-
   unsigned long MSNA_P1;
   unsigned long MSNA_P2;
   unsigned long MSNA_P3;
 
- //outdivider 77000000000 or 30000000000
-  outdivider = 30000000000 / frequency;
+  // Target VCO ~850 MHz across 14-28 MHz band. "frequency" arrives in centi-Hz
+  // (Hz x100), so the 850 MHz target is scaled to match (850,000,000 Hz x100).
+  // Resulting outdivider range:
+  // 14 MHz -> 60,  18 MHz -> 46,  21 MHz -> 40,  28 MHz -> 30
+  // No R divider needed; outdivider always fits in phase reg (7 bits, max 127).
+  outdivider = 85000000000ULL / frequency;
 
-  while (outdivider > 900) {
-    R = R * 2;
-    outdivider = outdivider / 2;
-  }
-
+  // Must be even for correct 180 degree phase relationship
   if (outdivider % 2)
     outdivider--;
 
-  fvco = frequency;
-  fvco = fvco * outdivider * R / 100;
+  // Sanity clamp — should never trigger in 14-28 MHz band
+  if (outdivider < 4)   outdivider = 4;
+  if (outdivider > 126) outdivider = 126;
 
-  switch (R) {
-    case 1:   R = 0;   break;
-    case 2:   R = 16;  break;
-    case 4:   R = 32;  break;
-    case 8:   R = 48;  break;
-    case 16:  R = 64;  break;
-    case 32:  R = 80;  break;
-    case 64:  R = 96;  break;
-    case 128: R = 112; break;
-  }
-
-  a = fvco / tcxo;
-
-  f = fvco - a * tcxo;
-  f = f * pll_c;
-  f = f / tcxo;
-
-  b = f;
+  // VCO frequency, converted back down from centi-Hz to Hz to match tcxo/pll_c (which are in Hz).
+  // This step is what preserves the ~1.4648 Hz WSPR tone spacing through to the PLL fractional
+  // divider below — without it, tone steps collapse to whole Hz and WSPR decode breaks.
+  fvco = (uint64_t)frequency * outdivider / 100;
 
   // -------------------------
-  // CLK0 + CLK1 divider setup
+  // CLK0 + CLK1 multisynth P1
   // -------------------------
 
   MS0_P1 = 128 * outdivider - 512;
   MS1_P1 = MS0_P1;
 
-  // 180 degree phase offset
-  uint8_t phase = outdivider / 2;
+  // -------------------------
+  // PLL (MSNA) calculation
+  // -------------------------
 
-  // PLL calculation
+  a = fvco / tcxo;
 
-  f = 128 * b / pll_c;
+  f = fvco - a * tcxo;
+  f = f * 924000UL;         // 924000UL;  "c" part of the XTAL->PLL feedback multiplier
+  f = f / tcxo;
+  b = f;
 
-  MSNA_P1 = 128 * a + f - 512;
-
-  MSNA_P2 = f;
-  MSNA_P2 = 128 * b - MSNA_P2 * pll_c;
-
-  MSNA_P3 = pll_c;
+  f = 128.0 * b / 924000UL; // 924000UL; "c" part of the XTAL->PLL feedback multiplier
+  MSNA_P1 = 128 * a + (unsigned long)f - 512;
+  MSNA_P2 = 128 * b - (unsigned long)f * 924000UL; 
+  MSNA_P3 = 924000UL; 
 
   // -------------------------
   // PLLA setup
   // -------------------------
 
   Si5351a_Write_Reg (26, (MSNA_P3 & 65280) >> 8);
-  Si5351a_Write_Reg (27, MSNA_P3 & 255);
-
+  Si5351a_Write_Reg (27,  MSNA_P3 & 255);
   Si5351a_Write_Reg (28, (MSNA_P1 & 196608) >> 16);
   Si5351a_Write_Reg (29, (MSNA_P1 & 65280) >> 8);
-  Si5351a_Write_Reg (30, MSNA_P1 & 255);
-
+  Si5351a_Write_Reg (30,  MSNA_P1 & 255);
   Si5351a_Write_Reg (31, ((MSNA_P3 & 983040) >> 12) | ((MSNA_P2 & 983040) >> 16));
-
   Si5351a_Write_Reg (32, (MSNA_P2 & 65280) >> 8);
-  Si5351a_Write_Reg (33, MSNA_P2 & 255);
+  Si5351a_Write_Reg (33,  MSNA_P2 & 255);
 
   // -------------------------
-  // CLK0 setup
+  // CLK0 setup (no R divider — R bits in reg 44 left as 0)
   // -------------------------
 
+  Si5351a_Write_Reg (16, 0x4F);  // Integer mode | PLLA | MS0, full drive (79 decimal)
   Si5351a_Write_Reg (42, 0);
   Si5351a_Write_Reg (43, 1);
-
-  Si5351a_Write_Reg (44, ((MS0_P1 & 196608) >> 16) | R);
+  Si5351a_Write_Reg (44, (MS0_P1 & 196608) >> 16);
   Si5351a_Write_Reg (45, (MS0_P1 & 65280) >> 8);
-  Si5351a_Write_Reg (46, MS0_P1 & 255);
-
+  Si5351a_Write_Reg (46,  MS0_P1 & 255);
   Si5351a_Write_Reg (47, 0);
   Si5351a_Write_Reg (48, 0);
   Si5351a_Write_Reg (49, 0);
 
   // -------------------------
-  // CLK1 setup
+  // CLK1 setup — only when the 180° dipole hardware config is selected.
+  // In standard/ground-wire mode CLK1 is left alone (it stays powered down,
+  // as encode() disables it at the end of every transmission anyway).
   // -------------------------
 
-  Si5351a_Write_Reg (50, 0);
-  Si5351a_Write_Reg (51, 1);
+  if (use180deg)
+ {
+    Si5351a_Write_Reg (17, 0x4F);  // Integer mode | PLLA | MS1, full drive (79 decimal)
+    Si5351a_Write_Reg (50, 0);
+    Si5351a_Write_Reg (51, 1);
+    Si5351a_Write_Reg (52, (MS1_P1 & 196608) >> 16);
+    Si5351a_Write_Reg (53, (MS1_P1 & 65280) >> 8);
+    Si5351a_Write_Reg (54,  MS1_P1 & 255);
+    Si5351a_Write_Reg (55, 0);
+    Si5351a_Write_Reg (56, 0);
+    Si5351a_Write_Reg (57, 0);
 
-  Si5351a_Write_Reg (52, ((MS1_P1 & 196608) >> 16) | R);
-  Si5351a_Write_Reg (53, (MS1_P1 & 65280) >> 8);
-  Si5351a_Write_Reg (54, MS1_P1 & 255);
+    // Phase offset for 180 degrees — MUST be written after all MS config
+    //
+    // Per Si5351 AN619: phase offset register value = outdivider (integer divider).
+    // outdivider is 30-60 across 14-28 MHz, well within 7-bit reg limit (max 127).
+    // CLK0 phase = 0 (reference), CLK1 phase = outdivider (180 degrees out).
+    // PLLA reset latches the phase — required per AN619.
+    Si5351a_Write_Reg (165, 0);                    // CLK0 phase offset = 0
+    Si5351a_Write_Reg (166, (uint8_t)outdivider);  // CLK1 phase offset = 180 deg
+ }
 
-  Si5351a_Write_Reg (55, 0);
-  Si5351a_Write_Reg (56, 0);
-  Si5351a_Write_Reg (57, 0);
-
-  // -------------------------
-  // Set CLK1 phase offset
-  // -------------------------
-
-  Si5351a_Write_Reg (166, phase);
-
-  // Special divide-by-4 handling
-
-  if (outdivider == 4) {
-
-    Si5351a_Write_Reg (44, 12 | R);
-    Si5351a_Write_Reg (45, 0);
-    Si5351a_Write_Reg (46, 0);
-
-    Si5351a_Write_Reg (52, 12 | R);
-    Si5351a_Write_Reg (53, 0);
-    Si5351a_Write_Reg (54, 0);
-  }
-
-  // Reset PLLA for phase sync for every symbol
-  //Si5351a_Write_Reg (177, 32); // Guarantees phase sync, but may introduce tiny clicks/chirps during WSPR tone changes, line 421
+  // Reset PLLA to latch phase/frequency — required by Si5351 AN619
+  Si5351a_Write_Reg (177, 32);
 }
 
 void encode()
@@ -440,16 +343,14 @@ void encode()
   // Disable CLK2
   Si5351a_Write_Reg (18, 128);
 
-  // Enable CLK0 + CLK1
-  Si5351a_Write_Reg (16, pwr_level);
-  Si5351a_Write_Reg (17, pwr_level);
-
-  // Reset PLLA ONCE for phase sync
-  Si5351a_Write_Reg (177, 32);
+  // CLK0 (and CLK1, if use180deg) enable is handled inside SetFrequency() on every call.
 
   for (i = 0; i < symbol_count; i++)
   {
-    SetFrequency((freq * 100) + (tx_buffer[i] * tone_spacing));
+    // freq is in Hz; tone_spacing = 146 = 1.46 Hz x100. Keeping this multiply in
+    // centi-Hz all the way into SetFrequency() is what gives WSPR its correct
+    // 1.4648 Hz tone step — do not collapse this to plain Hz before the call.
+    SetFrequency((freq * 100UL) + (tx_buffer[i] * tone_spacing));
 
     proceed = false;
 
@@ -458,7 +359,7 @@ void encode()
     wdt_reset();
   }
 
-  // Disable outputs
+  // Disable CLK0 and CLK1 outputs
   Si5351a_Write_Reg (16, 128);
   Si5351a_Write_Reg (17, 128);
 
@@ -469,14 +370,13 @@ void encode()
   sei();
 }
 
- void software_reset()
+void software_reset()
 {
-  wdt_reset(); 
-
+  wdt_reset();
   exit (1);  // loop forever
-}  
+}
 
-void rf_on() // Turn on the high-side switch, activating the transmitter
+void rf_on() // Turn on Si5351
  {
   delay(10);
   digitalWrite(2, HIGH);
@@ -485,8 +385,8 @@ void rf_on() // Turn on the high-side switch, activating the transmitter
   digitalWrite(6, HIGH);
   digitalWrite(7, HIGH);
  }
- 
-void rf_off() // Turn off the high-side switch
+
+void rf_off() // Turn off Si5351
  {
   digitalWrite(2, LOW);
   digitalWrite(4, LOW);
@@ -503,7 +403,6 @@ void GPS_VCC_on()
   digitalWrite(A1, HIGH);
   digitalWrite(A2, HIGH);
   digitalWrite(A3, HIGH);
-  digitalWrite(A7, HIGH);
  }
 
 void GPS_VCC_off()
@@ -513,6 +412,4 @@ void GPS_VCC_off()
   digitalWrite(A1, LOW);
   digitalWrite(A2, LOW);
   digitalWrite(A3, LOW);
-  digitalWrite(A7, LOW);
- }
-  
+  }

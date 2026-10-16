@@ -5,21 +5,24 @@
 #define DIT_DURATION 50
 
 void beep(int on, int off) {
-   freq = 14096950UL;
+  // freq = 14096950UL;
   // freq = 18105900UL;
-  // freq = 28125870UL;
+     freq = 24926000UL;
+  // freq = 28126015UL;
   digitalWrite(2, HIGH); // Si5351 on
   digitalWrite(4, HIGH);
   digitalWrite(5, HIGH);
   digitalWrite(6, HIGH);
   digitalWrite(7, HIGH);
   
-  Si5351a_Write_Reg (17, 128);   // Disable output CLK1
-  Si5351a_Write_Reg (18, 128);   // Disable output CLK2
-  Si5351a_Write_Reg (16, 77);    // Enable output CLK0, set crystal as source and Integer Mode on PLLA
-  SetFrequency((freq * 100));
+  Si5351a_Write_Reg (18, 128);  // Disable output CLK2
+  if (use180deg) Si5351a_Write_Reg (17, 77); // Enable output CLK1 (180° dipole mode only)
+  Si5351a_Write_Reg (16, 77);   // Enable output CLK0, set crystal as source and Integer Mode on PLLA
+  SetFrequency(freq * 100UL);   // SetFrequency expects centi-Hz (Hz x100)
   delay(off);
-  Si5351a_Write_Reg (16, 128);   // Disable output CLK0
+  Si5351a_Write_Reg (16, 128);  // Disable output CLK0
+  Si5351a_Write_Reg (17, 128);  // Disable output CLK1 (harmless no-op if it was never enabled)
+
   delay(on);
     
   digitalWrite(2, LOW);  // Si5351 off
