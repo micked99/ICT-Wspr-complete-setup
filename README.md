@@ -215,16 +215,13 @@ The Arduino code is setup from start to use a 26Mhz Tcxo and to use a 4Mhz xo di
 
 Values to edit in the ino file  <br>
 
-<img width="1019" height="154" alt="setup" src="https://github.com/user-attachments/assets/20a43e93-b5ae-40ad-9a3e-7ebeeabc7ddc"  width="100"/>
+<img width="1019" height="154" alt="setup" src="https://github.com/user-attachments/assets/20a43e93-b5ae-40ad-9a3e-7ebeeabc7ddc"  width="100"/><br>
 
-
-Sets the frequency and band  <br>
-
-const char call[] = "SA7BSS";      // WSPR Standard callsign -- SA7BSS for bench testing, SA6BSS for flight
-char tlm_channel1 = '1';           // Telemetry channel: 0/1/Q
-char tlm_channel2 = '1';           // Telemetry channel: 0-9
-const uint32_t tcxo  = 26000000UL; // TCXO/crystal frequency in Hz
-const bool use180deg = false;      // Hardware config: true = 180° dipole (CLK0+CLK1), false = standard/ground-wire (CLK0)
+const char call[] = "SA7BSS";      // WSPR Standard callsign -- SA7BSS for bench testing, SA6BSS for flight<br>
+char tlm_channel1 = '1';           // Telemetry channel: 0/1/Q<br>
+char tlm_channel2 = '1';           // Telemetry channel: 0-9<br>
+const uint32_t tcxo  = 26000000UL; // TCXO/crystal frequency in Hz<br>
+const bool use180deg = false;      // Hardware config: true = 180° dipole (CLK0+CLK1), false = standard/ground-wire (CLK0)<br><br>
  
 See this page for channel setup and reservation: https://traquito.github.io/channelmap/ & https://wsprtv.com/tools/channel_map.html
 
