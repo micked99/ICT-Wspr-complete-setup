@@ -46,7 +46,7 @@ Cam files for pcb ordering as well as the Eagle schematic and board files, viewe
 Replace the Boards.txt in arduino to controll the speed of the 328, its located in: C:\Program Files (x86)\Arduino\hardware\arduino\avr  
 ### oscillator-main  
 Test file to test the 328 and si5351, no gps is needed for this, only the 328, 5351, its tcxo and the two pull up resistors have to be soldered, if all works it will tx a carrier at 14.097Mhz, upload the .ino file with arduino or the .hex with Avrdudess https://github.com/ZakKemble/AVRDUDESS
-## Sidenote - the main code have a cw beep function that will tx at startup, this without a gps soldered, so this test is really not needed anymore, just flash the main code into the board and it will beep at freq set in beep.h
+# Sidenote - the main code have a cw beep function that will tx at startup, this without a gps soldered, so this test is really not needed anymore, just flash the main code into the board and it will beep at freq set in beep.h
 
 ## Goals  
 This setup is aimed at three main things: light weight, low power demands and as few components as possible - easy to build
