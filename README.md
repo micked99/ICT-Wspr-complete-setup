@@ -214,29 +214,23 @@ Here is what a JLC-PCB assambled board looks like, pictures from Michael KC3GMG
 The Arduino code is setup from start to use a 26Mhz Tcxo and to use a 4Mhz xo divided by 2 to run at 2Mhz, if other values used the code needs to be changed - see below  
 
 Values to edit in the ino file  <br>
-Follow the <<<<< arrows where you need to edit <br>
+
+<img width="1019" height="154" alt="setup" src="https://github.com/user-attachments/assets/20a43e93-b5ae-40ad-9a3e-7ebeeabc7ddc"  width="100"/>
+
 
 Sets the frequency and band  <br>
-#define WSPR_FREQ     14097190UL // <<<<< SET TX FREQUENCY HERE <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<br>
 
-Sets your call and channel<br>
-const char call[] = "SA7BSS";   // <<<<< SET WSPR CALLSIGN <<<<<<<<<<<<<<<<<<br>
-char tlm_channel1 = 'Q';        // <<<<< SET TELEMETRY CHANNEL 0/1/Q <<<<<<<<br>
-char tlm_channel2 = '9';        // <<<<< SET TELEMETRY CHANNEL 0-9 <<<<<<<<<<br>
+const char call[] = "SA7BSS";      // WSPR Standard callsign -- SA7BSS for bench testing, SA6BSS for flight
+char tlm_channel1 = '1';           // Telemetry channel: 0/1/Q
+char tlm_channel2 = '1';           // Telemetry channel: 0-9
+const uint32_t tcxo  = 26000000UL; // TCXO/crystal frequency in Hz
+const bool use180deg = false;      // Hardware config: true = 180° dipole (CLK0+CLK1), false = standard/ground-wire (CLK0)
  
-See this page for channel setup and reservation: https://traquito.github.io/channelmap/
-
-Set initial power of the 5351  
-int pwr_level=79;  
-it will for every sequence increase the power one step so if you set it at 77 it will take two sequencies, 20 min before it will start at full power   
-avalible valus are 76, 77, 78 and 79 where 79 is max power, 76 is just a few mW so I recommend not to use that, the default setting is max power 79
+See this page for channel setup and reservation: https://traquito.github.io/channelmap/ & https://wsprtv.com/tools/channel_map.html
 
 CW setup, the board will at first moment at power on send a morse signal with your callsign<br>
 Here is my SA6BSS call in the ino file  <br>
 cw_s(); cw_a(); cw_6(); cw_b(); cw_s(); cw_s();  <br>
-
-Sets the frequncy of tcxo used for the si5351 <br>
-tcxo  = 26000000UL;   // <<<<< SET TCXO FREQUENCY HERE <<<<<<<<br>
 
 Testing and Scheduling of tx sequence<br>
 
@@ -275,13 +269,6 @@ to set cw tx frequncy adjust it in Beep.h, this will tx a short cw init as soon 
      freq = 14096980UL;  <br>
   // freq = 18105900UL;  <br>
   // freq = 28125870UL;  <br>
-
-If you have problem getting wspr decodes, say its works fine on 20m but when you try 10m the board tx but you dont get any decodes,
-change this in TelemFunctions.h <br>
-
- //outdivider 77000000000 or 30000000000 // If bad decodes at 24/28Mhz try the other value<br> 
-  outdivider = 30000000000 / frequency;  // With 900 MHz beeing the maximum internal PLL-Frequency<br> 
-
 
 
 # Balance the board
