@@ -8,8 +8,8 @@
 <img src="https://github.com/user-attachments/assets/87f7522f-9779-4d59-95e0-92f3e82d1d06" width="400" />  <br> <br>
 ## Updates
 
-20261017 
-Major overhaul of the code, biggest enhancements is the mergin of the 180° tx code with the normal tx code with a setting to run the board in standard - normal diploe mode or in 180° mode with the dipole halfs fed 180° antiphase, quadruple the power output but only doubling the power consumption of the si5351 - in theory. Power demands increase from 25mA in dipole to 30mA 180 degree mode, also lots of old unused code mainly the jt9 codesnips that was left in there removed, all user configureble  settings moved to one place in the beginning of the .ino file - new and old pcb:s 100% compatible but old pcb:s does not have clk1 routed that is needed for 180° tx so only dipole mode works on them. (si5351 use about 17mA in stb and 27mA in tx using one clock + 5mA for anothe clock.)
+20261017  <br>
+Major overhaul of the code, biggest enhancements is the mergin of the 180° tx code with the normal tx code with a setting to run the board in standard - normal diploe mode or in 180° mode with the dipole halfs fed 180° antiphase, quadruple the power output but only doubling the power consumption of the si5351 - in theory. Power demands increase from 25mA in dipole to 30mA 180 degree mode, also lots of old unused code mainly the jt9 codesnips that was left in there removed, all user configureble  settings moved to one place in the beginning of the .ino file - new and old pcb:s 100% compatible but old pcb:s does not have clk1 routed that is needed for 180° tx so only dipole mode works on them. (si5351 use about 17mA in stb and 27mA in tx using one clock + 5mA for another clock.)
 
 Fixed a bug in telemetry/gps data and moved all configurable settings into the .ino file, like channel and tcxo freq
 
