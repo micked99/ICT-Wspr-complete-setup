@@ -231,6 +231,11 @@ cw_s(); cw_a(); cw_6(); cw_b(); cw_s(); cw_s();  <br>
 
 Testing and Scheduling of tx sequence<br>
 
+Arround line 65 in the .ino file you can set the timing of the board<br><br>
+
+<img width="1540" height="96" alt="schedule" src="https://github.com/user-attachments/assets/03d79978-86bc-4223-9af5-af6222c08000" width="100"/>
+
+
 #include "Timing-test.h"  // <<<<< Set Timing-test.h for testing, it will tx on first 2 min slot after power on <<<<<<<<<<  <br>
 #include "Timing.h"       // <<<<< Set Timing.h for flight and it will tx on the nominal 10 min scheduling <<<<<<<<<<<<<<<  <br>
 
