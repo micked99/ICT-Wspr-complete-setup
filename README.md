@@ -8,6 +8,8 @@
 <img src="https://github.com/user-attachments/assets/87f7522f-9779-4d59-95e0-92f3e82d1d06" width="400" />  <br> <br>
 ## Updates
 
+20261017 Major overhaul of the code, biggest enhancements is the mergin of the 180° tx code with the normal tx code with a setting to run the board in standard - normal diploe mode or in 180° mode with the dipole halfs fed 180° antiphase, quadruple the power output but only doubling the power consumption of the si5351 - in theory. Power demands increase from 25mA in dipole to 30mA 180 degree mode, also lots of old unused code mainly the jt9 codesnips that was left in there removed, all user configureble  settings moved to one plce in the beginning of the .ino file - new and old pcb:s 100% compatible.
+
 Fixed a bug in telemetry/gps data and moved all configurable settings into the .ino file, like channel and tcxo freq
 
 A 180° tx with a 4x power output avalible here: https://github.com/micked99/ICT-wspr-180-4x-the-power-output
