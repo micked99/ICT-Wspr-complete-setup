@@ -240,8 +240,12 @@ set<br>
 or<br>
 #include "Timing.h"       // <<<<< Set Timing.h for flight and it will tx on the nominal 10 min scheduling <<<<<<<<<<<<<<<  <br>
 
-Timing-test.h is a testfile that will start tx every 2min, this it convinient to use during testing on the bench, final prep before flight is to edit the  
-.ino file from #include "Timing-test.h" to #include "Timing.h" this is the main config that should be used during a flight, it have a 10 min sequence as needed to fit the scheduling agreed on in the balloon community
+Timing-test.h is a testfile that will start tx every 2min, this it convenient to use during testing on the bench, final prep before flight is to edit the  
+.ino file from #include "Timing-test.h" to #include "Timing.h" this is the main config that should be used during a flight, it have a 10 min sequence as needed to fit the scheduling agreed on in the balloon community 
+
+After power on it takes about 30sec fort the board to get GPS fix if in clear sky or gps repeater used, GPS through a window can take 1-2 minutes.
+
+
 Edit Timing.h sceduling at what minute you want to tx your normal wspr and at what minute to tx the telemetry, this can be done inside Arduino ide or with a normal texteditor  
 
 To adjust the sequence in what order the standard and telemtry is transmitted edit Timing.h, it is set to transmitt 4 times - 8 minutes and then switching off the radio and enable gps, gets new loction data last 2 min of the 10 minute slot, then start over, default setting is: WSPR, WSPR_telemtry, WSPR, WSPR, this is set by adjusting the setModeWSPR();  or  setModeWSPR_telem(); in Timing.h file  
@@ -280,7 +284,6 @@ You want the board to be as leveled as possible so the solarcells always points 
 to do this use the top hook, puti it on a short loop of fishing line and bend the copper rod untill it levels up, see below:  
 
 <img src="https://github.com/user-attachments/assets/eec8681e-1199-46cd-8c37-9d269d65407c" width="300" />  <br> 
-
 
 # Get your flight uploaded to Sondehub and/or aprs.fi
 
