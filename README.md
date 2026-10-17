@@ -46,7 +46,7 @@ Cam files for pcb ordering as well as the Eagle schematic and board files, viewe
 Replace the Boards.txt in arduino to controll the speed of the 328, its located in: C:\Program Files (x86)\Arduino\hardware\arduino\avr  
 ### oscillator-main  
 Test file to test the 328 and si5351, no gps is needed for this, only the 328, 5351, its tcxo and the two pull up resistors have to be soldered, if all works it will tx a carrier at 14.097Mhz, upload the .ino file with arduino or the .hex with Avrdudess https://github.com/ZakKemble/AVRDUDESS
-# Sidenote - the main code have a cw beep function that will tx at startup, this without a gps soldered, so this test is really not needed anymore, just flash the main code into the board and it will beep at freq set in beep.h
+### Sidenote - the main code have a cw beep function that will tx at startup, this without a gps soldered, so this test is really not needed anymore, just flash the main code into the board and it will beep at freq set in beep.h
 
 ## Goals  
 This setup is aimed at three main things: light weight, low power demands and as few components as possible - easy to build
@@ -79,7 +79,7 @@ The ATGM336-N31 support both GPS and Beidou system, by switching off Beidou and 
 This gps does not have any altitude limit like many other modules, its been tested to 150.000m with a hack-rf and GPSSim and still worked fine
 
 
-# BOM
+## BOM
 
 All components but the si5351 is bought on Aliexpress, you can source the SI535/MS5351 on Ali but they can have an higher power consumption then the original, from my experience the Ali ones draw 27mA instead of 17mA in stb current  
 ----------------  
