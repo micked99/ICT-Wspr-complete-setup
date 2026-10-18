@@ -1,5 +1,8 @@
-const uint8_t TLM_SLOT  = 2;   // slot of the 10-min cycle that carries the telemetry message: 0, 2, 4, 6 or 8
-const uint8_t LAST_SLOT = 6;   // last TX slot in the cycle: 6 = four slots (0,2,4,6), 8 = all five
+// ---- Schedule setup (10-minute cycle, 2-minute slots at minutes 0, 2, 4, 6, 8) ----
+#define SLOT(m) (1 << ((m) / 2))
+const uint8_t TX_SLOTS  = SLOT(0) | SLOT(2) | SLOT(6) | SLOT(8);  // minutes that transmit; any other even minute is idle (GPS only)
+const uint8_t TLM_SLOT  = 2;   // minute that carries the telemetry message (must be one of TX_SLOTS)
+const uint8_t PREP_SLOT = 6;   // minute where new GPS data is read (the first TX slot after the idle one)
 
 void TXtiming() // Timing
 {
@@ -13,9 +16,9 @@ void TXtiming() // Timing
 
     uint8_t slot = minute() % 10;         // position in the 10-minute cycle
 
-    if (((slot % 2) == 0) && (slot <= LAST_SLOT))
+    if (((slot % 2) == 0) && (TX_SLOTS & SLOT(slot)))   // a TX slot
     {
-      if ((slot == 0) || (telemetry_set == 0))   // fresh data at slot 0, or at first slot after power-up
+      if ((slot == PREP_SLOT) || (telemetry_set == 0))  // fresh data at PREP_SLOT, or at first slot after power-up
       {
         loc4calc();
         call_telem();
@@ -28,14 +31,13 @@ void TXtiming() // Timing
 
       GPS_VCC_off();
       rf_on();
-      if ((slot == TLM_SLOT) && !firstTx) setModeWSPR_telem();   // telemetry slot, but never as the very first TX
-      else                                setModeWSPR();         // all other slots = standard message
+      if ((slot == TLM_SLOT) && !firstTx) setModeWSPR_telem();
+      else                                setModeWSPR();
       encode();
       rf_off();
       GPS_VCC_on();
       firstTx = false;
-
-      if (slot == LAST_SLOT) telemetry_set = 0;   // cycle finished, re-prepare at next slot 0
     }
+    // idle slot: nothing to do, the GPS is already on after the previous TX
   }
 }
