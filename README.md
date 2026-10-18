@@ -1,12 +1,6 @@
-## Consider a donation to this projects software developer at: https://yo3ict.uus.ro/index.html press the "Show Sponsors" button  <br>
-
-### If you do find the following compilation of information of use - [Donation](https://www.paypal.com/donate/?business=FRB6FHBJRKUK8&no_recurring=0&currency_code=SEK) <br>
-
-
-
-# ICT-v7-ATGM336
-<img src="https://github.com/user-attachments/assets/87f7522f-9779-4d59-95e0-92f3e82d1d06" width="400" />  <br> <br>
 ## Updates
+20261018  <br>
+Changed Timing.h so it will not wait for its 10 min schedule, if the board starts at any minute inside the scheduled time it will starta at next 2 min window to tx a standard wspr packet and then resume the order of schedule you have set.
 
 20261017  <br>
 Major overhaul of the code, biggest enhancements is the mergin of the 180° tx code with the normal tx code with a setting to run the board in standard - normal diploe mode or in 180° mode with the dipole halfs fed 180° antiphase, quadruple the power output but only doubling the power consumption of the si5351 - in theory. Power demands increase from 25mA in dipole to 30mA 180 degree mode, also lots of old unused code mainly the jt9 codesnips that was left in there removed, all user configureble  settings moved to one place in the beginning of the .ino file - new and old pcb:s 100% compatible but old pcb:s does not have clk1 routed that is needed for 180° tx so only dipole mode works on them. (si5351 use about 17mA in stb and 27mA in tx using clk0 + 5mA for clk1.) <br>
@@ -24,6 +18,14 @@ Screenshots of the settings of order of pcb assembly, see folder "JLCPcb order"
 
 Get your board online onto Sondehub/aprs.fi section added  
 
+## Consider a donation to this projects software developer at: https://yo3ict.uus.ro/index.html press the "Show Sponsors" button  <br>
+
+### If you do find the following compilation of information of use - [Donation](https://www.paypal.com/donate/?business=FRB6FHBJRKUK8&no_recurring=0&currency_code=SEK) <br>
+
+
+
+# ICT-v7-ATGM336
+<img src="https://github.com/user-attachments/assets/87f7522f-9779-4d59-95e0-92f3e82d1d06" width="400" />  <br> <br>
 
 ## Introduction
 This FW is mostly the work of Eduard YO3ICT,  you can read about here: https://yo3ict.uus.ro/tracker.html  
