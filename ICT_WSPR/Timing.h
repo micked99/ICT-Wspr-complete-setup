@@ -1,76 +1,41 @@
+const uint8_t TLM_SLOT  = 2;   // slot of the 10-min cycle that carries the telemetry message: 0, 2, 4, 6 or 8
+const uint8_t LAST_SLOT = 6;   // last TX slot in the cycle: 6 = four slots (0,2,4,6), 8 = all five
+
 void TXtiming() // Timing
-   {
-    // run additional scripts here to generate data prior to TX if there is a large delay involved.
+{
+  static int8_t lastHandledMinute = -1;   // minute we've already acted on
+  static bool firstTx = true;             // true until the first transmission after power-up
 
-    static uint8_t lastHandledSecond = 255;   // last second() value we already acted on
-
-    // Fires once per second, with a 2-second catch window (second 0 or 1) instead of
-    // requiring second()==0 exactly. If loop() is ever delayed past second 0, this
-    // still catches the slot on second 1 instead of skipping the whole 2-minute window.
-    if ((timeStatus() == timeSet) && (second() <= 1) && (second() != lastHandledSecond))
-   {
-    lastHandledSecond = second();
+  if ((timeStatus() == timeSet) && (second() <= 1) && (minute() != lastHandledMinute))
+  {
+    lastHandledMinute = minute();
     setGPStime();
 
-    uint8_t slot = minute() % 10;   // which 2-minute slot of the 10-minute cycle we're in
+    uint8_t slot = minute() % 10;         // position in the 10-minute cycle
 
-   if ((slot == 0) && (telemetry_set == 0))
-   {
-      loc4calc();             // Get position
-      call_telem();           // Update WSPR telemetry callsign based on previous information : position and altitude in meters
-      dbm_alt();              // Calculate the dBm field to encode coarse altitude
-      loc_dbm_telem();        // Update WSPR telemetry locator and dbm. Get temperature, voltage, speed in knots, GPS status and sats number
-      telemetry_set = 1;      // Set WSPR as next in sequence
-      geofence_check();
-
-   if (Outside == true)
-      freq = WSPR_FREQ;       // Set WSPR frequency
-   else   
-      freq = ISM_WSPR_FREQ;   // Set ISM WSPR frequency
-   }
-        
-    if ((slot == 0) && (telemetry_set == 1)) // TX WSPR telemetry message
-   {
-      GPS_VCC_off();
-      rf_on();
-      setModeWSPR();         // Set WSPR standard or WSPR-telem mode
-      encode();              // Begin radio transmission
-      rf_off();
-      GPS_VCC_on();
-      telemetry_set = 2;     // Set WSPR as next in sequence
-   }
-    
-    else if ((slot == 2) && (telemetry_set != 0))    // TX WSPR standard message
-   {
-      GPS_VCC_off();
-      rf_on();
-      setModeWSPR_telem();    // Set WSPR standard or WSPR-telem 
-      encode();               // Begin radio transmission
-      rf_off();
-      GPS_VCC_on();
-      telemetry_set = 3;      // Set WSPR as next in sequence
-    }
-    
-    else if ((slot == 4) && (telemetry_set != 0))    // TX WSPR standard message
+    if (((slot % 2) == 0) && (slot <= LAST_SLOT))
     {
-      GPS_VCC_off(); 
-      rf_on();
-      setModeWSPR();          // Set WSPR standard or WSPR-telem 
-      encode();               // Begin radio transmission
-      rf_off(); 
-      GPS_VCC_on();
-      telemetry_set = 4;      // Set WSPR as next in sequence
-   }
-   
-    else if ((slot == 6) && (telemetry_set != 0))    // TX WSPR standard message
-   {
+      if ((slot == 0) || (telemetry_set == 0))   // fresh data at slot 0, or at first slot after power-up
+      {
+        loc4calc();
+        call_telem();
+        dbm_alt();
+        loc_dbm_telem();
+        geofence_check();
+        freq = (Outside == true) ? WSPR_FREQ : ISM_WSPR_FREQ;
+        telemetry_set = 1;                // data is ready
+      }
+
       GPS_VCC_off();
       rf_on();
-      setModeWSPR();                  // Set WSPR standard or WSPR-telem 
-      encode();                       // Begin radio transmission
+      if ((slot == TLM_SLOT) && !firstTx) setModeWSPR_telem();   // telemetry slot, but never as the very first TX
+      else                                setModeWSPR();         // all other slots = standard message
+      encode();
       rf_off();
       GPS_VCC_on();
-      telemetry_set = 0;              // Set WSPR as next in sequence
-   } 
-   }
-   }
+      firstTx = false;
+
+      if (slot == LAST_SLOT) telemetry_set = 0;   // cycle finished, re-prepare at next slot 0
+    }
+  }
+}
