@@ -57,14 +57,14 @@ The board can be built to weigh below 1 gram fully assembled (pic below) with so
 
 
 
-To make the board consume as little power as possible its setup to switch between tx and gps so only one of the two is ON at any time, so it will startup and get valid gps lock with tx side of the board switched off, the tx ic - si5351 consumes 17-27mA (depending on model) in stb curent even when not in use so only the gps is on and draws about 25mA using the ATGM336 (N31), when the board have got a valid lock the gps will turn off and the wspr tx starts, using the low power 76, see further down, it will consume about 20mA in low and at max power, 79, it will be about 30mA, on top of this the 328 running at 2Mhz and the Tcxo combined will take another 3mA 
+To make the board consume as little power as possible its setup to switch between tx and gps so only one of the two is ON at any time, so it will startup and get valid gps lock with tx side of the board switched off, the tx ic - si5351 consumes 17-27mA (depending on model) in stb curent even when not in use so only the gps is on and draws about 25mA using the ATGM336 (N31), when the board have got a valid lock the gps will turn off and the wspr tx starts, it will be about 30mA, on top of this the 328 running at 2Mhz and the Tcxo combined will take another 3mA 
 
-The board will work on any band between 80m and 2m but most used band is 20m-10m
+The board will work on any band between 14Mhhz and 28Mhz
 
 # Features  
 CW init - At power on, when sun hits the solar panels it start to tx cw, then you know you are good for launch  
 No tx over selected grids - Move tx to ism (13.555) freq over selected grids  
-Powerswitching between gps and tx - Will put less stress on the cells and get earlier in the morning startups  
+Powerswitching between gps and tx - Will put less stress on the cells and get earlie in the morning startups  
 Course altitude in main wspr - Will insert a rough altitude into the standard wspr db field, see TelemFunctions.h  
 Good WDT function of 328 - Will never fail to wake up even with unstable solar cells powering the board  
 Will work at low clocks, tested down to 1Mhz on the 328 - Deafult is 2Mhz  
@@ -143,7 +143,7 @@ To test the solar + board indoor before a flight you can use a Halogen flood lig
 # Arduino
 
 To compile and upload the sketch I use Arduino version 1.8.13 which you find here, others will work but not tested, <br> https://www.arduino.cc/en/software/OldSoftwareReleases/<br> 
-Resently tested last version as of now 2.3.10 which also works fine.
+Resently tested last version as of now 2.3.10 which also worked fine.
 
 # 328 Fuses
 
@@ -153,7 +153,7 @@ The 328 have an internal xo at 8Mhz, you can set it to be divided down by 8 (fus
 the internal xo at 8Mhz is not very stable in cold and it will not work at flying altitude, but I have tried a few flights on the internal xo divided down to 1Mhz 
 and it have worked fine, anyway, both speeeds works fine for testing a board on the bench, but I do recomend that you use the suggested 4Mhz xo as in the schematic.
 
-FD D9 FE 1,8V / External 2/4/8Mhz xo  - This is the fuses you should use if you build this board  
+FD D9 FE 1,8V / External 2/4/8Mhz xo, Brownout to 1,8V - This is the fuses you should use if you build this board  
 
 62 D9 FE 1.8V / internal 8Mhz osc /div8 = 1Mhz  
 E2 D9 FE 1.8V / internal 8Mhz osc  
@@ -223,12 +223,13 @@ const bool use180deg = false;      // Hardware config: true = 180° dipole (CLK0
 See this page for channel setup and reservation: https://traquito.github.io/channelmap/ & https://wsprtv.com/tools/channel_map.html
 
 CW setup, the board will at first moment at power on send a morse signal with your callsign<br>
+This is a first good test the board is working, set the freq in Beep.h, it will beep without a gps soldered
 Here is my SA6BSS call in the ino file  <br>
 cw_s(); cw_a(); cw_6(); cw_b(); cw_s(); cw_s();  <br>
 
 Testing and Scheduling of tx sequence<br>
 
-After power on it takes about 25-30sec fort the board to get GPS fix if in clear sky or gps repeater used, GPS through a window can take 1-2 minutes.
+After power on it will beep a cw for 5 sec then switch over to gps that takes about 25-30sec to get a GPS fix if in clear sky or gps repeater used, GPS through a window can take 1-2 minutes.
 
 Edit Timing.h sceduling at what minute you want to tx your normal wspr and at what minute to tx the telemetry, this can be done inside Arduino ide or with a normal texteditor, this is self explanatory
 
@@ -236,7 +237,7 @@ const uint8_t TX_SLOTS  = SLOT(0) | SLOT(2) | SLOT(6) | SLOT(8);  // minutes tha
 const uint8_t TLM_SLOT  = 2;   // minute that carries the telemetry message (must be one of TX_SLOTS)<br>
 const uint8_t PREP_SLOT = 6;   // minute where new GPS data is read (the first TX slot after the idle one)<br>
 
-"PREP_SLOT = 6; "This can be a bit unlogical but its the first tx after the GPS got new data, we can see "TX_SLOTS  = SLOT(0) | SLOT(2) | SLOT(6) | SLOT(8); " where 4 is the slot where the radio switch off and the gps enables, so this is the first slot after gps got new data into the board
+"PREP_SLOT = 6; "This can be a bit unlogical but its the first tx after the GPS got new data, we can see "TX_SLOTS  = SLOT(0) | SLOT(2) | SLOT(6) | SLOT(8); " where 4 is the slot where the radio switch off and the gps enables, so PREP_SLOT = 6; is the first slot after gps got new data into the board
 
 To adjust the sequence in what order the standard and telemtry is transmitted edit Timing.h, it is set to transmitt 4 times - 8 minutes and then switching off the radio and enable gps, gets new loction data, then start over.
 
