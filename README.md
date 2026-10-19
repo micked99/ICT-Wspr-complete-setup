@@ -249,9 +249,15 @@ Timing-test.h is a testfile that will start tx every 2min, this it convenient to
 After power on it takes about 30sec fort the board to get GPS fix if in clear sky or gps repeater used, GPS through a window can take 1-2 minutes.
 
 
-Edit Timing.h sceduling at what minute you want to tx your normal wspr and at what minute to tx the telemetry, this can be done inside Arduino ide or with a normal texteditor  
+Edit Timing.h sceduling at what minute you want to tx your normal wspr and at what minute to tx the telemetry, this can be done inside Arduino ide or with a normal texteditor, this is self explanatory
 
-To adjust the sequence in what order the standard and telemtry is transmitted edit Timing.h, it is set to transmitt 4 times - 8 minutes and then switching off the radio and enable gps, gets new loction data last 2 min of the 10 minute slot, then start over, default setting is: WSPR, WSPR_telemtry, WSPR, WSPR, this is set by adjusting the setModeWSPR();  or  setModeWSPR_telem(); in Timing.h file  
+const uint8_t TX_SLOTS  = SLOT(0) | SLOT(2) | SLOT(6) | SLOT(8);  // minutes that transmit; any other even minute is idle (GPS only)<br>
+const uint8_t TLM_SLOT  = 2;   // minute that carries the telemetry message (must be one of TX_SLOTS)<br>
+const uint8_t PREP_SLOT = 6;   // minute where new GPS data is read (the first TX slot after the idle one)<br>
+
+"PREP_SLOT = 6; "This can be a bit unlogical but its the first tx after the GPS got new data, we can see "TX_SLOTS  = SLOT(0) | SLOT(2) | SLOT(6) | SLOT(8); " where 4 is the slot where the radio switch off and the gps enables, so this is the first slot after gps got new data into the board
+
+To adjust the sequence in what order the standard and telemtry is transmitted edit Timing.h, it is set to transmitt 4 times - 8 minutes and then switching off the radio and enable gps, gets new loction data, then start over, default setting is: WSPR, WSPR_telemtry, WSPR, WSPR, this is set by adjusting the setModeWSPR();  or  setModeWSPR_telem(); in Timing.h file  
 
 This is the standard setup using a 4 Mhz xo, so if you build the board with the recommended components and downloaded fw this does not need to change
 Sets speed of the board  
