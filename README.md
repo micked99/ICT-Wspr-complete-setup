@@ -37,6 +37,8 @@ Another good site for beginers is to read up and join the io board at: https://g
 
 The [Traquito](https://traquito.github.io/)  page will host channel reservation and upload to varous tracking sites like https://aprs.fi/ and https://amateur.sondehub.org/ and as well host its own map, more maps and info avalible here https://lu7aa.org/dx.asp and here http://qrp-labs.com/tracking.html, another good page that poped up lately is [wsprtv](https://wsprtv.com/docs/user_guide.html#u4b-channel-map) & [wsprtv channel map](https://wsprtv.com/tools/channel_map.html?band=17m&num_days=30&rx_threshold=1)
 
+## Everything in this git is in Metrics
+
 ## Folders in this repo:  
 ### ICT_WSPR   
 The Arduino code to upload to the PCB  
@@ -107,9 +109,9 @@ I use a small hook 2cm long made of 0,6mm wire bottom, and 0,8mm at the top to s
 Here is good picture where you can see the Red and Yellow gps antennas  
 <img src="https://github.com/user-attachments/assets/a84f1ce0-c35d-4ae1-815b-1d40e82dd7b6" width="220" />  <br>  
 
-Tx Antenna length calculated as normal, 300/freq x 0.95 /4
+Tx Antenna length calculated as normal, 300/freq x 0.95 /4 
 
-Upper antenna leg should be supported by some sort of fishing line taped to the balloon
+Upper antenna leg should be supported by a fishing line taped between the balloon and pcb
 
 # Solar cells
 
