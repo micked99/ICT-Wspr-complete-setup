@@ -80,7 +80,7 @@ This gps does not have any altitude limit like many other modules, its been test
 
 ## BOM
 
-All components but the si5351 is bought on Aliexpress, you can source the SI535/MS5351 on Ali but they can have an higher power consumption then the original, from my experience the Ali ones draw 27mA instead of 17mA in stb current  
+All components but the si5351 is bought on Aliexpress, you can source the SI535/MS5351 on Ali but they can have an higher power consumption then the original, from my experience the Ali ones draw 27mA instead of 17mA in stb current of the genuine ones 
 ----------------  
 Cpu ATmega328P (328PB also works but need installing MiniCore in Arduino IDE)
 
@@ -144,7 +144,7 @@ To test the solar + board indoor before a flight you can use a Halogen flood lig
 
 # Arduino
 
-To compile and upload the sketch I use Arduino version 1.8.13 which you find here, others will work but not tested, https://www.arduino.cc/en/software/OldSoftwareReleases/
+To compile and upload the sketch I use Arduino version 1.8.13 which you find here, others will work but not tested, <br> https://www.arduino.cc/en/software/OldSoftwareReleases/<br> 
 Resently tested last version as of now 2.3.10 which also works fine.
 
 # 328 Fuses
@@ -210,7 +210,7 @@ Here is what a JLC-PCB assambled board looks like, pictures from Michael KC3GMG
 <img src="https://github.com/user-attachments/assets/d44a3582-5e09-4798-9103-74a7370bb043" width="400" />
 
 # Setup parameters in the code  
-The Arduino code is setup from start to use a 26Mhz Tcxo and to use a 4Mhz xo divided by 2 to run at 2Mhz, if other values used the code needs to be changed - see below  
+The Arduino code is setup from start to use a 26Mhz Tcxo and a 4Mhz crystal, if other values used the code needs to be changed - see below  
 
 Values to edit in the ino file  <br>
 
@@ -230,20 +230,7 @@ cw_s(); cw_a(); cw_6(); cw_b(); cw_s(); cw_s();  <br>
 
 Testing and Scheduling of tx sequence<br>
 
-Arround line 65 in the .ino file you can set the timing of the board<br><br>
-
-<img width="1540" height="96" alt="schedule" src="https://github.com/user-attachments/assets/03d79978-86bc-4223-9af5-af6222c08000" width="100"/><br>
-
-set<br>
-#include "Timing-test.h"  // <<<<< Set Timing-test.h for testing, it will tx on first 2 min slot after power on <<<<<<<<<<  <br>
-or<br>
-#include "Timing.h"       // <<<<< Set Timing.h for flight and it will tx on the nominal 10 min scheduling <<<<<<<<<<<<<<<  <br>
-
-Timing-test.h is a testfile that will start tx every 2min, this it convenient to use during testing on the bench, final prep before flight is to edit the  
-.ino file from #include "Timing-test.h" to #include "Timing.h" this is the main config that should be used during a flight, it have a 10 min sequence as needed to fit the scheduling agreed on in the balloon community 
-
-After power on it takes about 30sec fort the board to get GPS fix if in clear sky or gps repeater used, GPS through a window can take 1-2 minutes.
-
+After power on it takes about 25-30sec fort the board to get GPS fix if in clear sky or gps repeater used, GPS through a window can take 1-2 minutes.
 
 Edit Timing.h sceduling at what minute you want to tx your normal wspr and at what minute to tx the telemetry, this can be done inside Arduino ide or with a normal texteditor, this is self explanatory
 
@@ -253,7 +240,9 @@ const uint8_t PREP_SLOT = 6;   // minute where new GPS data is read (the first T
 
 "PREP_SLOT = 6; "This can be a bit unlogical but its the first tx after the GPS got new data, we can see "TX_SLOTS  = SLOT(0) | SLOT(2) | SLOT(6) | SLOT(8); " where 4 is the slot where the radio switch off and the gps enables, so this is the first slot after gps got new data into the board
 
-To adjust the sequence in what order the standard and telemtry is transmitted edit Timing.h, it is set to transmitt 4 times - 8 minutes and then switching off the radio and enable gps, gets new loction data, then start over, default setting is: WSPR, WSPR_telemtry, WSPR, WSPR, this is set by adjusting the setModeWSPR();  or  setModeWSPR_telem(); in Timing.h file  
+To adjust the sequence in what order the standard and telemtry is transmitted edit Timing.h, it is set to transmitt 4 times - 8 minutes and then switching off the radio and enable gps, gets new loction data, then start over.
+
+##
 
 This is the standard setup using a 4 Mhz xo, so if you build the board with the recommended components and downloaded fw this does not need to change
 Sets speed of the board  
