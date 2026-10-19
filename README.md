@@ -23,7 +23,6 @@ Get your board online onto Sondehub/aprs.fi section added
 ### If you do find the following compilation of information of use - [Donation](https://www.paypal.com/donate/?business=FRB6FHBJRKUK8&no_recurring=0&currency_code=SEK) <br>
 
 
-
 # ICT-v7-ATGM336
 <img src="https://github.com/user-attachments/assets/87f7522f-9779-4d59-95e0-92f3e82d1d06" width="400" />  <br> <br>
 
@@ -47,9 +46,6 @@ Copy the content in this folder into libraries folder of Arduino C:\Program File
 Cam files for pcb ordering as well as the Eagle schematic and board files, viewer for both files here: https://www.altium365.com/viewer/
 ### Boards.txt-main  
 Replace the Boards.txt in arduino to controll the speed of the 328, its located in: C:\Program Files (x86)\Arduino\hardware\arduino\avr  
-### oscillator-main  
-Test file to test the 328 and si5351, no gps is needed for this, only the 328, 5351, its tcxo and the two pull up resistors have to be soldered, if all works it will tx a carrier at 14.097Mhz, upload the .ino file with arduino or the .hex with Avrdudess https://github.com/ZakKemble/AVRDUDESS
-### Sidenote - the main code have a cw beep function that will tx at startup, this without a gps soldered, so this test is really not needed anymore, just flash the main code into the board and it will beep at freq set in beep.h
 
 ## Goals  
 This setup is aimed at three main things: light weight, low power demands and as few components as possible - easy to build
