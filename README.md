@@ -63,11 +63,9 @@ The board will work on any band between 80m and 2m but most used band is 20m-10m
 
 # Features  
 CW init - At power on, when sun hits the solar panels it start to tx cw, then you know you are good for launch  
-Randomization - Randomize the tx by ca 5 hz each tx, have been turned off by deafult, enable in Timing.h  
 No tx over selected grids - Move tx to ism (13.555) freq over selected grids  
 Powerswitching between gps and tx - Will put less stress on the cells and get earlier in the morning startups  
 Course altitude in main wspr - Will insert a rough altitude into the standard wspr db field, see TelemFunctions.h  
-Slowly increased power in 4 steps - Default setting is 79 - Max power  
 Good WDT function of 328 - Will never fail to wake up even with unstable solar cells powering the board  
 Will work at low clocks, tested down to 1Mhz on the 328 - Deafult is 2Mhz  
 Powersave of gps by set it to single navigational system  - See Gps section  
