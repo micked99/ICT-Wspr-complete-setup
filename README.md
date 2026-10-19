@@ -39,7 +39,7 @@ The [Traquito](https://traquito.github.io/)  page will host channel reservation 
 
 ## Folders in this repo:  
 ### ICT_WSPR   
-The code to upload to the board  
+The Arduino code to upload to the PCB  
 ### Libraries
 Copy the content in this folder into libraries folder of Arduino C:\Program Files (x86)\Arduino\libraries  
 ### Pcb-ICT-main  
