@@ -21,12 +21,12 @@
 //#define WSPR_FREQ     7040185UL  // <<<<< SET TX FREQUENCY HERE
 //#define WSPR_FREQ     10140285UL // <<<<< SET TX FREQUENCY HERE
 //#define WSPR_FREQ     14097190UL // <<<<< SET TX FREQUENCY HERE
-//#define WSPR_FREQ     18106200UL  // <<<<< SET TX FREQUENCY HERE
+//#define WSPR_FREQ     18106200UL // <<<<< SET TX FREQUENCY HERE
 //#define WSPR_FREQ     21096190UL // <<<<< SET TX FREQUENCY HERE  
 #define WSPR_FREQ     24926055UL // <<<<< SET TX FREQUENCY HERE       
-//#define WSPR_FREQ       28126100UL // <<<<< SET TX FREQUENCY HERE
+//#define WSPR_FREQ     28126100UL // <<<<< SET TX FREQUENCY HERE
 #define ISM_WSPR_FREQ   13555425UL // = 1,500Hz audio on 13.553.900 Mhz // 13555425UL New correct ism freq
-#define WSPR_CTC        1334       // WSPR CTC - 2668 @ 4Mhz //1334 @ 2Mhz //667 @ 1Mhz
+#define WSPR_CTC        1332       // 8Mhz-5332 / 2666-4Mhz / 1332-2Mhz //666-1Mhz
 
 
 // Enumerations
