@@ -26,7 +26,7 @@
 #define WSPR_FREQ     24926055UL // <<<<< SET TX FREQUENCY HERE       
 //#define WSPR_FREQ     28126100UL // <<<<< SET TX FREQUENCY HERE
 #define ISM_WSPR_FREQ   13555425UL // = 1,500Hz audio on 13.553.900 Mhz // 13555425UL New correct ism freq
-#define WSPR_CTC        1332       // 8Mhz-5332 / 2666-4Mhz / 1332-2Mhz //666-1Mhz
+#define WSPR_CTC        1332       // 8Mhz-5332 / 4Mhz-2666 / 2Mhz-1332 / 1Mhz-666
 
 
 // Enumerations
