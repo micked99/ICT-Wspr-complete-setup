@@ -1,8 +1,8 @@
 // ---- Schedule setup (10-minute cycle, 2-minute slots at minutes 0, 2, 4, 6, 8) ----
 #define SLOT(m) (1 << ((m) / 2))
-const uint8_t TX_SLOTS  = SLOT(0) | SLOT(2) | SLOT(6) | SLOT(8);  // minutes that transmit; any other even minute is idle (GPS only)
+const uint8_t TX_SLOTS  = SLOT(0) | SLOT(2) | SLOT(4) | SLOT(6);  // minutes that transmit; any other even minute is idle (GPS only)
 const uint8_t TLM_SLOT  = 2;   // minute that carries the telemetry message (must be one of TX_SLOTS)
-const uint8_t PREP_SLOT = 6;   // minute where new GPS data is read (the first TX slot after the idle one)
+const uint8_t PREP_SLOT = 0;   // slot where new GPS data is used, if 8 is gps-on =0, if 6 is gps-on =8 (the first TX slot after the idle one)
 
 void TXtiming() // Timing
 {
@@ -16,7 +16,7 @@ void TXtiming() // Timing
 
     uint8_t slot = minute() % 10;         // position in the 10-minute cycle
 
-    if (((slot % 2) == 0) && (TX_SLOTS & SLOT(slot)))   // a TX slot
+if (((slot % 2) == 0) && ((TX_SLOTS & SLOT(slot)) || firstTx))   // a TX slot, or the first even minute after power-up
     {
       if ((slot == PREP_SLOT) || (telemetry_set == 0))  // fresh data at PREP_SLOT, or at first slot after power-up
       {
