@@ -313,8 +313,8 @@ void SetFrequency (uint32_t frequency) { // frequency is in centi-Hz (Hz x100); 
     // outdivider is 30-60 across 14-28 MHz, well within 7-bit reg limit (max 127).
     // CLK0 phase = 0 (reference), CLK1 phase = outdivider (180 degrees out).
     // PLLA reset latches the phase — required per AN619.
-    Si5351a_Write_Reg (165, 0);                    // CLK0 phase offset = 0
-    Si5351a_Write_Reg (166, (uint8_t)outdivider);  // CLK1 phase offset = 180 deg
+    Si5351a_Write_Reg (165, 0);                          // CLK0 phase offset = 0
+    Si5351a_Write_Reg (166, (uint8_t)(2 * outdivider));  // CLK1 phase offset = 180 deg
  }
 
   // Reset PLLA to latch phase/frequency — required by Si5351 AN619
