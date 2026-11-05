@@ -18,10 +18,6 @@ Screenshots of the settings of order of pcb assembly, see folder "JLCPcb order"
 
 Get your board online onto Sondehub/aprs.fi section added  
 
-## Consider a donation to this projects software developer at: https://yo3ict.uus.ro/index.html press the "Show Sponsors" button  <br>
-
-### If you do find the following compilation of information of use - [Donation](https://www.paypal.com/donate/?business=FRB6FHBJRKUK8&no_recurring=0&currency_code=SEK) <br>
-
 
 # ICT-v7-ATGM336
 <img src="https://github.com/user-attachments/assets/87f7522f-9779-4d59-95e0-92f3e82d1d06" width="400" />  <br> <br>
